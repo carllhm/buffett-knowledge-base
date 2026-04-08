@@ -11,10 +11,10 @@ hero:
       link: /01_letters/
     - theme: alt
       text: 公司库
-      link: /03_companies/
+      link: '/03_companies/'
     - theme: alt
       text: 人物库
-      link: /04_people/
+      link: '/04_people/'
 
 features:
   - icon: 📖
@@ -59,6 +59,32 @@ features:
 ## 关于作者
 
 由投资爱好者系统化整理，旨在为中文投资社区提供高质量的知识资源。
+
+### 关注我们
+
+<div style="display: flex; gap: 20px; justify-content: center; margin: 20px 0;">
+
+<div style="text-align: center;">
+
+**公众号**
+
+<img src="/images/wechat-qr.jpg" alt="公众号：慢慢变富的卡尔" style="width: 150px; height: 150px; border: 1px solid #ddd; border-radius: 8px;">
+
+<p>慢慢变富的卡尔</p>
+
+</div>
+
+<div style="text-align: center;">
+
+**视频号**
+
+<img src="/images/video-qr.jpg" alt="视频号" style="width: 150px; height: 150px; border: 1px solid #ddd; border-radius: 8px;">
+
+<p>视频号</p>
+
+</div>
+
+</div>
 
 ---
 
