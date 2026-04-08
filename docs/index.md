@@ -68,7 +68,7 @@ features:
 
 **公众号**
 
-<img src="/images/wechat-qr.jpg" alt="公众号：慢慢变富的卡尔" style="width: 150px; height: 150px; border: 1px solid #ddd; border-radius: 8px;">
+<img src="/images/公众号二维码.jpg" alt="公众号：慢慢变富的卡尔" style="width: 150px; height: 150px; border: 1px solid #ddd; border-radius: 8px;">
 
 <p>慢慢变富的卡尔</p>
 
@@ -78,7 +78,7 @@ features:
 
 **视频号**
 
-<img src="/images/video-qr.jpg" alt="视频号" style="width: 150px; height: 150px; border: 1px solid #ddd; border-radius: 8px;">
+<img src="/images/视频号二维码.jpg" alt="视频号" style="width: 150px; height: 150px; border: 1px solid #ddd; border-radius: 8px;">
 
 <p>视频号</p>
 
