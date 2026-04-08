@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: '巴菲特致股东信知识库',
-  description: '中文世界最系统的巴菲特股东信知识库',
+  description: '中文世界最系统的巴菲特股东信知识库（1956-2025）',
   
   ignoreDeadLinks: true,
   cleanUrls: true,
@@ -28,11 +28,51 @@ export default defineConfig({
       
       '/01_letters/': [
         {
-          text: '原文翻译（1977-1987）',
+          text: '1956-1959年',
+          collapsed: true,
           items: [
+            { text: '1956年', link: '/01_letters/1956年/翻译' },
+            { text: '1957年', link: '/01_letters/1957年/翻译' },
+            { text: '1958年', link: '/01_letters/1958年/翻译' },
+            { text: '1959年', link: '/01_letters/1959年/翻译' }
+          ]
+        },
+        {
+          text: '1960-1969年',
+          collapsed: true,
+          items: [
+            { text: '1960年', link: '/01_letters/1960年/翻译' },
+            { text: '1961年', link: '/01_letters/1961年/翻译' },
+            { text: '1962年', link: '/01_letters/1962年/翻译' },
+            { text: '1963年', link: '/01_letters/1963年/翻译' },
+            { text: '1964年', link: '/01_letters/1964年/翻译' },
+            { text: '1965年', link: '/01_letters/1965年/翻译' },
+            { text: '1966年', link: '/01_letters/1966年/翻译' },
+            { text: '1967年', link: '/01_letters/1967年/翻译' },
+            { text: '1968年', link: '/01_letters/1968年/翻译' },
+            { text: '1969年', link: '/01_letters/1969年/翻译' }
+          ]
+        },
+        {
+          text: '1970-1979年',
+          collapsed: false,
+          items: [
+            { text: '1970年', link: '/01_letters/1970年/翻译' },
+            { text: '1971年', link: '/01_letters/1971年/翻译' },
+            { text: '1972年', link: '/01_letters/1972年/翻译' },
+            { text: '1973年', link: '/01_letters/1973年/翻译' },
+            { text: '1974年', link: '/01_letters/1974年/翻译' },
+            { text: '1975年', link: '/01_letters/1975年/翻译' },
+            { text: '1976年', link: '/01_letters/1976年/翻译' },
             { text: '1977年', link: '/01_letters/1977年/翻译' },
             { text: '1978年', link: '/01_letters/1978年/翻译' },
-            { text: '1979年', link: '/01_letters/1979年/翻译' },
+            { text: '1979年', link: '/01_letters/1979年/翻译' }
+          ]
+        },
+        {
+          text: '1980-1989年',
+          collapsed: false,
+          items: [
             { text: '1980年', link: '/01_letters/1980年/翻译' },
             { text: '1981年', link: '/01_letters/1981年/翻译' },
             { text: '1982年', link: '/01_letters/1982年/翻译' },
@@ -40,7 +80,69 @@ export default defineConfig({
             { text: '1984年', link: '/01_letters/1984年/翻译' },
             { text: '1985年', link: '/01_letters/1985年/翻译' },
             { text: '1986年', link: '/01_letters/1986年/翻译' },
-            { text: '1987年', link: '/01_letters/1987年/翻译' }
+            { text: '1987年', link: '/01_letters/1987年/翻译' },
+            { text: '1988年', link: '/01_letters/1988年/翻译' },
+            { text: '1989年', link: '/01_letters/1989年/翻译' }
+          ]
+        },
+        {
+          text: '1990-1999年',
+          collapsed: true,
+          items: [
+            { text: '1990年', link: '/01_letters/1990年/翻译' },
+            { text: '1991年', link: '/01_letters/1991年/翻译' },
+            { text: '1992年', link: '/01_letters/1992年/翻译' },
+            { text: '1993年', link: '/01_letters/1993年/翻译' },
+            { text: '1994年', link: '/01_letters/1994年/翻译' },
+            { text: '1995年', link: '/01_letters/1995年/翻译' },
+            { text: '1996年', link: '/01_letters/1996年/翻译' },
+            { text: '1997年', link: '/01_letters/1997年/翻译' },
+            { text: '1998年', link: '/01_letters/1998年/翻译' },
+            { text: '1999年', link: '/01_letters/1999年/翻译' }
+          ]
+        },
+        {
+          text: '2000-2009年',
+          collapsed: true,
+          items: [
+            { text: '2000年', link: '/01_letters/2000年/翻译' },
+            { text: '2001年', link: '/01_letters/2001年/翻译' },
+            { text: '2002年', link: '/01_letters/2002年/翻译' },
+            { text: '2003年', link: '/01_letters/2003年/翻译' },
+            { text: '2004年', link: '/01_letters/2004年/翻译' },
+            { text: '2005年', link: '/01_letters/2005年/翻译' },
+            { text: '2006年', link: '/01_letters/2006年/翻译' },
+            { text: '2007年', link: '/01_letters/2007年/翻译' },
+            { text: '2008年', link: '/01_letters/2008年/翻译' },
+            { text: '2009年', link: '/01_letters/2009年/翻译' }
+          ]
+        },
+        {
+          text: '2010-2019年',
+          collapsed: true,
+          items: [
+            { text: '2010年', link: '/01_letters/2010年/翻译' },
+            { text: '2011年', link: '/01_letters/2011年/翻译' },
+            { text: '2012年', link: '/01_letters/2012年/翻译' },
+            { text: '2013年', link: '/01_letters/2013年/翻译' },
+            { text: '2014年', link: '/01_letters/2014年/翻译' },
+            { text: '2015年', link: '/01_letters/2015年/翻译' },
+            { text: '2016年', link: '/01_letters/2016年/翻译' },
+            { text: '2017年', link: '/01_letters/2017年/翻译' },
+            { text: '2018年', link: '/01_letters/2018年/翻译' },
+            { text: '2019年', link: '/01_letters/2019年/翻译' }
+          ]
+        },
+        {
+          text: '2020-2025年',
+          collapsed: true,
+          items: [
+            { text: '2020年', link: '/01_letters/2020年/翻译' },
+            { text: '2021年', link: '/01_letters/2021年/翻译' },
+            { text: '2022年', link: '/01_letters/2022年/翻译' },
+            { text: '2023年', link: '/01_letters/2023年/翻译' },
+            { text: '2024年', link: '/01_letters/2024年/翻译' },
+            { text: '2025年', link: '/01_letters/2025年/翻译' }
           ]
         }
       ],
@@ -111,7 +213,7 @@ export default defineConfig({
     },
     
     footer: {
-      message: '巴菲特致股东信知识库 - 免费分享',
+      message: '巴菲特致股东信知识库（1956-2025）- 免费分享',
       copyright: 'Copyright © 2026'
     }
   }
