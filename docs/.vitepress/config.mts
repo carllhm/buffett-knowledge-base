@@ -1,11 +1,16 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   title: '巴菲特致股东信知识库',
   description: '中文世界最系统的巴菲特股东信知识库（1956-2025）',
   
   ignoreDeadLinks: true,
   // cleanUrls: true, // 已禁用，避免Cloudflare Pages 404问题
+  
+  mermaid: {
+    // Mermaid配置
+  },
   
   themeConfig: {
     nav: [
@@ -217,4 +222,4 @@ export default defineConfig({
       copyright: 'Copyright © 2026'
     }
   }
-})
+}))
