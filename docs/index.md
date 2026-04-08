@@ -66,26 +66,18 @@ features:
 
 ### 关注我们
 
-<div style="display: flex; gap: 20px; justify-content: center; margin: 20px 0;">
+<div style="display: flex; justify-content: center; gap: 40px; margin: 30px 0;">
 
-<div style="text-align: center;">
-
-**公众号**
-
-<img src="/images/公众号二维码.jpg" alt="公众号：慢慢变富的卡尔" style="width: 150px; height: 150px; border: 1px solid #ddd; border-radius: 8px;">
-
-<p>慢慢变富的卡尔</p>
-
+<div style="text-align: center; background: #f8f9fa; padding: 20px; border-radius: 12px;">
+<img src="/images/公众号二维码.jpg" alt="公众号：慢慢变富的卡尔" style="width: 120px; height: 120px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+<p style="margin-top: 10px; font-weight: 600; color: #333;">公众号</p>
+<p style="margin: 5px 0 0; color: #666; font-size: 14px;">慢慢变富的卡尔</p>
 </div>
 
-<div style="text-align: center;">
-
-**视频号**
-
-<img src="/images/视频号二维码.jpg" alt="视频号" style="width: 150px; height: 150px; border: 1px solid #ddd; border-radius: 8px;">
-
-<p>视频号</p>
-
+<div style="text-align: center; background: #f8f9fa; padding: 20px; border-radius: 12px;">
+<img src="/images/视频号二维码.jpg" alt="视频号" style="width: 120px; height: 120px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+<p style="margin-top: 10px; font-weight: 600; color: #333;">视频号</p>
+<p style="margin: 5px 0 0; color: #666; font-size: 14px;">慢慢变富的卡尔</p>
 </div>
 
 </div>
