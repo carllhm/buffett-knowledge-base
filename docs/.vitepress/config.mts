@@ -5,7 +5,7 @@ export default defineConfig({
   description: '中文世界最系统的巴菲特股东信知识库（1956-2025）',
   
   ignoreDeadLinks: true,
-  cleanUrls: true,
+  // cleanUrls: true, // 已禁用，避免Cloudflare Pages 404问题
   
   themeConfig: {
     nav: [

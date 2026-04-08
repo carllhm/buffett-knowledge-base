@@ -1,0 +1,5 @@
+# VitePress clean URLs redirect
+# This file helps Cloudflare Pages handle clean URLs properly
+
+# Redirect /foo to /foo.html if it exists
+/* /:splat.html 200
