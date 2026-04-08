@@ -15,6 +15,7 @@ export default withMermaid(defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
+      { text: '70年完整梳理', link: '/00_index/巴菲特致股东信70年完整梳理' },
       { text: '阅读导航', link: '/00_index/reading-guide' },
       { text: '原文翻译', link: '/01_letters/' },
       { text: '主题索引', link: '/02_concepts/' },
@@ -33,19 +34,13 @@ export default withMermaid(defineConfig({
       
       '/01_letters/': [
         {
-          text: '1956-1959年',
+          text: '第一纪元：合伙人信纪元（1956-1969）',
           collapsed: true,
           items: [
             { text: '1956年', link: '/01_letters/1956年/翻译' },
             { text: '1957年', link: '/01_letters/1957年/翻译' },
             { text: '1958年', link: '/01_letters/1958年/翻译' },
-            { text: '1959年', link: '/01_letters/1959年/翻译' }
-          ]
-        },
-        {
-          text: '1960-1969年',
-          collapsed: true,
-          items: [
+            { text: '1959年', link: '/01_letters/1959年/翻译' },
             { text: '1960年', link: '/01_letters/1960年/翻译' },
             { text: '1961年', link: '/01_letters/1961年/翻译' },
             { text: '1962年', link: '/01_letters/1962年/翻译' },
@@ -59,8 +54,8 @@ export default withMermaid(defineConfig({
           ]
         },
         {
-          text: '1970-1979年',
-          collapsed: false,
+          text: '第二纪元：早期探索期（1970-1976）',
+          collapsed: true,
           items: [
             { text: '1970年', link: '/01_letters/1970年/翻译' },
             { text: '1971年', link: '/01_letters/1971年/翻译' },
@@ -68,16 +63,16 @@ export default withMermaid(defineConfig({
             { text: '1973年', link: '/01_letters/1973年/翻译' },
             { text: '1974年', link: '/01_letters/1974年/翻译' },
             { text: '1975年', link: '/01_letters/1975年/翻译' },
-            { text: '1976年', link: '/01_letters/1976年/翻译' },
-            { text: '1977年', link: '/01_letters/1977年/翻译' },
-            { text: '1978年', link: '/01_letters/1978年/翻译' },
-            { text: '1979年', link: '/01_letters/1979年/翻译' }
+            { text: '1976年', link: '/01_letters/1976年/翻译' }
           ]
         },
         {
-          text: '1980-1989年',
-          collapsed: false,
+          text: '第二纪元：保险驱动期（1977-1988）',
+          collapsed: true,
           items: [
+            { text: '1977年', link: '/01_letters/1977年/翻译' },
+            { text: '1978年', link: '/01_letters/1978年/翻译' },
+            { text: '1979年', link: '/01_letters/1979年/翻译' },
             { text: '1980年', link: '/01_letters/1980年/翻译' },
             { text: '1981年', link: '/01_letters/1981年/翻译' },
             { text: '1982年', link: '/01_letters/1982年/翻译' },
@@ -86,14 +81,14 @@ export default withMermaid(defineConfig({
             { text: '1985年', link: '/01_letters/1985年/翻译' },
             { text: '1986年', link: '/01_letters/1986年/翻译' },
             { text: '1987年', link: '/01_letters/1987年/翻译' },
-            { text: '1988年', link: '/01_letters/1988年/翻译' },
-            { text: '1989年', link: '/01_letters/1989年/翻译' }
+            { text: '1988年', link: '/01_letters/1988年/翻译' }
           ]
         },
         {
-          text: '1990-1999年',
+          text: '第二纪元：帝国扩张期（1989-1999）',
           collapsed: true,
           items: [
+            { text: '1989年', link: '/01_letters/1989年/翻译' },
             { text: '1990年', link: '/01_letters/1990年/翻译' },
             { text: '1991年', link: '/01_letters/1991年/翻译' },
             { text: '1992年', link: '/01_letters/1992年/翻译' },
@@ -107,7 +102,7 @@ export default withMermaid(defineConfig({
           ]
         },
         {
-          text: '2000-2009年',
+          text: '第二纪元：周期穿越期（2000-2008）',
           collapsed: true,
           items: [
             { text: '2000年', link: '/01_letters/2000年/翻译' },
@@ -118,14 +113,14 @@ export default withMermaid(defineConfig({
             { text: '2005年', link: '/01_letters/2005年/翻译' },
             { text: '2006年', link: '/01_letters/2006年/翻译' },
             { text: '2007年', link: '/01_letters/2007年/翻译' },
-            { text: '2008年', link: '/01_letters/2008年/翻译' },
-            { text: '2009年', link: '/01_letters/2009年/翻译' }
+            { text: '2008年', link: '/01_letters/2008年/翻译' }
           ]
         },
         {
-          text: '2010-2019年',
+          text: '第二纪元：超级控股期（2009-2019）',
           collapsed: true,
           items: [
+            { text: '2009年', link: '/01_letters/2009年/翻译' },
             { text: '2010年', link: '/01_letters/2010年/翻译' },
             { text: '2011年', link: '/01_letters/2011年/翻译' },
             { text: '2012年', link: '/01_letters/2012年/翻译' },
@@ -139,8 +134,8 @@ export default withMermaid(defineConfig({
           ]
         },
         {
-          text: '2020-2025年',
-          collapsed: true,
+          text: '第二纪元：传承与告别期（2020-2025）',
+          collapsed: false,
           items: [
             { text: '2020年', link: '/01_letters/2020年/翻译' },
             { text: '2021年', link: '/01_letters/2021年/翻译' },
