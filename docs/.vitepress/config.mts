@@ -1,6 +1,56 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
+// 人物名 → 人物页 slug 映射（用于 wiki-link 直接跳转）
+const PEOPLE_MAP: Record<string, string> = {
+  '沃伦·巴菲特': '沃伦·巴菲特',
+  '巴菲特': '沃伦·巴菲特',
+  '查理·芒格': '查理·芒格',
+  '芒格': '查理·芒格',
+  '阿吉特·贾恩': '阿吉特·贾恩',
+  'Ajit·贾恩': '阿吉特·贾恩',
+  'Ajit Jain': '阿吉特·贾恩',
+  'B夫人': 'B夫人',
+  'Mrs. B': 'B夫人',
+  'Rose Blumkin': 'B夫人',
+  '卢·辛普森': '卢·辛普森',
+  'Lou Simpson': '卢·辛普森',
+  '斯坦·利普西': '斯坦·利普西',
+  'Stan Lipsey': '斯坦·利普西',
+  '皮特·利格尔': '皮特·利格尔',
+  'Pete Liegl': '皮特·利格尔',
+  '弗兰克·普塔克': '弗兰克·普塔克',
+  'Frank Puttkammer': '弗兰克·普塔克',
+  '菲尔·利切': '菲尔·利切',
+  'Phil Liechti': '菲尔·利切',
+  '杰克·伯恩': '杰克·伯恩',
+  'Jack Byrne': '杰克·伯恩',
+  'Chuck Huggins': 'Chuck_Huggins',
+  '格雷迪·罗西尔': '格雷迪·罗西尔',
+  'Grady Rosier': '格雷迪·罗西尔',
+  '凯文·克莱顿': '凯文·克莱顿',
+  'Kevin Clayton': '凯文·克莱顿',
+  'Tom Murphy': 'Tom_Murphy',
+  'Murphy': 'Tom_Murphy',
+  '埃坦·韦特海默': '埃坦·韦特海默',
+  'Eitan Werb': '埃坦·韦特海默',
+  '雅各布·哈帕兹': '雅各布·哈帕兹',
+  'Jacob Harpaz': '雅各布·哈帕兹',
+  '吉恩·阿贝格': '吉恩·阿贝格',
+  'Gene Abegg': '吉恩·阿贝格',
+  '本·格雷厄姆': '本·格雷厄姆',
+  'Ben Graham': '本·格雷厄姆',
+  '格雷厄姆': '本·格雷厄姆',
+  '菲利普·费雪': '菲利普·费雪',
+  'Phil Fisher': '菲利普·费雪',
+  '费雪': '菲利普·费雪',
+  '凯瑟琳·格雷厄姆': '凯瑟琳·格雷厄姆',
+  'Kay Graham': '凯瑟琳·格雷厄姆',
+  '保罗·纽曼': '保罗·纽曼',
+  'Paul Newman': '保罗·纽曼',
+  'John-Lo': 'John-Lo',
+}
+
 // 自定义 wiki-links 插件
 const wikiLinksPlugin = (md) => {
   const defaultRender = md.renderer.rules.link_open || function(tokens, idx, options, env, self) {
@@ -18,8 +68,12 @@ const wikiLinksPlugin = (md) => {
       const wikiMatch = href.match(/^\[\[(.+?)\]\]$/)
       if (wikiMatch) {
         const pageName = wikiMatch[1]
-        // 转换为搜索链接或对应页面链接
-        token.attrs[hrefIndex][1] = `/search?q=${encodeURIComponent(pageName)}`
+        // 优先映射人物页，否则走搜索
+        if (PEOPLE_MAP[pageName]) {
+          token.attrs[hrefIndex][1] = `/04_people/${PEOPLE_MAP[pageName]}`
+        } else {
+          token.attrs[hrefIndex][1] = `/search?q=${encodeURIComponent(pageName)}`
+        }
       }
     }
     
@@ -80,8 +134,12 @@ export default withMermaid(defineConfig({
         
         const content = state.src.slice(start + 2, endPos)
         if (!silent) {
+          // 人物优先映射，否则走搜索
+          const href = PEOPLE_MAP[content]
+            ? `/04_people/${PEOPLE_MAP[content]}`
+            : `/search?q=${encodeURIComponent(content)}`
           const token = state.push('link_open', 'a', 1)
-          token.attrs = [['href', `/search?q=${encodeURIComponent(content)}`]]
+          token.attrs = [['href', href]]
           token.markup = '[['
           
           const textToken = state.push('text', '', 0)
