@@ -27,6 +27,27 @@ const wikiLinksPlugin = (md) => {
   }
 }
 
+// 生成年份子菜单（翻译、核心总结、思维导图）
+function generateYearItems(year: string) {
+  const items = []
+  
+  // 翻译始终存在
+  items.push({ text: '📄 全文翻译', link: `/01_letters/${year}年/翻译` })
+  
+  // 核心总结（1989年以后）
+  const yearNum = parseInt(year)
+  if (yearNum >= 1989) {
+    items.push({ text: '📝 核心总结', link: `/01_letters/${year}年/核心总结` })
+  }
+  
+  // 思维导图（1977年以后，除了2009）
+  if (yearNum >= 1977 && year !== '2009') {
+    items.push({ text: '🧠 思维导图', link: `/01_letters/${year}年/思维导图` })
+  }
+  
+  return items
+}
+
 export default withMermaid(defineConfig({
   title: '巴菲特致股东信知识库',
   description: '中文世界最系统的巴菲特股东信知识库（1956-2025）',
@@ -84,186 +105,231 @@ export default withMermaid(defineConfig({
       { text: '创作工具', link: '/08_tools/' }
     ],
     
-    sidebar: {
-      '/00_index/': [
-        { text: '阅读导航', link: '/00_index/reading-guide' }
-      ],
+    sidebar: [
+      // 首页
+      {
+        text: '🏠 首页',
+        link: '/',
+        items: []
+      },
       
-      '/01_letters/': [
-        {
-          text: '第一纪元：合伙人信纪元（1956-1969）',
-          collapsed: true,
-          items: [
-            { text: '1956年', link: '/01_letters/1956年/翻译' },
-            { text: '1957年', link: '/01_letters/1957年/翻译' },
-            { text: '1958年', link: '/01_letters/1958年/翻译' },
-            { text: '1959年', link: '/01_letters/1959年/翻译' },
-            { text: '1960年', link: '/01_letters/1960年/翻译' },
-            { text: '1961年', link: '/01_letters/1961年/翻译' },
-            { text: '1962年', link: '/01_letters/1962年/翻译' },
-            { text: '1963年', link: '/01_letters/1963年/翻译' },
-            { text: '1964年', link: '/01_letters/1964年/翻译' },
-            { text: '1965年', link: '/01_letters/1965年/翻译' },
-            { text: '1966年', link: '/01_letters/1966年/翻译' },
-            { text: '1967年', link: '/01_letters/1967年/翻译' },
-            { text: '1968年', link: '/01_letters/1968年/翻译' },
-            { text: '1969年', link: '/01_letters/1969年/翻译' }
-          ]
-        },
-        {
-          text: '第二纪元：早期探索期（1970-1976）',
-          collapsed: true,
-          items: [
-            { text: '1970年', link: '/01_letters/1970年/翻译' },
-            { text: '1971年', link: '/01_letters/1971年/翻译' },
-            { text: '1972年', link: '/01_letters/1972年/翻译' },
-            { text: '1973年', link: '/01_letters/1973年/翻译' },
-            { text: '1974年', link: '/01_letters/1974年/翻译' },
-            { text: '1975年', link: '/01_letters/1975年/翻译' },
-            { text: '1976年', link: '/01_letters/1976年/翻译' }
-          ]
-        },
-        {
-          text: '第二纪元：保险驱动期（1977-1988）',
-          collapsed: true,
-          items: [
-            { text: '1977年', link: '/01_letters/1977年/翻译' },
-            { text: '1978年', link: '/01_letters/1978年/翻译' },
-            { text: '1979年', link: '/01_letters/1979年/翻译' },
-            { text: '1980年', link: '/01_letters/1980年/翻译' },
-            { text: '1981年', link: '/01_letters/1981年/翻译' },
-            { text: '1982年', link: '/01_letters/1982年/翻译' },
-            { text: '1983年', link: '/01_letters/1983年/翻译' },
-            { text: '1984年', link: '/01_letters/1984年/翻译' },
-            { text: '1985年', link: '/01_letters/1985年/翻译' },
-            { text: '1986年', link: '/01_letters/1986年/翻译' },
-            { text: '1987年', link: '/01_letters/1987年/翻译' },
-            { text: '1988年', link: '/01_letters/1988年/翻译' }
-          ]
-        },
-        {
-          text: '第二纪元：帝国扩张期（1989-1999）',
-          collapsed: true,
-          items: [
-            { text: '1989年', link: '/01_letters/1989年/翻译' },
-            { text: '1990年', link: '/01_letters/1990年/翻译' },
-            { text: '1991年', link: '/01_letters/1991年/翻译' },
-            { text: '1992年', link: '/01_letters/1992年/翻译' },
-            { text: '1993年', link: '/01_letters/1993年/翻译' },
-            { text: '1994年', link: '/01_letters/1994年/翻译' },
-            { text: '1995年', link: '/01_letters/1995年/翻译' },
-            { text: '1996年', link: '/01_letters/1996年/翻译' },
-            { text: '1997年', link: '/01_letters/1997年/翻译' },
-            { text: '1998年', link: '/01_letters/1998年/翻译' },
-            { text: '1999年', link: '/01_letters/1999年/翻译' }
-          ]
-        },
-        {
-          text: '第二纪元：周期穿越期（2000-2008）',
-          collapsed: true,
-          items: [
-            { text: '2000年', link: '/01_letters/2000年/翻译' },
-            { text: '2001年', link: '/01_letters/2001年/翻译' },
-            { text: '2002年', link: '/01_letters/2002年/翻译' },
-            { text: '2003年', link: '/01_letters/2003年/翻译' },
-            { text: '2004年', link: '/01_letters/2004年/翻译' },
-            { text: '2005年', link: '/01_letters/2005年/翻译' },
-            { text: '2006年', link: '/01_letters/2006年/翻译' },
-            { text: '2007年', link: '/01_letters/2007年/翻译' },
-            { text: '2008年', link: '/01_letters/2008年/翻译' }
-          ]
-        },
-        {
-          text: '第二纪元：超级控股期（2009-2019）',
-          collapsed: true,
-          items: [
-            { text: '2009年', link: '/01_letters/2009年/翻译' },
-            { text: '2010年', link: '/01_letters/2010年/翻译' },
-            { text: '2011年', link: '/01_letters/2011年/翻译' },
-            { text: '2012年', link: '/01_letters/2012年/翻译' },
-            { text: '2013年', link: '/01_letters/2013年/翻译' },
-            { text: '2014年', link: '/01_letters/2014年/翻译' },
-            { text: '2015年', link: '/01_letters/2015年/翻译' },
-            { text: '2016年', link: '/01_letters/2016年/翻译' },
-            { text: '2017年', link: '/01_letters/2017年/翻译' },
-            { text: '2018年', link: '/01_letters/2018年/翻译' },
-            { text: '2019年', link: '/01_letters/2019年/翻译' }
-          ]
-        },
-        {
-          text: '第二纪元：传承与告别期（2020-2025）',
-          collapsed: false,
-          items: [
-            { text: '2020年', link: '/01_letters/2020年/翻译' },
-            { text: '2021年', link: '/01_letters/2021年/翻译' },
-            { text: '2022年', link: '/01_letters/2022年/翻译' },
-            { text: '2023年', link: '/01_letters/2023年/翻译' },
-            { text: '2024年', link: '/01_letters/2024年/翻译' },
-            { text: '2025年', link: '/01_letters/2025年/翻译' }
-          ]
-        }
-      ],
+      // 原文翻译 - 多级结构
+      {
+        text: '📚 原文翻译',
+        link: '/01_letters/',
+        collapsed: false,
+        items: [
+          {
+            text: '第一纪元：合伙人信（1956-1969）',
+            collapsed: true,
+            items: [
+              { text: '1956年', collapsed: true, items: generateYearItems('1956') },
+              { text: '1957年', collapsed: true, items: generateYearItems('1957') },
+              { text: '1958年', collapsed: true, items: generateYearItems('1958') },
+              { text: '1959年', collapsed: true, items: generateYearItems('1959') },
+              { text: '1960年', collapsed: true, items: generateYearItems('1960') },
+              { text: '1961年', collapsed: true, items: generateYearItems('1961') },
+              { text: '1962年', collapsed: true, items: generateYearItems('1962') },
+              { text: '1963年', collapsed: true, items: generateYearItems('1963') },
+              { text: '1964年', collapsed: true, items: generateYearItems('1964') },
+              { text: '1965年', collapsed: true, items: generateYearItems('1965') },
+              { text: '1966年', collapsed: true, items: generateYearItems('1966') },
+              { text: '1967年', collapsed: true, items: generateYearItems('1967') },
+              { text: '1968年', collapsed: true, items: generateYearItems('1968') },
+              { text: '1969年', collapsed: true, items: generateYearItems('1969') }
+            ]
+          },
+          {
+            text: '第二纪元：早期探索（1970-1976）',
+            collapsed: true,
+            items: [
+              { text: '1970年', collapsed: true, items: generateYearItems('1970') },
+              { text: '1971年', collapsed: true, items: generateYearItems('1971') },
+              { text: '1972年', collapsed: true, items: generateYearItems('1972') },
+              { text: '1973年', collapsed: true, items: generateYearItems('1973') },
+              { text: '1974年', collapsed: true, items: generateYearItems('1974') },
+              { text: '1975年', collapsed: true, items: generateYearItems('1975') },
+              { text: '1976年', collapsed: true, items: generateYearItems('1976') }
+            ]
+          },
+          {
+            text: '第二纪元：保险驱动（1977-1988）',
+            collapsed: true,
+            items: [
+              { text: '1977年', collapsed: true, items: generateYearItems('1977') },
+              { text: '1978年', collapsed: true, items: generateYearItems('1978') },
+              { text: '1979年', collapsed: true, items: generateYearItems('1979') },
+              { text: '1980年', collapsed: true, items: generateYearItems('1980') },
+              { text: '1981年', collapsed: true, items: generateYearItems('1981') },
+              { text: '1982年', collapsed: true, items: generateYearItems('1982') },
+              { text: '1983年', collapsed: true, items: generateYearItems('1983') },
+              { text: '1984年', collapsed: true, items: generateYearItems('1984') },
+              { text: '1985年', collapsed: true, items: generateYearItems('1985') },
+              { text: '1986年', collapsed: true, items: generateYearItems('1986') },
+              { text: '1987年', collapsed: true, items: generateYearItems('1987') },
+              { text: '1988年', collapsed: true, items: generateYearItems('1988') }
+            ]
+          },
+          {
+            text: '第二纪元：帝国扩张（1989-1999）',
+            collapsed: true,
+            items: [
+              { text: '1989年', collapsed: true, items: generateYearItems('1989') },
+              { text: '1990年', collapsed: true, items: generateYearItems('1990') },
+              { text: '1991年', collapsed: true, items: generateYearItems('1991') },
+              { text: '1992年', collapsed: true, items: generateYearItems('1992') },
+              { text: '1993年', collapsed: true, items: generateYearItems('1993') },
+              { text: '1994年', collapsed: true, items: generateYearItems('1994') },
+              { text: '1995年', collapsed: true, items: generateYearItems('1995') },
+              { text: '1996年', collapsed: true, items: generateYearItems('1996') },
+              { text: '1997年', collapsed: true, items: generateYearItems('1997') },
+              { text: '1998年', collapsed: true, items: generateYearItems('1998') },
+              { text: '1999年', collapsed: true, items: generateYearItems('1999') }
+            ]
+          },
+          {
+            text: '第二纪元：周期穿越（2000-2008）',
+            collapsed: true,
+            items: [
+              { text: '2000年', collapsed: true, items: generateYearItems('2000') },
+              { text: '2001年', collapsed: true, items: generateYearItems('2001') },
+              { text: '2002年', collapsed: true, items: generateYearItems('2002') },
+              { text: '2003年', collapsed: true, items: generateYearItems('2003') },
+              { text: '2004年', collapsed: true, items: generateYearItems('2004') },
+              { text: '2005年', collapsed: true, items: generateYearItems('2005') },
+              { text: '2006年', collapsed: true, items: generateYearItems('2006') },
+              { text: '2007年', collapsed: true, items: generateYearItems('2007') },
+              { text: '2008年', collapsed: true, items: generateYearItems('2008') }
+            ]
+          },
+          {
+            text: '第二纪元：超级控股（2009-2019）',
+            collapsed: true,
+            items: [
+              { text: '2009年', collapsed: true, items: generateYearItems('2009') },
+              { text: '2010年', collapsed: true, items: generateYearItems('2010') },
+              { text: '2011年', collapsed: true, items: generateYearItems('2011') },
+              { text: '2012年', collapsed: true, items: generateYearItems('2012') },
+              { text: '2013年', collapsed: true, items: generateYearItems('2013') },
+              { text: '2014年', collapsed: true, items: generateYearItems('2014') },
+              { text: '2015年', collapsed: true, items: generateYearItems('2015') },
+              { text: '2016年', collapsed: true, items: generateYearItems('2016') },
+              { text: '2017年', collapsed: true, items: generateYearItems('2017') },
+              { text: '2018年', collapsed: true, items: generateYearItems('2018') },
+              { text: '2019年', collapsed: true, items: generateYearItems('2019') }
+            ]
+          },
+          {
+            text: '第二纪元：传承告别（2020-2025）',
+            collapsed: false,
+            items: [
+              { text: '2020年', collapsed: true, items: generateYearItems('2020') },
+              { text: '2021年', collapsed: true, items: generateYearItems('2021') },
+              { text: '2022年', collapsed: true, items: generateYearItems('2022') },
+              { text: '2023年', collapsed: true, items: generateYearItems('2023') },
+              { text: '2024年', collapsed: true, items: generateYearItems('2024') },
+              { text: '2025年', collapsed: true, items: generateYearItems('2025') }
+            ]
+          }
+        ]
+      },
       
-      '/02_concepts/': [
-        { text: '主题索引', link: '/02_concepts/' }
-      ],
+      // 主题索引
+      {
+        text: '🎯 主题索引',
+        link: '/02_concepts/',
+        collapsed: true,
+        items: [
+          { text: '资本配置', link: '/02_concepts/capital-allocation' },
+          { text: '能力圈', link: '/02_concepts/circle-of-competence' },
+          { text: '复利', link: '/02_concepts/compounding' },
+          { text: '逆向思维', link: '/02_concepts/contrarian' },
+          { text: '保险浮存金', link: '/02_concepts/insurance-float' },
+          { text: '内在价值', link: '/02_concepts/intrinsic-value' },
+          { text: '长期主义', link: '/02_concepts/long-term' },
+          { text: '管理层选择', link: '/02_concepts/management' },
+          { text: '护城河', link: '/02_concepts/moat' },
+          { text: '声誉经济', link: '/02_concepts/reputation' },
+          { text: '风险', link: '/02_concepts/risk' },
+          { text: '安全边际', link: '/02_concepts/safety-margin' },
+          { text: '承保纪律', link: '/02_concepts/underwriting-discipline' }
+        ]
+      },
       
-      '/03_companies/': [
-        {
-          text: '公司档案',
-          items: [
-            { text: 'GEICO', link: '/03_companies/GEICO' },
-            { text: '喜诗糖果', link: '/03_companies/喜诗糖果' },
-            { text: '内布拉斯加家具城', link: '/03_companies/内布拉斯加家具城' },
-            { text: '伯克希尔哈撒韦', link: '/03_companies/伯克希尔哈撒韦' },
-            { text: '华盛顿邮报', link: '/03_companies/华盛顿邮报' },
-            { text: '首都城市ABC', link: '/03_companies/首都城市ABC' },
-            { text: '水牛城新闻', link: '/03_companies/水牛城新闻' },
-            { text: '国家赔偿公司', link: '/03_companies/国家赔偿公司' },
-            { text: '蓝筹印花', link: '/03_companies/蓝筹印花' },
-            { text: 'Scott & Fetzer', link: '/03_companies/Scott_Fetzer' },
-            { text: '所罗门兄弟', link: '/03_companies/所罗门兄弟' },
-            { text: 'Fechheimer Bros.', link: '/03_companies/Fechheimer_Bros' }
-          ]
-        }
-      ],
+      // 公司档案
+      {
+        text: '🏢 公司档案',
+        link: '/03_companies/',
+        collapsed: true,
+        items: [
+          { text: 'GEICO', link: '/03_companies/GEICO' },
+          { text: '喜诗糖果', link: '/03_companies/喜诗糖果' },
+          { text: '内布拉斯加家具城', link: '/03_companies/内布拉斯加家具城' },
+          { text: '伯克希尔哈撒韦', link: '/03_companies/伯克希尔哈撒韦' },
+          { text: '华盛顿邮报', link: '/03_companies/华盛顿邮报' },
+          { text: '首都城市ABC', link: '/03_companies/首都城市ABC' },
+          { text: '水牛城新闻', link: '/03_companies/水牛城新闻' },
+          { text: '国家赔偿公司', link: '/03_companies/国家赔偿公司' },
+          { text: '蓝筹印花', link: '/03_companies/蓝筹印花' },
+          { text: 'Scott & Fetzer', link: '/03_companies/Scott_Fetzer' },
+          { text: '所罗门兄弟', link: '/03_companies/所罗门兄弟' },
+          { text: 'Fechheimer Bros.', link: '/03_companies/Fechheimer_Bros' }
+        ]
+      },
       
-      '/04_people/': [
-        {
-          text: '人物传记',
-          items: [
-            { text: '沃伦·巴菲特', link: '/04_people/沃伦·巴菲特' },
-            { text: '查理·芒格', link: '/04_people/查理·芒格' },
-            { text: 'B夫人', link: '/04_people/B夫人' },
-            { text: '本·格雷厄姆', link: '/04_people/本·格雷厄姆' },
-            { text: '杰克·伯恩', link: '/04_people/杰克·伯恩' },
-            { text: '菲尔·利切', link: '/04_people/菲尔·利切' },
-            { text: 'Chuck Huggins', link: '/04_people/Chuck_Huggins' },
-            { text: 'Tom Murphy', link: '/04_people/Tom_Murphy' },
-            { text: '卢·辛普森', link: '/04_people/卢·辛普森' },
-            { text: '斯坦·利普西', link: '/04_people/斯坦·利普西' },
-            { text: '吉恩·阿贝格', link: '/04_people/吉恩·阿贝格' },
-            { text: '本·罗斯纳', link: '/04_people/本·罗斯纳' }
-          ]
-        }
-      ],
+      // 人物传记
+      {
+        text: '👤 人物传记',
+        link: '/04_people/',
+        collapsed: true,
+        items: [
+          { text: '沃伦·巴菲特', link: '/04_people/沃伦·巴菲特' },
+          { text: '查理·芒格', link: '/04_people/查理·芒格' },
+          { text: 'B夫人', link: '/04_people/B夫人' },
+          { text: '本·格雷厄姆', link: '/04_people/本·格雷厄姆' },
+          { text: '杰克·伯恩', link: '/04_people/杰克·伯恩' },
+          { text: '菲尔·利切', link: '/04_people/菲尔·利切' },
+          { text: 'Chuck Huggins', link: '/04_people/Chuck_Huggins' },
+          { text: 'Tom Murphy', link: '/04_people/Tom_Murphy' },
+          { text: '卢·辛普森', link: '/04_people/卢·辛普森' },
+          { text: '斯坦·利普西', link: '/04_people/斯坦·利普西' },
+          { text: '吉恩·阿贝格', link: '/04_people/吉恩·阿贝格' },
+          { text: '本·罗斯纳', link: '/04_people/本·罗斯纳' }
+        ]
+      },
       
-      '/05_quotes/': [
-        { text: '金句库', link: '/05_quotes/' }
-      ],
+      // 金句库
+      {
+        text: '💬 金句库',
+        link: '/05_quotes/',
+        collapsed: true,
+        items: []
+      },
       
-      '/06_visualization/': [
-        { text: '数据可视化', link: '/06_visualization/' }
-      ],
+      // 数据可视化
+      {
+        text: '📊 数据可视化',
+        link: '/06_visualization/',
+        collapsed: true,
+        items: []
+      },
       
-      '/07_resources/': [
-        { text: '扩展阅读', link: '/07_resources/' }
-      ],
+      // 扩展阅读
+      {
+        text: '📖 扩展阅读',
+        link: '/07_resources/',
+        collapsed: true,
+        items: []
+      },
       
-      '/08_tools/': [
-        { text: '创作工具', link: '/08_tools/' }
-      ]
-    },
+      // 创作工具
+      {
+        text: '🛠️ 创作工具',
+        link: '/08_tools/',
+        collapsed: true,
+        items: []
+      }
+    ],
     
     search: {
       provider: 'local'
