@@ -17,39 +17,39 @@ hero:
 features:
   - icon: 📖
     title: 原文翻译
-    details: 48年完整 + 22年待补全
+    details: 1956-2025年完整翻译，70年投资智慧结晶
     link: /01_letters/
   - icon: 🧠
     title: 思维导图
-    details: 47年投资理念结构化梳理
+    details: 47年投资理念结构化，秒懂巴菲特思路
     link: /01_letters/1977年/思维导图.html
   - icon: 📝
     title: 核心总结
-    details: 48年年度要点提炼
+    details: 历年投资要点提炼，一页读懂一年
     link: /01_letters/1989年/核心总结.html
   - icon: 🧩
     title: 主题索引
-    details: 14个核心概念 · 护城河/安全边际/复利
+    details: 14大核心概念，护城河/安全边际/复利
     link: /02_concepts/
   - icon: 🏢
     title: 公司档案
-    details: 23家经典公司 · GEICO/喜诗糖果/可口可乐
+    details: 23家经典公司，伯克希尔持仓与收购案例
     link: /03_companies/
   - icon: 👤
     title: 人物传记
-    details: 20位传奇人物 · 芒格/B夫人/阿吉特
+    details: 20位传奇人物，芒格/阿吉特/管理层
     link: /04_people/
   - icon: 💬
     title: 金句库
-    details: 历年经典语录金句精选
+    details: 历年经典语录，按主题/年份分类
     link: /05_quotes/
   - icon: 📈
     title: 数据可视化
-    details: 图表展示 · 股价/业绩/持仓
+    details: 股价/业绩/持仓变迁，一图胜千言
     link: /06_visualization/
   - icon: 📚
     title: 拓展阅读
-    details: 价值投资书单 · 经典文献 · 推荐资源
+    details: 演讲/访谈/纪录片，延伸学习资源
     link: /07_resources/
 ---
 
