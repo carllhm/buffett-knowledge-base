@@ -33,7 +33,7 @@ function generateYearItems(year: string) {
   const yearNum = parseInt(year)
   
   // 翻译始终存在
-  items.push({ text: '📄 全文翻译', link: `/01_letters/${year}年/翻译` })
+  items.push({ text: '📄 全年股东信', link: `/01_letters/${year}年/翻译` })
   
   // 年中信（1961、1962年有年中信）
   if (year === '1961' || year === '1962') {
@@ -105,7 +105,7 @@ export default withMermaid(defineConfig({
     
     nav: [
       { text: '首页', link: '/' },
-      { text: '原文翻译', link: '/01_letters/' },
+      { text: '全年股东信', link: '/01_letters/' },
       { text: '主题索引', link: '/02_concepts/' },
       { text: '公司档案', link: '/03_companies/' },
       { text: '人物传记', link: '/04_people/' },
@@ -124,7 +124,7 @@ export default withMermaid(defineConfig({
       
       // 原文翻译 - 多级结构（去掉年份）
       {
-        text: '📚 原文翻译',
+        text: '📚 全年股东信',
         link: '/01_letters/',
         collapsed: false,
         items: [
