@@ -2,8 +2,8 @@
 layout: home
 
 hero:
-  name: "巴菲特致股东信知识库"
-  text: "70年投资智慧 · 系统学习巴菲特"
+  name: "巴菲特致股东信知识库<span style=\"font-size:0.5em;font-weight:400;color:var(--vp-c-text-2);margin-left:12px\">70年投资智慧 · 系统学习巴菲特</span>"
+  text: ""
   tagline: ""
   actions:
     - theme: brand
