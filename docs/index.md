@@ -7,8 +7,11 @@ hero:
   tagline: "70年投资智慧，完整翻译+深度解析"
   actions:
     - theme: brand
-      text: 🚀 开始阅读
-      link: /01_letters/
+      text: 📖 70年导读
+      link: /00_index/巴菲特致股东信70年导读
+    - theme: alt
+      text: 🧭 阅读导航
+      link: /00_index/reading-guide
 
 features:
   - icon: 📖

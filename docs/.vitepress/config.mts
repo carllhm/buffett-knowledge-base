@@ -74,8 +74,6 @@ export default withMermaid(defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '70年导读', link: '/00_index/巴菲特致股东信70年导读' },
-      { text: '阅读导航', link: '/00_index/reading-guide' },
       { text: '原文翻译', link: '/01_letters/' },
       { text: '主题索引', link: '/02_concepts/' },
       { text: '公司档案', link: '/03_companies/' },
