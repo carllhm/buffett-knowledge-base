@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "巴菲特致股东信知识库"
-  text: "中文世界最系统的巴菲特股东信知识库"
-  tagline: "70年投资智慧，完整翻译+深度解析"
+  text: "70年投资智慧 · 系统学习巴菲特"
+  tagline: ""
   actions:
     - theme: brand
       text: 📖 70年导读
