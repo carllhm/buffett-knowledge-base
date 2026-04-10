@@ -1,0 +1,291 @@
+{
+  "extraction_period": "1988-1999",
+  "extraction_date": "2024-04-09",
+  "companies": [
+    {
+      "name": "伯克希尔·哈撒韦",
+      "name_en": "Berkshire Hathaway",
+      "business_type": "多元化投资控股公司",
+      "investment_actions": ["持有"],
+      "years_mentioned": ["1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "巴菲特管理的核心公司，所有投资和收购的主体"
+    },
+    {
+      "name": "首都城市/ABC",
+      "name_en": "Capital Cities/ABC",
+      "business_type": "媒体/广播公司",
+      "investment_actions": ["买入", "持有", "卖出"],
+      "years_mentioned": ["1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997"],
+      "notes": "永久持仓之一，1988年市值10.8亿美元，1993年卖出1/3，1996年与迪士尼合并"
+    },
+    {
+      "name": "可口可乐",
+      "name_en": "Coca-Cola",
+      "business_type": "饮料",
+      "investment_actions": ["买入", "持有"],
+      "years_mentioned": ["1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1988年开始大量买入，成为伯克希尔最大持仓之一"
+    },
+    {
+      "name": "GEICO",
+      "name_en": "Government Employees Insurance Company",
+      "business_type": "汽车保险",
+      "investment_actions": ["买入", "持有", "收购"],
+      "years_mentioned": ["1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "永久持仓之一，1996年收购剩余49%股权成为全资子公司"
+    },
+    {
+      "name": "华盛顿邮报",
+      "name_en": "Washington Post",
+      "business_type": "报纸媒体",
+      "investment_actions": ["买入", "持有"],
+      "years_mentioned": ["1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "永久持仓之一"
+    },
+    {
+      "name": "房地美",
+      "name_en": "Freddie Mac",
+      "business_type": "住房抵押贷款金融",
+      "investment_actions": ["买入", "持有"],
+      "years_mentioned": ["1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1988年买入优先股"
+    },
+    {
+      "name": "吉列",
+      "name_en": "Gillette",
+      "business_type": "剃须刀/个人护理",
+      "investment_actions": ["买入", "持有"],
+      "years_mentioned": ["1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1989年买入可转换优先股，1991年转换为普通股"
+    },
+    {
+      "name": "富国银行",
+      "name_en": "Wells Fargo",
+      "business_type": "银行",
+      "investment_actions": ["买入", "持有"],
+      "years_mentioned": ["1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1990年开始买入，在银行股恐慌时逆势加仓"
+    },
+    {
+      "name": "美国航空",
+      "name_en": "USAir",
+      "business_type": "航空",
+      "investment_actions": ["买入", "持有", "减值"],
+      "years_mentioned": ["1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1989年买入可转换优先股，后因行业困境大幅减值，1997年复苏"
+    },
+    {
+      "name": "所罗门兄弟",
+      "name_en": "Salomon Brothers",
+      "business_type": "投资银行",
+      "investment_actions": ["买入", "持有"],
+      "years_mentioned": ["1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998"],
+      "notes": "1987年买入可转换优先股，1991年巴菲特担任临时董事长"
+    },
+    {
+      "name": "冠军国际",
+      "name_en": "Champion International",
+      "business_type": "造纸",
+      "investment_actions": ["买入", "持有", "卖出"],
+      "years_mentioned": ["1989", "1990", "1991", "1992", "1993", "1994", "1995"],
+      "notes": "1989年买入可转换优先股，1995年转换后卖出"
+    },
+    {
+      "name": "健力士",
+      "name_en": "Guinness",
+      "business_type": "酒类饮料",
+      "investment_actions": ["买入", "持有"],
+      "years_mentioned": ["1991", "1992", "1993", "1994"],
+      "notes": "1991年首次重仓买入国外公司"
+    },
+    {
+      "name": "通用动力",
+      "name_en": "General Dynamics",
+      "business_type": "国防/航空航天",
+      "investment_actions": ["买入", "持有"],
+      "years_mentioned": ["1992", "1993", "1994"],
+      "notes": "1992年买入"
+    },
+    {
+      "name": "美国运通",
+      "name_en": "American Express",
+      "business_type": "金融服务/信用卡",
+      "investment_actions": ["买入", "持有"],
+      "years_mentioned": ["1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1991年买入Percs，后转换为普通股并增持"
+    },
+    {
+      "name": "迪士尼",
+      "name_en": "Disney",
+      "business_type": "娱乐媒体",
+      "investment_actions": ["买入", "持有"],
+      "years_mentioned": ["1996", "1997", "1998", "1999"],
+      "notes": "1996年通过首都城市合并获得股份"
+    },
+    {
+      "name": "麦当劳",
+      "name_en": "McDonald's",
+      "business_type": "快餐连锁",
+      "investment_actions": ["买入", "持有", "卖出"],
+      "years_mentioned": ["1996", "1997", "1998"],
+      "notes": "1996年买入，1998年卖出（巴菲特承认是个错误）"
+    },
+    {
+      "name": "旅行者集团",
+      "name_en": "Travelers Group",
+      "business_type": "金融服务/保险",
+      "investment_actions": ["买入", "持有"],
+      "years_mentioned": ["1997"],
+      "notes": "1997年买入"
+    },
+    {
+      "name": "内布拉斯加家具城",
+      "name_en": "Nebraska Furniture Mart",
+      "business_type": "家具零售",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1983年收购，B夫人管理"
+    },
+    {
+      "name": "喜诗糖果",
+      "name_en": "See's Candies",
+      "business_type": "糖果零售",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1972年收购，高ROE典范"
+    },
+    {
+      "name": "水牛城新闻",
+      "name_en": "Buffalo News",
+      "business_type": "报纸",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1977年收购"
+    },
+    {
+      "name": "Borsheim's珠宝",
+      "name_en": "Borsheim's",
+      "business_type": "珠宝零售",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1989年收购"
+    },
+    {
+      "name": "Fechheimer",
+      "name_en": "Fechheimer Bros.",
+      "business_type": "制服制造",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "早期收购的子公司"
+    },
+    {
+      "name": "Scott Fetzer",
+      "name_en": "Scott Fetzer",
+      "business_type": "制造集团(吸尘器、百科全书等)",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1986年收购，包括Kirby吸尘器和世界图书百科"
+    },
+    {
+      "name": "H.H. Brown",
+      "name_en": "H.H. Brown",
+      "business_type": "鞋业制造",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1991年收购"
+    },
+    {
+      "name": "德克斯特鞋业",
+      "name_en": "Dexter Shoe",
+      "business_type": "鞋业制造",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1993", "1994", "1995", "1996", "1997", "1998", "1999"],
+      "notes": "1993年收购"
+    },
+    {
+      "name": "R.C. Willey",
+      "name_en": "R.C. Willey Home Furnishings",
+      "business_type": "家具零售",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1995", "1996", "1997", "1998", "1999"],
+      "notes": "1995年收购"
+    },
+    {
+      "name": "赫尔兹伯格钻石店",
+      "name_en": "Helzberg's Diamond Shops",
+      "business_type": "珠宝零售",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1995", "1996", "1997", "1998", "1999"],
+      "notes": "1995年收购"
+    },
+    {
+      "name": "飞安国际",
+      "name_en": "FlightSafety International",
+      "business_type": "飞行员培训",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1996", "1997", "1998", "1999"],
+      "notes": "1996年收购"
+    },
+    {
+      "name": "公务机航空公司",
+      "name_en": "Executive Jet Aviation (NetJets)",
+      "business_type": "公务机部分所有权",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1998", "1999"],
+      "notes": "1998年收购，NetJets部分所有权业务"
+    },
+    {
+      "name": "通用再保险公司",
+      "name_en": "General Re",
+      "business_type": "再保险",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1998", "1999"],
+      "notes": "1998年收购，220亿美元交易"
+    },
+    {
+      "name": "明星家具",
+      "name_en": "Star Furniture",
+      "business_type": "家具零售",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1997", "1998", "1999"],
+      "notes": "1997年收购"
+    },
+    {
+      "name": "国际乳品皇后",
+      "name_en": "International Dairy Queen",
+      "business_type": "快餐连锁",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1998", "1999"],
+      "notes": "1998年初完成收购"
+    },
+    {
+      "name": "乔丹家具",
+      "name_en": "Jordan's Furniture",
+      "business_type": "家具零售",
+      "investment_actions": ["收购", "持有"],
+      "years_mentioned": ["1999"],
+      "notes": "1999年收购"
+    },
+    {
+      "name": "中美洲能源公司",
+      "name_en": "MidAmerican Energy",
+      "business_type": "公用事业",
+      "investment_actions": ["投资"],
+      "years_mentioned": ["1999"],
+      "notes": "1999年投资约20亿美元"
+    }
+  ],
+  "summary": {
+    "total_companies": 34,
+    "major_investments": ["可口可乐", "美国运通", "吉列", "华盛顿邮报", "富国银行", "迪士尼", "房地美"],
+    "permanent_holdings": ["首都城市/ABC", "GEICO", "华盛顿邮报"],
+    "major_acquisitions": ["GEICO(1996)", "飞安国际(1996)", "通用再保险(1998)", "公务机航空(1998)"],
+    "investment_themes": [
+      "消费品牌特许经营权（可口可乐、吉列、美国运通）",
+      "金融服务（GEICO、富国银行、房地美）",
+      "媒体（华盛顿邮报、首都城市/ABC）",
+      "零售（内布拉斯加家具城、喜诗糖果、Borsheim's、R.C. Willey）",
+      "制造业（Scott Fetzer、H.H. Brown、德克斯特鞋业）"
+    ]
+  }
+}
