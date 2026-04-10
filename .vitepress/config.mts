@@ -207,12 +207,11 @@ export default defineConfig({
             { text: '斯坦·利普西', link: '/04_people/斯坦·利普西' },
             { text: '吉恩·阿贝格', link: '/04_people/吉恩·阿贝格' },
             { text: '本·罗斯纳', link: '/04_people/本·罗斯纳' },
-            { text: '查理·芒格（继承者）', link: '/04_people/查理·芒格' },
             { text: '格雷迪·罗西尔', link: '/04_people/格雷迪·罗西尔' },
             { text: '皮特·利格尔', link: '/04_people/皮特·利格尔' },
             { text: '阿吉特·贾恩', link: '/04_people/阿吉特·贾恩' },
             { text: '雅各布·哈帕兹', link: '/04_people/雅各布·哈帕兹' },
-            { text: '凯文·克林顿', link: '/04_people/凯文·克林顿' },
+            { text: '凯文·克莱顿', link: '/04_people/凯文·克莱顿' },
             { text: '埃坦·韦特海默', link: '/04_people/埃坦·韦特海默' },
             { text: '弗兰克·普塔克', link: '/04_people/弗兰克·普塔克' }
           ]
