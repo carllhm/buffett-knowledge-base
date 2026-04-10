@@ -1,6 +1,32 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
+// 自定义 wiki-links 插件
+const wikiLinksPlugin = (md) => {
+  const defaultRender = md.renderer.rules.link_open || function(tokens, idx, options, env, self) {
+    return self.renderToken(tokens, idx, options)
+  }
+
+  md.renderer.rules.link_open = function(tokens, idx, options, env, self) {
+    const token = tokens[idx]
+    const hrefIndex = token.attrIndex('href')
+    
+    if (hrefIndex !== -1) {
+      let href = token.attrs[hrefIndex][1]
+      
+      // 处理 wiki-links 格式 [[页面名]]
+      const wikiMatch = href.match(/^\[\[(.+?)\]\]$/)
+      if (wikiMatch) {
+        const pageName = wikiMatch[1]
+        // 转换为搜索链接或对应页面链接
+        token.attrs[hrefIndex][1] = `/search?q=${encodeURIComponent(pageName)}`
+      }
+    }
+    
+    return defaultRender(tokens, idx, options, env, self)
+  }
+}
+
 export default withMermaid(defineConfig({
   title: '巴菲特致股东信知识库',
   description: '中文世界最系统的巴菲特股东信知识库（1956-2025）',
@@ -10,6 +36,39 @@ export default withMermaid(defineConfig({
   
   mermaid: {
     // Mermaid配置
+  },
+  
+  markdown: {
+    config: (md) => {
+      // 配置 wiki-links 解析
+      md.inline.ruler.before('link', 'wiki_link', function(state, silent) {
+        const start = state.pos
+        const marker = state.src.charCodeAt(start)
+        
+        // 检查是否以 [[ 开头
+        if (marker !== 0x5B /* [ */ || state.src.charCodeAt(start + 1) !== 0x5B /* [ */) {
+          return false
+        }
+        
+        const endPos = state.src.indexOf(']]', start + 2)
+        if (endPos === -1) return false
+        
+        const content = state.src.slice(start + 2, endPos)
+        if (!silent) {
+          const token = state.push('link_open', 'a', 1)
+          token.attrs = [['href', `/search?q=${encodeURIComponent(content)}`]]
+          token.markup = '[['
+          
+          const textToken = state.push('text', '', 0)
+          textToken.content = content
+          
+          state.push('link_close', 'a', -1)
+        }
+        
+        state.pos = endPos + 2
+        return true
+      })
+    }
   },
   
   themeConfig: {
