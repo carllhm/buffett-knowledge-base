@@ -30,12 +30,17 @@ const wikiLinksPlugin = (md) => {
 // 生成年份子菜单（翻译、核心总结、思维导图）
 function generateYearItems(year: string) {
   const items = []
+  const yearNum = parseInt(year)
   
   // 翻译始终存在
   items.push({ text: '📄 全文翻译', link: `/01_letters/${year}年/翻译` })
   
+  // 年中信（1961、1962年有年中信）
+  if (year === '1961' || year === '1962') {
+    items.push({ text: '📅 年中信', link: `/01_letters/${year}年/年中信` })
+  }
+  
   // 核心总结（1989年以后）
-  const yearNum = parseInt(year)
   if (yearNum >= 1989) {
     items.push({ text: '📝 核心总结', link: `/01_letters/${year}年/核心总结` })
   }
