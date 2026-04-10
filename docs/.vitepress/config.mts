@@ -51,6 +51,128 @@ const PEOPLE_MAP: Record<string, string> = {
   'John-Lo': 'John-Lo',
 }
 
+// 公司名别名 → 公司页 slug 映射（wiki-link 直接跳转）
+const COMPANY_MAP: Record<string, string> = {
+  'ABC': '首都城市ABC',
+  'ABC广播': '首都城市ABC',
+  'American Express': '美国运通',
+  'Amex': '美国运通',
+  'Apple': '苹果公司',
+  'BNSF': 'BNSF铁路',
+  'BNSF铁路': 'BNSF铁路',
+  'BRK': '伯克希尔哈撒韦',
+  'BYD': '比亚迪',
+  'Bank of America': '美国银行',
+  'Berkshire': '伯克希尔哈撒韦',
+  'Blue Chip Stamps': '蓝筹印花',
+  'Buffalo News': '水牛城新闻',
+  'Burlington Northern': 'BNSF铁路',
+  'Capital Cities': '首都城市ABC',
+  'Capital Cities/ABC': '首都城市ABC',
+  'Chevron': '雪佛龙',
+  'Clayton': '克莱顿家园',
+  'Clayton Homes': '克莱顿家园',
+  'Coca-Cola': '可口可乐',
+  'Coke': '可口可乐',
+  'Fannie Mae': '房地美',
+  'Fechheimer': 'Fechheimer_Bros',
+  'Fechheimer Bros': 'Fechheimer_Bros',
+  'Fetzer': 'Scott_Fetzer',
+  'FlightSafety': '飞安国际',
+  'Freddie Mac': '房地美',
+  'GEICO': 'GEICO',
+  'GEICO保险': 'GEICO',
+  'Gillette': '吉列',
+  'H.J. Heinz': '亨氏',
+  'Heinz': '亨氏',
+  'IBM': 'IBM',
+  'IMC': 'ISCAR-IMC',
+  'ISCAR': 'ISCAR-IMC',
+  'ISCAR-IMC': 'ISCAR-IMC',
+  'Johnson & Johnson': '强生',
+  'Johnson Johnson': '强生',
+  'Marmon': 'Marmon集团',
+  'Marmon集团': 'Marmon集团',
+  'McLane': 'McLanes麦克莱恩',
+  'McLanes': 'McLanes麦克莱恩',
+  'MetLife': '大都会',
+  'Metropolitan': '大都会',
+  'MidAmerican': '中美能源',
+  'MidAmerican Energy': '中美能源',
+  'Moody': '穆迪',
+  "Moody's": '穆迪',
+  'NFM': '内布拉斯加家具城',
+  'NICO': '国家赔偿公司',
+  'National Indemnity': '国家赔偿公司',
+  'Nebraska Furniture Mart': '内布拉斯加家具城',
+  'OXY': '西方石油',
+  'Occidental': '西方石油',
+  'P&G': '宝洁',
+  'Procter & Gamble': '宝洁',
+  'Procter Gamble': '宝洁',
+  'Salomon': '所罗门兄弟',
+  'Salomon Brothers': '所罗门兄弟',
+  'Scott & Fetzer': 'Scott_Fetzer',
+  'Scott Fetzer': 'Scott_Fetzer',
+  "See's": '喜诗糖果',
+  "See's Candies": '喜诗糖果',
+  'Washington Post': '华盛顿邮报',
+  'Wells Fargo': '富国银行',
+  '《华盛顿邮报》': '华盛顿邮报',
+  '中美能源': '中美能源',
+  '亨氏': '亨氏',
+  '伯克希尔': '伯克希尔哈撒韦',
+  '伯克希尔哈撒韦': '伯克希尔哈撒韦',
+  '伯克希尔能源': '中美能源',
+  '克莱顿': '克莱顿家园',
+  '克莱顿家园': '克莱顿家园',
+  '内布拉斯加家具城': '内布拉斯加家具城',
+  '北方铁路': 'BNSF铁路',
+  '华盛顿邮报': '华盛顿邮报',
+  '华盛顿邮报公司': '华盛顿邮报',
+  '卡夫亨氏': '亨氏',
+  '可乐': '可口可乐',
+  '可口可乐': '可口可乐',
+  '吉列': '吉列',
+  '吉列公司': '吉列',
+  '哈撒韦': '伯克希尔哈撒韦',
+  '喜诗': '喜诗糖果',
+  '喜诗糖果': '喜诗糖果',
+  '国家赔偿': '国家赔偿公司',
+  '国家赔偿公司': '国家赔偿公司',
+  '国际商业机器': 'IBM',
+  '大都会': '大都会',
+  '宝洁': '宝洁',
+  '家具城': '内布拉斯加家具城',
+  '富国银行': '富国银行',
+  '布法罗新闻': '水牛城新闻',
+  '强生': '强生',
+  '房利美': '房地美',
+  '房地美': '房地美',
+  '所罗门': '所罗门兄弟',
+  '所罗门兄弟': '所罗门兄弟',
+  '政府雇员保险': 'GEICO',
+  '比亚迪': '比亚迪',
+  '水牛城': '水牛城新闻',
+  '水牛城新闻': '水牛城新闻',
+  '盖可': 'GEICO',
+  '盖可保险': 'GEICO',
+  '穆迪': '穆迪',
+  '美国运通': '美国运通',
+  '美国银行': '美国银行',
+  '美银': '美国银行',
+  '苹果': '苹果公司',
+  '苹果公司': '苹果公司',
+  '蓝筹': '蓝筹印花',
+  '蓝筹印花': '蓝筹印花',
+  '西方石油': '西方石油',
+  '运通': '美国运通',
+  '雪佛龙': '雪佛龙',
+  '飞安': '飞安国际',
+  '飞安国际': '飞安国际',
+  '首都城市': '首都城市ABC',
+  '麦克莱恩': 'McLanes麦克莱恩',
+}
 // 自定义 wiki-links 插件
 const wikiLinksPlugin = (md) => {
   const defaultRender = md.renderer.rules.link_open || function(tokens, idx, options, env, self) {
@@ -68,9 +190,11 @@ const wikiLinksPlugin = (md) => {
       const wikiMatch = href.match(/^\[\[(.+?)\]\]$/)
       if (wikiMatch) {
         const pageName = wikiMatch[1]
-        // 优先映射人物页，否则走搜索
+        // 优先人物页，再公司页，最后走搜索
         if (PEOPLE_MAP[pageName]) {
           token.attrs[hrefIndex][1] = `/04_people/${PEOPLE_MAP[pageName]}`
+        } else if (COMPANY_MAP[pageName]) {
+          token.attrs[hrefIndex][1] = `/03_companies/${COMPANY_MAP[pageName]}`
         } else {
           token.attrs[hrefIndex][1] = `/search?q=${encodeURIComponent(pageName)}`
         }
@@ -134,10 +258,15 @@ export default withMermaid(defineConfig({
         
         const content = state.src.slice(start + 2, endPos)
         if (!silent) {
-          // 人物优先映射，否则走搜索
-          const href = PEOPLE_MAP[content]
-            ? `/04_people/${PEOPLE_MAP[content]}`
-            : `/search?q=${encodeURIComponent(content)}`
+          // 人物优先，再公司，最后搜索
+          let href: string
+          if (PEOPLE_MAP[content]) {
+            href = `/04_people/${PEOPLE_MAP[content]}`
+          } else if (COMPANY_MAP[content]) {
+            href = `/03_companies/${COMPANY_MAP[content]}`
+          } else {
+            href = `/search?q=${encodeURIComponent(content)}`
+          }
           const token = state.push('link_open', 'a', 1)
           token.attrs = [['href', href]]
           token.markup = '[['
