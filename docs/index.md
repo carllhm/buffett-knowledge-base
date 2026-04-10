@@ -1,5 +1,6 @@
 ---
 layout: home
+aside: true
 
 hero:
   name: "巴菲特致股东信知识库"
@@ -19,9 +20,13 @@ features:
     details: 48年完整 + 22年待补全
     link: /01_letters/
   - icon: 🧠
-    title: 深度解析
-    details: 思维导图(47年) + 核心总结(48年)
+    title: 思维导图
+    details: 47年投资理念结构化梳理
     link: /01_letters/1977年/思维导图.html
+  - icon: 📝
+    title: 核心总结
+    details: 48年年度要点提炼
+    link: /01_letters/1989年/核心总结.html
   - icon: 🧩
     title: 主题索引
     details: 14个核心概念 · 护城河/安全边际/复利

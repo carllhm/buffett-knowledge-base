@@ -111,10 +111,22 @@ export default withMermaid(defineConfig({
     ],
     
     sidebar: [
-      // 首页
+      // 首页 - 包含完整导航
       {
         text: '🏠 首页',
-        link: '/'
+        link: '/',
+        collapsed: false,
+        items: [
+          { text: '📖 原文翻译', link: '/01_letters/' },
+          { text: '🧠 思维导图', link: '/01_letters/1977年/思维导图.html' },
+          { text: '📝 核心总结', link: '/01_letters/1989年/核心总结.html' },
+          { text: '🎯 主题索引', link: '/02_concepts/' },
+          { text: '🏢 公司档案', link: '/03_companies/' },
+          { text: '👤 人物传记', link: '/04_people/' },
+          { text: '💬 金句库', link: '/05_quotes/' },
+          { text: '📈 数据可视化', link: '/06_visualization/' },
+          { text: '📚 拓展阅读', link: '/07_resources/' }
+        ]
       },
       
       // 原文翻译 - 多级结构（去掉年份）
