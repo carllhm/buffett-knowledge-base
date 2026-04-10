@@ -53,7 +53,6 @@ export default withMermaid(defineConfig({
   description: '中文世界最系统的巴菲特股东信知识库（1956-2025）',
   
   ignoreDeadLinks: true,
-  // cleanUrls: true, // 已禁用，避免Cloudflare Pages 404问题
   
   mermaid: {
     // Mermaid配置
@@ -93,6 +92,12 @@ export default withMermaid(defineConfig({
   },
   
   themeConfig: {
+    // 首页配置（包含侧边栏）
+    outline: {
+      level: [2, 3],
+      label: '本页目录'
+    },
+    
     nav: [
       { text: '首页', link: '/' },
       { text: '原文翻译', link: '/01_letters/' },
@@ -106,21 +111,28 @@ export default withMermaid(defineConfig({
     ],
     
     sidebar: [
-      // 首页
+      // 首页 - 包含快速链接
       {
         text: '🏠 首页',
         link: '/',
-        items: []
+        collapsed: false,
+        items: [
+          { text: '📚 原文翻译', link: '/01_letters/' },
+          { text: '🎯 主题索引', link: '/02_concepts/' },
+          { text: '🏢 公司档案', link: '/03_companies/' },
+          { text: '👤 人物传记', link: '/04_people/' },
+          { text: '💬 金句库', link: '/05_quotes/' }
+        ]
       },
       
-      // 原文翻译 - 多级结构
+      // 原文翻译 - 多级结构（去掉年份）
       {
         text: '📚 原文翻译',
         link: '/01_letters/',
         collapsed: false,
         items: [
           {
-            text: '第一纪元：合伙人信（1956-1969）',
+            text: '第一纪元：合伙人信',
             collapsed: true,
             items: [
               { text: '1956年', collapsed: true, items: generateYearItems('1956') },
@@ -140,7 +152,7 @@ export default withMermaid(defineConfig({
             ]
           },
           {
-            text: '第二纪元：早期探索（1970-1976）',
+            text: '第二纪元：早期探索',
             collapsed: true,
             items: [
               { text: '1970年', collapsed: true, items: generateYearItems('1970') },
@@ -153,7 +165,7 @@ export default withMermaid(defineConfig({
             ]
           },
           {
-            text: '第二纪元：保险驱动（1977-1988）',
+            text: '第二纪元：保险驱动',
             collapsed: true,
             items: [
               { text: '1977年', collapsed: true, items: generateYearItems('1977') },
@@ -171,7 +183,7 @@ export default withMermaid(defineConfig({
             ]
           },
           {
-            text: '第二纪元：帝国扩张（1989-1999）',
+            text: '第二纪元：帝国扩张',
             collapsed: true,
             items: [
               { text: '1989年', collapsed: true, items: generateYearItems('1989') },
@@ -188,7 +200,7 @@ export default withMermaid(defineConfig({
             ]
           },
           {
-            text: '第二纪元：周期穿越（2000-2008）',
+            text: '第二纪元：周期穿越',
             collapsed: true,
             items: [
               { text: '2000年', collapsed: true, items: generateYearItems('2000') },
@@ -203,7 +215,7 @@ export default withMermaid(defineConfig({
             ]
           },
           {
-            text: '第二纪元：超级控股（2009-2019）',
+            text: '第二纪元：超级控股',
             collapsed: true,
             items: [
               { text: '2009年', collapsed: true, items: generateYearItems('2009') },
@@ -220,7 +232,7 @@ export default withMermaid(defineConfig({
             ]
           },
           {
-            text: '第二纪元：传承告别（2020-2025）',
+            text: '第二纪元：传承告别',
             collapsed: false,
             items: [
               { text: '2020年', collapsed: true, items: generateYearItems('2020') },
@@ -256,45 +268,91 @@ export default withMermaid(defineConfig({
         ]
       },
       
-      // 公司档案
+      // 公司档案 - 带二级分类
       {
         text: '🏢 公司档案',
         link: '/03_companies/',
         collapsed: true,
         items: [
-          { text: 'GEICO', link: '/03_companies/GEICO' },
-          { text: '喜诗糖果', link: '/03_companies/喜诗糖果' },
-          { text: '内布拉斯加家具城', link: '/03_companies/内布拉斯加家具城' },
-          { text: '伯克希尔哈撒韦', link: '/03_companies/伯克希尔哈撒韦' },
-          { text: '华盛顿邮报', link: '/03_companies/华盛顿邮报' },
-          { text: '首都城市ABC', link: '/03_companies/首都城市ABC' },
-          { text: '水牛城新闻', link: '/03_companies/水牛城新闻' },
-          { text: '国家赔偿公司', link: '/03_companies/国家赔偿公司' },
-          { text: '蓝筹印花', link: '/03_companies/蓝筹印花' },
-          { text: 'Scott & Fetzer', link: '/03_companies/Scott_Fetzer' },
-          { text: '所罗门兄弟', link: '/03_companies/所罗门兄弟' },
-          { text: 'Fechheimer Bros.', link: '/03_companies/Fechheimer_Bros' }
+          {
+            text: '📁 伯克希尔子公司',
+            collapsed: true,
+            items: [
+              { text: 'GEICO', link: '/03_companies/GEICO' },
+              { text: '喜诗糖果', link: '/03_companies/喜诗糖果' },
+              { text: '内布拉斯加家具城', link: '/03_companies/内布拉斯加家具城' },
+              { text: 'BNSF铁路', link: '/03_companies/BNSF铁路' },
+              { text: '伯克希尔哈撒韦', link: '/03_companies/伯克希尔哈撒韦' },
+              { text: '国家赔偿公司', link: '/03_companies/国家赔偿公司' },
+              { text: '中美能源', link: '/03_companies/中美能源' },
+              { text: '克莱顿家园', link: '/03_companies/克莱顿家园' }
+            ]
+          },
+          {
+            text: '📁 已清仓持仓',
+            collapsed: true,
+            items: [
+              { text: '华盛顿邮报', link: '/03_companies/华盛顿邮报' },
+              { text: '首都城市ABC', link: '/03_companies/首都城市ABC' },
+              { text: '水牛城新闻', link: '/03_companies/水牛城新闻' },
+              { text: '蓝筹印花', link: '/03_companies/蓝筹印花' },
+              { text: 'Scott & Fetzer', link: '/03_companies/Scott_Fetzer' },
+              { text: '所罗门兄弟', link: '/03_companies/所罗门兄弟' },
+              { text: 'Fechheimer Bros.', link: '/03_companies/Fechheimer_Bros' },
+              { text: 'ISCAR-IMC', link: '/03_companies/ISCAR-IMC' },
+              { text: 'Marmon集团', link: '/03_companies/Marmon集团' },
+              { text: 'McLanes麦克莱恩', link: '/03_companies/McLanes麦克莱恩' }
+            ]
+          }
         ]
       },
       
-      // 人物传记
+      // 人物传记 - 带二级分类
       {
         text: '👤 人物传记',
         link: '/04_people/',
         collapsed: true,
         items: [
-          { text: '沃伦·巴菲特', link: '/04_people/沃伦·巴菲特' },
-          { text: '查理·芒格', link: '/04_people/查理·芒格' },
-          { text: 'B夫人', link: '/04_people/B夫人' },
-          { text: '本·格雷厄姆', link: '/04_people/本·格雷厄姆' },
-          { text: '杰克·伯恩', link: '/04_people/杰克·伯恩' },
-          { text: '菲尔·利切', link: '/04_people/菲尔·利切' },
-          { text: 'Chuck Huggins', link: '/04_people/Chuck_Huggins' },
-          { text: 'Tom Murphy', link: '/04_people/Tom_Murphy' },
-          { text: '卢·辛普森', link: '/04_people/卢·辛普森' },
-          { text: '斯坦·利普西', link: '/04_people/斯坦·利普西' },
-          { text: '吉恩·阿贝格', link: '/04_people/吉恩·阿贝格' },
-          { text: '本·罗斯纳', link: '/04_people/本·罗斯纳' }
+          {
+            text: '📁 伯克希尔核心管理层',
+            collapsed: true,
+            items: [
+              { text: '沃伦·巴菲特', link: '/04_people/沃伦·巴菲特' },
+              { text: '查理·芒格', link: '/04_people/查理·芒格' },
+              { text: '阿吉特·贾恩', link: '/04_people/阿吉特·贾恩' },
+              { text: '格雷迪·罗西尔', link: '/04_people/格雷迪·罗西尔' }
+            ]
+          },
+          {
+            text: '📁 子公司CEO',
+            collapsed: true,
+            items: [
+              { text: '菲尔·利切', link: '/04_people/菲尔·利切' },
+              { text: '皮特·利格尔', link: '/04_people/皮特·利格尔' },
+              { text: '凯文·克莱顿', link: '/04_people/凯文·克莱顿' },
+              { text: '雅各布·哈帕兹', link: '/04_people/雅各布·哈帕兹' },
+              { text: '埃坦·韦特海默', link: '/04_people/埃坦·韦特海默' }
+            ]
+          },
+          {
+            text: '📁 投资大师',
+            collapsed: true,
+            items: [
+              { text: '本·格雷厄姆', link: '/04_people/本·格雷厄姆' },
+              { text: '斯坦·利普西', link: '/04_people/斯坦·利普西' },
+              { text: '卢·辛普森', link: '/04_people/卢·辛普森' }
+            ]
+          },
+          {
+            text: '📁 被投公司CEO',
+            collapsed: true,
+            items: [
+              { text: '杰克·伯恩', link: '/04_people/杰克·伯恩' },
+              { text: '本·罗斯纳', link: '/04_people/本·罗斯纳' },
+              { text: '吉恩·阿贝格', link: '/04_people/吉恩·阿贝格' },
+              { text: '弗兰克·普塔克', link: '/04_people/弗兰克·普塔克' }
+            ]
+          }
         ]
       },
       
