@@ -111,18 +111,10 @@ export default withMermaid(defineConfig({
     ],
     
     sidebar: [
-      // 首页 - 包含快速链接
+      // 首页
       {
         text: '🏠 首页',
-        link: '/',
-        collapsed: false,
-        items: [
-          { text: '📚 原文翻译', link: '/01_letters/' },
-          { text: '🎯 主题索引', link: '/02_concepts/' },
-          { text: '🏢 公司档案', link: '/03_companies/' },
-          { text: '👤 人物传记', link: '/04_people/' },
-          { text: '💬 金句库', link: '/05_quotes/' }
-        ]
+        link: '/'
       },
       
       // 原文翻译 - 多级结构（去掉年份）
