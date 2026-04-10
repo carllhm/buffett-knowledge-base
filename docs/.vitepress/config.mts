@@ -78,8 +78,8 @@ export default withMermaid(defineConfig({
       { text: '阅读导航', link: '/00_index/reading-guide' },
       { text: '原文翻译', link: '/01_letters/' },
       { text: '主题索引', link: '/02_concepts/' },
-      { text: '公司库', link: '/03_companies/' },
-      { text: '人物库', link: '/04_people/' },
+      { text: '公司档案', link: '/03_companies/' },
+      { text: '人物传记', link: '/04_people/' },
       { text: '金句库', link: '/05_quotes/' },
       { text: '数据可视化', link: '/06_visualization/' },
       { text: '扩展阅读', link: '/07_resources/' },
@@ -212,7 +212,7 @@ export default withMermaid(defineConfig({
       
       '/03_companies/': [
         {
-          text: '公司库',
+          text: '公司档案',
           items: [
             { text: 'GEICO', link: '/03_companies/GEICO' },
             { text: '喜诗糖果', link: '/03_companies/喜诗糖果' },
@@ -232,7 +232,7 @@ export default withMermaid(defineConfig({
       
       '/04_people/': [
         {
-          text: '人物库',
+          text: '人物传记',
           items: [
             { text: '沃伦·巴菲特', link: '/04_people/沃伦·巴菲特' },
             { text: '查理·芒格', link: '/04_people/查理·芒格' },
