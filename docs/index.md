@@ -7,32 +7,26 @@ hero:
   tagline: "70年投资智慧，完整翻译+深度解析"
   actions:
     - theme: brand
-      text: 📖 开始阅读
+      text: 🚀 开始阅读
       link: /01_letters/
-    - theme: alt
-      text: 🏢 公司档案
-      link: /03_companies/
-    - theme: alt
-      text: 👤 人物传记
-      link: /04_people/
 
 features:
   - icon: 📖
     title: 完整翻译
     details: 1956-2025年共70年股东信完整中文翻译（持续补全中）
     link: /01_letters/
-  - icon: 🏢
-    title: 公司档案
-    details: GEICO、喜诗糖果、华盛顿邮报等经典投资案例深度解析
-    link: /03_companies/
-  - icon: 👤
-    title: 人物传记
-    details: B夫人、查理·芒格、杰克·伯恩等传奇管理者故事
-    link: /04_people/
+  - icon: 🧠
+    title: 思维导图
+    details: 1977-1987年投资理念结构化梳理，11年完整呈现
+    link: /01_letters/1977年/思维导图.html
   - icon: 🧩
     title: 主题索引
     details: 护城河、安全边际、复利等核心投资概念系统梳理
     link: /02_concepts/
+  - icon: 💬
+    title: 金句库
+    details: 巴菲特历年经典语录金句精选
+    link: /05_quotes/
 ---
 
 ## 关于本站
