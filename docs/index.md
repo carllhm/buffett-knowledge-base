@@ -16,13 +16,9 @@ features:
     details: 1956-2025年 · 48年完整 + 22年待补全
     link: /01_letters/
   - icon: 🧠
-    title: 思维导图
-    details: 1977-1987年 · 11年投资理念结构化
+    title: 深度解析
+    details: 思维导图(1977-1987) + 核心总结(1988-2024)
     link: /01_letters/1977年/思维导图.html
-  - icon: 📊
-    title: 核心总结
-    details: 1988-2024年 · 37年年度要点提炼
-    link: /01_letters/1988年/核心总结.html
   - icon: 🧩
     title: 主题索引
     details: 13个核心概念 · 护城河/安全边际/复利
@@ -43,6 +39,10 @@ features:
     title: 数据可视化
     details: 图表展示 · 股价/业绩/持仓
     link: /06_visualization/
+  - icon: 📚
+    title: 拓展阅读
+    details: 价值投资书单 · 经典文献 · 推荐资源
+    link: /07_resources/
 ---
 
 ## 关于本站
