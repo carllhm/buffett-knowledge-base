@@ -186,12 +186,17 @@ const wikiLinksPlugin = (md) => {
     if (hrefIndex !== -1) {
       let href = token.attrs[hrefIndex][1]
       
-      // 处理 wiki-links 格式 [[页面名]]
+      // 处理 wiki-links 格式 [[页面名]] 或 [[页面名|显示文本]]
       const wikiMatch = href.match(/^\[\[(.+?)\]\]$/)
       if (wikiMatch) {
-        const pageName = wikiMatch[1]
-        // 优先人物页，再公司页，最后走搜索
-        if (PEOPLE_MAP[pageName]) {
+        const rawContent = wikiMatch[1]
+        const pipeIndex = rawContent.indexOf('|')
+        const pageName = pipeIndex >= 0 ? rawContent.slice(0, pipeIndex) : rawContent
+        
+        // 以 / 开头的路径直接使用
+        if (pageName.startsWith('/')) {
+          token.attrs[hrefIndex][1] = pageName
+        } else if (PEOPLE_MAP[pageName]) {
           token.attrs[hrefIndex][1] = `/04_people/${PEOPLE_MAP[pageName]}`
         } else if (COMPANY_MAP[pageName]) {
           token.attrs[hrefIndex][1] = `/03_companies/${COMPANY_MAP[pageName]}`
@@ -243,7 +248,7 @@ export default withMermaid(defineConfig({
   
   markdown: {
     config: (md) => {
-      // 配置 wiki-links 解析
+      // 配置 wiki-links 解析（支持管道符语法 [[页面|显示文本]]）
       md.inline.ruler.before('link', 'wiki_link', function(state, silent) {
         const start = state.pos
         const marker = state.src.charCodeAt(start)
@@ -256,23 +261,30 @@ export default withMermaid(defineConfig({
         const endPos = state.src.indexOf(']]', start + 2)
         if (endPos === -1) return false
         
-        const content = state.src.slice(start + 2, endPos)
+        const rawContent = state.src.slice(start + 2, endPos)
+        // 支持管道符语法：[[页面名|显示文本]]
+        const pipeIndex = rawContent.indexOf('|')
+        const pageName = pipeIndex >= 0 ? rawContent.slice(0, pipeIndex) : rawContent
+        const displayText = pipeIndex >= 0 ? rawContent.slice(pipeIndex + 1) : rawContent
+        
         if (!silent) {
-          // 人物优先，再公司，最后搜索
           let href: string
-          if (PEOPLE_MAP[content]) {
-            href = `/04_people/${PEOPLE_MAP[content]}`
-          } else if (COMPANY_MAP[content]) {
-            href = `/03_companies/${COMPANY_MAP[content]}`
+          // 以 / 开头的路径直接使用
+          if (pageName.startsWith('/')) {
+            href = pageName
+          } else if (PEOPLE_MAP[pageName]) {
+            href = `/04_people/${PEOPLE_MAP[pageName]}`
+          } else if (COMPANY_MAP[pageName]) {
+            href = `/03_companies/${COMPANY_MAP[pageName]}`
           } else {
-            href = `/search?q=${encodeURIComponent(content)}`
+            href = `/search?q=${encodeURIComponent(pageName)}`
           }
           const token = state.push('link_open', 'a', 1)
           token.attrs = [['href', href]]
           token.markup = '[['
           
           const textToken = state.push('text', '', 0)
-          textToken.content = content
+          textToken.content = displayText
           
           state.push('link_close', 'a', -1)
         }
