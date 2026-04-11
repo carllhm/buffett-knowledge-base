@@ -491,8 +491,12 @@ export default withMermaid(defineConfig({
       {
         text: '💬 金句库',
         link: '/05_quotes/',
-        collapsed: true,
-        items: []
+        collapsed: false,
+        items: [
+          { text: '📚 按主题', link: '/05_quotes/by-theme/' },
+          { text: '📅 按年份', link: '/05_quotes/by-year/' },
+          { text: '🎯 按场景', link: '/05_quotes/by-scene/' }
+        ]
       },
       
       {
