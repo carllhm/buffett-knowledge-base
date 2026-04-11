@@ -52,6 +52,7 @@ description: 巴菲特致股东信70年核心主题全覆盖
 | 主题 | 核心要义 | 必读年份 |
 |:---|:---|:---|
 | [管理层选择 Management](/02_concepts/management) | 找到对的船长 | 1983, 1995, 2005, 2015 |
+| [高管薪酬 Executive Compensation](/02_concepts/executive-compensation) | 设计合理的激励，避免股东财富流失 | 1983, 1992, 2003, 2014 |
 | [董事会与公司治理 Corporate Governance](/02_concepts/corporate-governance) | 被低估的核心议题 | 1992, 2003, 2008, 2014 |
 | [声誉 Reputation](/02_concepts/reputation) | 建立需20年，毁掉只需5分钟 | 1991, 2014, 2020 |
 

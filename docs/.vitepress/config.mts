@@ -248,7 +248,7 @@ export default withMermaid(defineConfig({
   
   markdown: {
     config: (md) => {
-      // 配置 wiki-links 解析（支持管道符语法 [[页面|显示文本]]）
+      // 配置 wiki-links 解析（支持管道符语法 [[页面名|显示文本]]）
       md.inline.ruler.before('link', 'wiki_link', function(state, silent) {
         const start = state.pos
         const marker = state.src.charCodeAt(start)
@@ -321,7 +321,7 @@ export default withMermaid(defineConfig({
         link: '/'
       },
       
-      // 原文翻译 - 多级结构（去掉年份）
+      // 原文翻译 - 多级结构（七个纪元）
       {
         text: '📚 全年股东信',
         link: '/01_letters/',
@@ -442,25 +442,62 @@ export default withMermaid(defineConfig({
         ]
       },
       
-      // 主题索引
+      // 主题索引 - 按四大分类组织（20个主题）
       {
         text: '🎯 主题索引',
         link: '/02_concepts/',
         collapsed: true,
         items: [
-          { text: '资本配置', link: '/02_concepts/capital-allocation' },
-          { text: '能力圈', link: '/02_concepts/circle-of-competence' },
-          { text: '复利', link: '/02_concepts/compounding' },
-          { text: '逆向思维', link: '/02_concepts/contrarian' },
-          { text: '保险浮存金', link: '/02_concepts/insurance-float' },
-          { text: '内在价值', link: '/02_concepts/intrinsic-value' },
-          { text: '长期主义', link: '/02_concepts/long-term' },
-          { text: '管理层选择', link: '/02_concepts/management' },
-          { text: '护城河', link: '/02_concepts/moat' },
-          { text: '声誉经济', link: '/02_concepts/reputation' },
-          { text: '风险', link: '/02_concepts/risk' },
-          { text: '安全边际', link: '/02_concepts/safety-margin' },
-          { text: '承保纪律', link: '/02_concepts/underwriting-discipline' }
+          {
+            text: '💡 投资哲学（5）',
+            collapsed: true,
+            items: [
+              { text: '内在价值', link: '/02_concepts/intrinsic-value' },
+              { text: '护城河', link: '/02_concepts/moat' },
+              { text: '安全边际', link: '/02_concepts/safety-margin' },
+              { text: '复利', link: '/02_concepts/compounding' },
+              { text: 'GAAP vs 真实盈利', link: '/02_concepts/accounting-earnings' }
+            ]
+          },
+          {
+            text: '⚙️ 商业逻辑（4）',
+            collapsed: true,
+            items: [
+              { text: '保险浮存金', link: '/02_concepts/insurance-float' },
+              { text: '承保纪律', link: '/02_concepts/underwriting-discipline' },
+              { text: '资本配置', link: '/02_concepts/capital-allocation' },
+              { text: '股票回购', link: '/02_concepts/share-buybacks' }
+            ]
+          },
+          {
+            text: '🧠 思维方法（4）',
+            collapsed: true,
+            items: [
+              { text: '能力圈', link: '/02_concepts/circle-of-competence' },
+              { text: '逆向思维', link: '/02_concepts/contrarian' },
+              { text: '多元化与集中', link: '/02_concepts/diversification' },
+              { text: '风险', link: '/02_concepts/risk' }
+            ]
+          },
+          {
+            text: '🏛️ 治理智慧（4）',
+            collapsed: true,
+            items: [
+              { text: '管理层选择', link: '/02_concepts/management' },
+              { text: '高管薪酬', link: '/02_concepts/executive-compensation' },
+              { text: '董事会与公司治理', link: '/02_concepts/corporate-governance' },
+              { text: '声誉', link: '/02_concepts/reputation' }
+            ]
+          },
+          {
+            text: '📜 历史镜鉴（3）',
+            collapsed: true,
+            items: [
+              { text: '航空公司教训', link: '/02_concepts/airline-lessons' },
+              { text: '日本五大投资', link: '/02_concepts/japan-investments' },
+              { text: '长期主义', link: '/02_concepts/long-term' }
+            ]
+          }
         ]
       },
       
