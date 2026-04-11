@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
+import { writeFileSync } from 'node:fs'
+import { join } from 'node:path'
 
 // 人物名 → 人物页 slug 映射
 const PEOPLE_MAP: Record<string, string> = {
@@ -522,6 +524,17 @@ export default withMermaid(defineConfig({
     footer: {
       message: '巴菲特致股东信知识库（1956-2025）- 免费分享',
       copyright: 'Copyright © 2026'
+    }
+  },
+
+  build: {
+    end() {
+      // Cloudflare Pages SPA fallback
+      const distDir = join(__dirname, '..', '..', '.vitepress', 'dist')
+      writeFileSync(
+        join(distDir, '_redirects'),
+        '/*    /index.html   200\n'
+      )
     }
   }
 }))
