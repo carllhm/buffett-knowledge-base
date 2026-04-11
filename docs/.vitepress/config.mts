@@ -254,7 +254,7 @@ function generateYearItems(year: string) {
     items.push({ text: '📅 年中信', link: `/01_letters/${year}年/年中信` })
   }
   
-  if (yearNum >= 1989) {
+  if (yearNum >= 1970) {
     items.push({ text: '📝 核心总结', link: `/01_letters/${year}年/核心总结` })
   }
   
