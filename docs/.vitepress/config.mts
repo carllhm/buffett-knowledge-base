@@ -1,14 +1,13 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
-// 人物名 → 人物页 slug 映射（用于 wiki-link 直接跳转）
+// 人物名 → 人物页 slug 映射
 const PEOPLE_MAP: Record<string, string> = {
   '沃伦·巴菲特': '沃伦·巴菲特',
   '巴菲特': '沃伦·巴菲特',
   '查理·芒格': '查理·芒格',
   '芒格': '查理·芒格',
   '阿吉特·贾恩': '阿吉特·贾恩',
-  'Ajit·贾恩': '阿吉特·贾恩',
   'Ajit Jain': '阿吉特·贾恩',
   'B夫人': 'B夫人',
   'Mrs. B': 'B夫人',
@@ -31,7 +30,6 @@ const PEOPLE_MAP: Record<string, string> = {
   '凯文·克莱顿': '凯文·克莱顿',
   'Kevin Clayton': '凯文·克莱顿',
   'Tom Murphy': 'Tom_Murphy',
-  'Murphy': 'Tom_Murphy',
   '埃坦·韦特海默': '埃坦·韦特海默',
   'Eitan Werb': '埃坦·韦特海默',
   '雅各布·哈帕兹': '雅各布·哈帕兹',
@@ -51,10 +49,9 @@ const PEOPLE_MAP: Record<string, string> = {
   'John-Lo': 'John-Lo',
 }
 
-// 公司名别名 → 公司页 slug 映射（wiki-link 直接跳转）
+// 公司名别名映射
 const COMPANY_MAP: Record<string, string> = {
   'ABC': '首都城市ABC',
-  'ABC广播': '首都城市ABC',
   'American Express': '美国运通',
   'Amex': '美国运通',
   'Apple': '苹果公司',
@@ -66,7 +63,6 @@ const COMPANY_MAP: Record<string, string> = {
   'Berkshire': '伯克希尔哈撒韦',
   'Blue Chip Stamps': '蓝筹印花',
   'Buffalo News': '水牛城新闻',
-  'Burlington Northern': 'BNSF铁路',
   'Capital Cities': '首都城市ABC',
   'Capital Cities/ABC': '首都城市ABC',
   'Chevron': '雪佛龙',
@@ -90,13 +86,10 @@ const COMPANY_MAP: Record<string, string> = {
   'ISCAR': 'ISCAR-IMC',
   'ISCAR-IMC': 'ISCAR-IMC',
   'Johnson & Johnson': '强生',
-  'Johnson Johnson': '强生',
   'Marmon': 'Marmon集团',
   'Marmon集团': 'Marmon集团',
   'McLane': 'McLanes麦克莱恩',
-  'McLanes': 'McLanes麦克莱恩',
   'MetLife': '大都会',
-  'Metropolitan': '大都会',
   'MidAmerican': '中美能源',
   'MidAmerican Energy': '中美能源',
   'Moody': '穆迪',
@@ -109,16 +102,13 @@ const COMPANY_MAP: Record<string, string> = {
   'Occidental': '西方石油',
   'P&G': '宝洁',
   'Procter & Gamble': '宝洁',
-  'Procter Gamble': '宝洁',
   'Salomon': '所罗门兄弟',
   'Salomon Brothers': '所罗门兄弟',
   'Scott & Fetzer': 'Scott_Fetzer',
-  'Scott Fetzer': 'Scott_Fetzer',
   "See's": '喜诗糖果',
   "See's Candies": '喜诗糖果',
   'Washington Post': '华盛顿邮报',
   'Wells Fargo': '富国银行',
-  '《华盛顿邮报》': '华盛顿邮报',
   '中美能源': '中美能源',
   '亨氏': '亨氏',
   '伯克希尔': '伯克希尔哈撒韦',
@@ -129,12 +119,10 @@ const COMPANY_MAP: Record<string, string> = {
   '内布拉斯加家具城': '内布拉斯加家具城',
   '北方铁路': 'BNSF铁路',
   '华盛顿邮报': '华盛顿邮报',
-  '华盛顿邮报公司': '华盛顿邮报',
   '卡夫亨氏': '亨氏',
   '可乐': '可口可乐',
   '可口可乐': '可口可乐',
   '吉列': '吉列',
-  '吉列公司': '吉列',
   '哈撒韦': '伯克希尔哈撒韦',
   '喜诗': '喜诗糖果',
   '喜诗糖果': '喜诗糖果',
@@ -145,7 +133,6 @@ const COMPANY_MAP: Record<string, string> = {
   '宝洁': '宝洁',
   '家具城': '内布拉斯加家具城',
   '富国银行': '富国银行',
-  '布法罗新闻': '水牛城新闻',
   '强生': '强生',
   '房利美': '房地美',
   '房地美': '房地美',
@@ -173,27 +160,25 @@ const COMPANY_MAP: Record<string, string> = {
   '首都城市': '首都城市ABC',
   '麦克莱恩': 'McLanes麦克莱恩',
 }
-// 自定义 wiki-links 插件
-const wikiLinksPlugin = (md) => {
-  const defaultRender = md.renderer.rules.link_open || function(tokens, idx, options, env, self) {
+
+// 启用 wiki-links 支持的函数
+function enableWikiLinks(md: any) {
+  const defaultRender = md.renderer.rules.link_open || function(tokens: any[], idx: number, options: any, env: any, self: any) {
     return self.renderToken(tokens, idx, options)
   }
 
-  md.renderer.rules.link_open = function(tokens, idx, options, env, self) {
+  md.renderer.rules.link_open = function(tokens: any[], idx: number, options: any, env: any, self: any) {
     const token = tokens[idx]
     const hrefIndex = token.attrIndex('href')
     
     if (hrefIndex !== -1) {
-      let href = token.attrs[hrefIndex][1]
-      
-      // 处理 wiki-links 格式 [[页面名]] 或 [[页面名|显示文本]]
+      const href = token.attrs[hrefIndex][1]
       const wikiMatch = href.match(/^\[\[(.+?)\]\]$/)
       if (wikiMatch) {
         const rawContent = wikiMatch[1]
         const pipeIndex = rawContent.indexOf('|')
         const pageName = pipeIndex >= 0 ? rawContent.slice(0, pipeIndex) : rawContent
         
-        // 以 / 开头的路径直接使用
         if (pageName.startsWith('/')) {
           token.attrs[hrefIndex][1] = pageName
         } else if (PEOPLE_MAP[pageName]) {
@@ -210,25 +195,62 @@ const wikiLinksPlugin = (md) => {
   }
 }
 
-// 生成年份子菜单（翻译、核心总结、思维导图）
+// wiki-links 内联解析
+function wikiLinkRule(md: any) {
+  md.inline.ruler.before('link', 'wiki_link', function(state: any, silent: boolean) {
+    const start = state.pos
+    if (state.src.charCodeAt(start) !== 0x5B || state.src.charCodeAt(start + 1) !== 0x5B) return false
+    
+    const endPos = state.src.indexOf(']]', start + 2)
+    if (endPos === -1) return false
+    
+    const rawContent = state.src.slice(start + 2, endPos)
+    const pipeIndex = rawContent.indexOf('|')
+    const pageName = pipeIndex >= 0 ? rawContent.slice(0, pipeIndex) : rawContent
+    const displayText = pipeIndex >= 0 ? rawContent.slice(pipeIndex + 1) : rawContent
+    
+    if (!silent) {
+      let href: string
+      if (pageName.startsWith('/')) {
+        href = pageName
+      } else if (PEOPLE_MAP[pageName]) {
+        href = `/04_people/${PEOPLE_MAP[pageName]}`
+      } else if (COMPANY_MAP[pageName]) {
+        href = `/03_companies/${COMPANY_MAP[pageName]}`
+      } else {
+        href = `/search?q=${encodeURIComponent(pageName)}`
+      }
+      
+      const token = state.push('link_open', 'a', 1)
+      token.attrs = [['href', href]]
+      token.markup = '[['
+      
+      const textToken = state.push('text', '', 0)
+      textToken.content = displayText
+      
+      state.push('link_close', 'a', -1)
+    }
+    
+    state.pos = endPos + 2
+    return true
+  })
+}
+
+// 生成年份子菜单
 function generateYearItems(year: string) {
-  const items = []
+  const items: any[] = []
   const yearNum = parseInt(year)
   
-  // 翻译始终存在
   items.push({ text: '📄 全年股东信', link: `/01_letters/${year}年/翻译` })
   
-  // 年中信（1961、1962年有年中信）
   if (year === '1961' || year === '1962') {
     items.push({ text: '📅 年中信', link: `/01_letters/${year}年/年中信` })
   }
   
-  // 核心总结（1989年以后）
   if (yearNum >= 1989) {
     items.push({ text: '📝 核心总结', link: `/01_letters/${year}年/核心总结` })
   }
   
-  // 思维导图（1977年以后，除了2009）
   if (yearNum >= 1977 && year !== '2009') {
     items.push({ text: '🧠 思维导图', link: `/01_letters/${year}年/思维导图` })
   }
@@ -236,67 +258,55 @@ function generateYearItems(year: string) {
   return items
 }
 
+// 全部年份配置
+const ALL_YEARS = [
+  '1956','1957','1958','1959','1960','1961','1962','1963','1964','1965',
+  '1966','1967','1968','1969','1970','1971','1972','1973','1974','1975',
+  '1976','1977','1978','1979','1980','1981','1982','1983','1984','1985',
+  '1986','1987','1988','1989','1990','1991','1992','1993','1994','1995',
+  '1996','1997','1998','1999','2000','2001','2002','2003','2004','2005',
+  '2006','2007','2008','2009','2010','2011','2012','2013','2014','2015',
+  '2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'
+]
+
+const ERA_CONFIGS = [
+  { label: '第一纪元：合伙人信', years: ['1956','1957','1958','1959','1960','1961','1962','1963','1964','1965','1966','1967','1968','1969'] },
+  { label: '第二纪元：早期探索', years: ['1970','1971','1972','1973','1974','1975','1976'] },
+  { label: '第三纪元：保险驱动', years: ['1977','1978','1979','1980','1981','1982','1983','1984','1985','1986','1987','1988'] },
+  { label: '第四纪元：帝国扩张', years: ['1989','1990','1991','1992','1993','1994','1995','1996','1997','1998','1999'] },
+  { label: '第五纪元：周期穿越', years: ['2000','2001','2002','2003','2004','2005','2006','2007','2008'] },
+  { label: '第六纪元：超级控股', years: ['2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019'] },
+  { label: '第七纪元：传承告别', years: ['2020','2021','2022','2023','2024','2025'] },
+]
+
+const ERA_SIDEBAR = ERA_CONFIGS.map(era => ({
+  text: era.label,
+  collapsed: true,
+  items: era.years.map(year => ({
+    text: `${year}年`,
+    collapsed: true,
+    items: generateYearItems(year)
+  }))
+}))
+
+// ✅ 关键：用 withMermaid 包裹整个 defineConfig
 export default withMermaid(defineConfig({
   title: '巴菲特致股东信知识库',
   description: '中文世界最系统的巴菲特股东信知识库（1956-2025）',
   
   ignoreDeadLinks: true,
   
-  mermaid: {
-    // Mermaid配置
-  },
+  mermaid: {},
   
   markdown: {
+    // ✅ 在 markdown.config 里直接调用两个 wiki-links 插件
     config: (md) => {
-      // 配置 wiki-links 解析（支持管道符语法 [[页面名|显示文本]]）
-      md.inline.ruler.before('link', 'wiki_link', function(state, silent) {
-        const start = state.pos
-        const marker = state.src.charCodeAt(start)
-        
-        // 检查是否以 [[ 开头
-        if (marker !== 0x5B /* [ */ || state.src.charCodeAt(start + 1) !== 0x5B /* [ */) {
-          return false
-        }
-        
-        const endPos = state.src.indexOf(']]', start + 2)
-        if (endPos === -1) return false
-        
-        const rawContent = state.src.slice(start + 2, endPos)
-        // 支持管道符语法：[[页面名|显示文本]]
-        const pipeIndex = rawContent.indexOf('|')
-        const pageName = pipeIndex >= 0 ? rawContent.slice(0, pipeIndex) : rawContent
-        const displayText = pipeIndex >= 0 ? rawContent.slice(pipeIndex + 1) : rawContent
-        
-        if (!silent) {
-          let href: string
-          // 以 / 开头的路径直接使用
-          if (pageName.startsWith('/')) {
-            href = pageName
-          } else if (PEOPLE_MAP[pageName]) {
-            href = `/04_people/${PEOPLE_MAP[pageName]}`
-          } else if (COMPANY_MAP[pageName]) {
-            href = `/03_companies/${COMPANY_MAP[pageName]}`
-          } else {
-            href = `/search?q=${encodeURIComponent(pageName)}`
-          }
-          const token = state.push('link_open', 'a', 1)
-          token.attrs = [['href', href]]
-          token.markup = '[['
-          
-          const textToken = state.push('text', '', 0)
-          textToken.content = displayText
-          
-          state.push('link_close', 'a', -1)
-        }
-        
-        state.pos = endPos + 2
-        return true
-      })
+      enableWikiLinks(md)   // 渲染层：[[...]] → <a href>
+      wikiLinkRule(md)        // 解析层：识别 [[...]] 语法
     }
   },
   
   themeConfig: {
-    // 首页配置（包含侧边栏）
     outline: {
       level: [2, 3],
       label: '本页目录'
@@ -315,134 +325,18 @@ export default withMermaid(defineConfig({
     ],
     
     sidebar: [
-      // 首页 - 显示左侧导航栏
       {
         text: '🏠 首页',
         link: '/'
       },
       
-      // 原文翻译 - 多级结构（七个纪元）
       {
         text: '📚 全年股东信',
         link: '/01_letters/',
         collapsed: false,
-        items: [
-          {
-            text: '第一纪元：合伙人信',
-            collapsed: true,
-            items: [
-              { text: '1956年', collapsed: true, items: generateYearItems('1956') },
-              { text: '1957年', collapsed: true, items: generateYearItems('1957') },
-              { text: '1958年', collapsed: true, items: generateYearItems('1958') },
-              { text: '1959年', collapsed: true, items: generateYearItems('1959') },
-              { text: '1960年', collapsed: true, items: generateYearItems('1960') },
-              { text: '1961年', collapsed: true, items: generateYearItems('1961') },
-              { text: '1962年', collapsed: true, items: generateYearItems('1962') },
-              { text: '1963年', collapsed: true, items: generateYearItems('1963') },
-              { text: '1964年', collapsed: true, items: generateYearItems('1964') },
-              { text: '1965年', collapsed: true, items: generateYearItems('1965') },
-              { text: '1966年', collapsed: true, items: generateYearItems('1966') },
-              { text: '1967年', collapsed: true, items: generateYearItems('1967') },
-              { text: '1968年', collapsed: true, items: generateYearItems('1968') },
-              { text: '1969年', collapsed: true, items: generateYearItems('1969') }
-            ]
-          },
-          {
-            text: '第二纪元：早期探索',
-            collapsed: true,
-            items: [
-              { text: '1970年', collapsed: true, items: generateYearItems('1970') },
-              { text: '1971年', collapsed: true, items: generateYearItems('1971') },
-              { text: '1972年', collapsed: true, items: generateYearItems('1972') },
-              { text: '1973年', collapsed: true, items: generateYearItems('1973') },
-              { text: '1974年', collapsed: true, items: generateYearItems('1974') },
-              { text: '1975年', collapsed: true, items: generateYearItems('1975') },
-              { text: '1976年', collapsed: true, items: generateYearItems('1976') }
-            ]
-          },
-          {
-            text: '第二纪元：保险驱动',
-            collapsed: true,
-            items: [
-              { text: '1977年', collapsed: true, items: generateYearItems('1977') },
-              { text: '1978年', collapsed: true, items: generateYearItems('1978') },
-              { text: '1979年', collapsed: true, items: generateYearItems('1979') },
-              { text: '1980年', collapsed: true, items: generateYearItems('1980') },
-              { text: '1981年', collapsed: true, items: generateYearItems('1981') },
-              { text: '1982年', collapsed: true, items: generateYearItems('1982') },
-              { text: '1983年', collapsed: true, items: generateYearItems('1983') },
-              { text: '1984年', collapsed: true, items: generateYearItems('1984') },
-              { text: '1985年', collapsed: true, items: generateYearItems('1985') },
-              { text: '1986年', collapsed: true, items: generateYearItems('1986') },
-              { text: '1987年', collapsed: true, items: generateYearItems('1987') },
-              { text: '1988年', collapsed: true, items: generateYearItems('1988') }
-            ]
-          },
-          {
-            text: '第二纪元：帝国扩张',
-            collapsed: true,
-            items: [
-              { text: '1989年', collapsed: true, items: generateYearItems('1989') },
-              { text: '1990年', collapsed: true, items: generateYearItems('1990') },
-              { text: '1991年', collapsed: true, items: generateYearItems('1991') },
-              { text: '1992年', collapsed: true, items: generateYearItems('1992') },
-              { text: '1993年', collapsed: true, items: generateYearItems('1993') },
-              { text: '1994年', collapsed: true, items: generateYearItems('1994') },
-              { text: '1995年', collapsed: true, items: generateYearItems('1995') },
-              { text: '1996年', collapsed: true, items: generateYearItems('1996') },
-              { text: '1997年', collapsed: true, items: generateYearItems('1997') },
-              { text: '1998年', collapsed: true, items: generateYearItems('1998') },
-              { text: '1999年', collapsed: true, items: generateYearItems('1999') }
-            ]
-          },
-          {
-            text: '第二纪元：周期穿越',
-            collapsed: true,
-            items: [
-              { text: '2000年', collapsed: true, items: generateYearItems('2000') },
-              { text: '2001年', collapsed: true, items: generateYearItems('2001') },
-              { text: '2002年', collapsed: true, items: generateYearItems('2002') },
-              { text: '2003年', collapsed: true, items: generateYearItems('2003') },
-              { text: '2004年', collapsed: true, items: generateYearItems('2004') },
-              { text: '2005年', collapsed: true, items: generateYearItems('2005') },
-              { text: '2006年', collapsed: true, items: generateYearItems('2006') },
-              { text: '2007年', collapsed: true, items: generateYearItems('2007') },
-              { text: '2008年', collapsed: true, items: generateYearItems('2008') }
-            ]
-          },
-          {
-            text: '第二纪元：超级控股',
-            collapsed: true,
-            items: [
-              { text: '2009年', collapsed: true, items: generateYearItems('2009') },
-              { text: '2010年', collapsed: true, items: generateYearItems('2010') },
-              { text: '2011年', collapsed: true, items: generateYearItems('2011') },
-              { text: '2012年', collapsed: true, items: generateYearItems('2012') },
-              { text: '2013年', collapsed: true, items: generateYearItems('2013') },
-              { text: '2014年', collapsed: true, items: generateYearItems('2014') },
-              { text: '2015年', collapsed: true, items: generateYearItems('2015') },
-              { text: '2016年', collapsed: true, items: generateYearItems('2016') },
-              { text: '2017年', collapsed: true, items: generateYearItems('2017') },
-              { text: '2018年', collapsed: true, items: generateYearItems('2018') },
-              { text: '2019年', collapsed: true, items: generateYearItems('2019') }
-            ]
-          },
-          {
-            text: '第二纪元：传承告别',
-            collapsed: false,
-            items: [
-              { text: '2020年', collapsed: true, items: generateYearItems('2020') },
-              { text: '2021年', collapsed: true, items: generateYearItems('2021') },
-              { text: '2022年', collapsed: true, items: generateYearItems('2022') },
-              { text: '2023年', collapsed: true, items: generateYearItems('2023') },
-              { text: '2024年', collapsed: true, items: generateYearItems('2024') },
-              { text: '2025年', collapsed: true, items: generateYearItems('2025') }
-            ]
-          }
-        ]
+        items: ERA_SIDEBAR
       },
       
-      // 主题索引 - 按四大分类组织（20个主题）
       {
         text: '🎯 主题索引',
         link: '/02_concepts/',
@@ -501,7 +395,6 @@ export default withMermaid(defineConfig({
         ]
       },
       
-      // 公司档案 - 带二级分类
       {
         text: '🏢 公司档案',
         link: '/03_companies/',
@@ -540,7 +433,6 @@ export default withMermaid(defineConfig({
         ]
       },
       
-      // 人物传记 - 带二级分类
       {
         text: '👤 人物传记',
         link: '/04_people/',
@@ -589,7 +481,6 @@ export default withMermaid(defineConfig({
         ]
       },
       
-      // 金句库
       {
         text: '💬 金句库',
         link: '/05_quotes/',
@@ -597,7 +488,6 @@ export default withMermaid(defineConfig({
         items: []
       },
       
-      // 数据可视化
       {
         text: '📊 数据可视化',
         link: '/06_visualization/',
@@ -605,7 +495,6 @@ export default withMermaid(defineConfig({
         items: []
       },
       
-      // 扩展阅读
       {
         text: '📖 扩展阅读',
         link: '/07_resources/',
@@ -613,7 +502,6 @@ export default withMermaid(defineConfig({
         items: []
       },
       
-      // 创作工具
       {
         text: '🛠️ 创作工具',
         link: '/08_tools/',
