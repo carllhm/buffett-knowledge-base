@@ -246,6 +246,10 @@ function wikiLinkRule(md: any) {
       let href: string
       if (pageName.startsWith('/')) {
         href = pageName
+      } else if (displayText.startsWith('/')) {
+        href = displayText
+      } else if (displayText.match(/^(05_quotes|03_companies|04_people|02_concepts|01_letters)\//)) {
+        href = `/${displayText}`
       } else if (CONCEPT_MAP[pageName]) {
         href = `/02_concepts/${CONCEPT_MAP[pageName]}`
       } else if (PEOPLE_MAP[pageName]) {
