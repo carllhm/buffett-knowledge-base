@@ -225,8 +225,13 @@ function wikiLinkRule(md: any) {
       token.attrs = [['href', href]]
       token.markup = '[['
       
+      // 对于 [[/01_letters/1993年/核心总结]] 无 | 的情况，
+      // 用路径最后一段做显示文本（如"核心总结"）
+      const display = (!pageName.includes('|') && pageName.startsWith('/'))
+        ? (pageName.split('/').pop() || pageName)
+        : displayText
       const textToken = state.push('text', '', 0)
-      textToken.content = displayText
+      textToken.content = display
       
       state.push('link_close', 'a', -1)
     }
