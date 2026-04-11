@@ -4,6 +4,35 @@ import { writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 // 人物名 → 人物页 slug 映射
+const CONCEPT_MAP: Record<string, string> = {
+  '内在价值': 'intrinsic-value',
+  '护城河': 'moat',
+  '安全边际': 'safety-margin',
+  '复利': 'compounding',
+  '长期主义': 'long-term',
+  '能力圈': 'circle-of-competence',
+  '逆向思维': 'contrarian',
+  '声誉': 'reputation',
+  '声誉经济': 'reputation',
+  '风险': 'risk',
+  '风险控制': 'risk',
+  '资本配置': 'capital-allocation',
+  '保险浮存金': 'insurance-float',
+  '管理层': 'management',
+  '管理层选择': 'management',
+  '股票回购': 'share-buybacks',
+  '董事会治理': 'corporate-governance',
+  '高管薪酬': 'executive-compensation',
+  'GAAP与真实盈利': 'accounting-earnings',
+  'GAAP vs 真实盈利': 'accounting-earnings',
+  '多元化与集中': 'diversification',
+  '多元化vs集中': 'diversification',
+  '航空公司教训': 'airline-lessons',
+  '日本五大投资': 'japan-investments',
+  '日本五大综合企业': 'japan-investments',
+  '承保纪律': 'underwriting-discipline',
+}
+
 const PEOPLE_MAP: Record<string, string> = {
   '沃伦·巴菲特': '沃伦·巴菲特',
   '巴菲特': '沃伦·巴菲特',
@@ -183,6 +212,8 @@ function enableWikiLinks(md: any) {
         
         if (pageName.startsWith('/')) {
           token.attrs[hrefIndex][1] = pageName
+        } else if (CONCEPT_MAP[pageName]) {
+          token.attrs[hrefIndex][1] = `/02_concepts/${CONCEPT_MAP[pageName]}`
         } else if (PEOPLE_MAP[pageName]) {
           token.attrs[hrefIndex][1] = `/04_people/${PEOPLE_MAP[pageName]}`
         } else if (COMPANY_MAP[pageName]) {
@@ -215,6 +246,8 @@ function wikiLinkRule(md: any) {
       let href: string
       if (pageName.startsWith('/')) {
         href = pageName
+      } else if (CONCEPT_MAP[pageName]) {
+        href = `/02_concepts/${CONCEPT_MAP[pageName]}`
       } else if (PEOPLE_MAP[pageName]) {
         href = `/04_people/${PEOPLE_MAP[pageName]}`
       } else if (COMPANY_MAP[pageName]) {
