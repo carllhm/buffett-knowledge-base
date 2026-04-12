@@ -319,7 +319,7 @@ function generateYearItems(year: string) {
     items.push({ text: '📝 核心总结', link: `/01_letters/${year}年/核心总结` })
   }
   
-  if (yearNum >= 1977 && year !== '2009') {
+  if (year !== '2009' && (yearNum <= 1959 || yearNum >= 1977)) {
     items.push({ text: '🧠 思维导图', link: `/01_letters/${year}年/思维导图` })
   }
   

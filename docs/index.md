@@ -21,7 +21,7 @@ features:
     link: /01_letters/
   - icon: 🧠
     title: 思维导图
-    details: 47年思维导图（1977-2024），结构化理解巴菲特思路
+    details: 51年思维导图（1956-1959 + 1977-2024），结构化理解巴菲特思路
     link: /01_letters/1977年/思维导图.html
   - icon: 📝
     title: 核心总结
