@@ -17,15 +17,15 @@ hero:
 features:
   - icon: 📖
     title: 原文翻译
-    details: 48年完整翻译（1957-2024），含早期合伙企业信函（1956-1969）
+    details: 70年完整翻译（1956-2025），含早期合伙企业信函原文
     link: /01_letters/
   - icon: 🧠
     title: 思维导图
-    details: 56年思维导图（1956-2024），两级折叠结构，覆盖主要历史阶段
+    details: 70年思维导图（1956-2025），两级折叠结构，梳理年度投资脉络
     link: /01_letters/1977年/思维导图.html
   - icon: 📝
     title: 核心总结
-    details: 70年全部完成（1956-2025），一页读懂每年投资精华
+    details: 70年核心总结（1956-2025），一页读懂每年投资精华
     link: /01_letters/1989年/核心总结.html
   - icon: 🧩
     title: 主题索引
