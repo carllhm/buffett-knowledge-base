@@ -33,7 +33,7 @@ features:
     link: /02_concepts/
   - icon: 🏢
     title: 公司档案
-    details: 23家经典公司，伯克希尔持仓与收购案例
+    details: 30家公司，涵盖子公司、持仓与历史案例
     link: /03_companies/
   - icon: 👤
     title: 人物传记

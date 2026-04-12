@@ -469,35 +469,77 @@ export default withMermaid(defineConfig({
         collapsed: true,
         items: [
           {
-            text: '📁 伯克希尔子公司',
+            text: '📁 保险业务',
             collapsed: true,
             items: [
               { text: 'GEICO', link: '/03_companies/GEICO' },
-              { text: '喜诗糖果', link: '/03_companies/喜诗糖果' },
-              { text: '内布拉斯加家具城', link: '/03_companies/内布拉斯加家具城' },
-              { text: 'BNSF铁路', link: '/03_companies/BNSF铁路' },
-              { text: '伯克希尔哈撒韦', link: '/03_companies/伯克希尔哈撒韦' },
               { text: '国家赔偿公司', link: '/03_companies/国家赔偿公司' },
-              { text: '中美能源', link: '/03_companies/中美能源' },
-              { text: '克莱顿家园', link: '/03_companies/克莱顿家园' }
+              { text: '通用再保险', link: '/03_companies/通用再保险' },
             ]
           },
           {
-            text: '📁 已清仓持仓',
+            text: '📁 消费与零售',
+            collapsed: true,
+            items: [
+              { text: '喜诗糖果', link: '/03_companies/喜诗糖果' },
+              { text: '内布拉斯加家具城', link: '/03_companies/内布拉斯加家具城' },
+              { text: '克莱顿家园', link: '/03_companies/克莱顿家园' },
+            ]
+          },
+          {
+            text: '📁 媒体与出版',
             collapsed: true,
             items: [
               { text: '华盛顿邮报', link: '/03_companies/华盛顿邮报' },
               { text: '首都城市ABC', link: '/03_companies/首都城市ABC' },
               { text: '水牛城新闻', link: '/03_companies/水牛城新闻' },
-              { text: '蓝筹印花', link: '/03_companies/蓝筹印花' },
-              { text: 'Scott & Fetzer', link: '/03_companies/Scott_Fetzer' },
-              { text: '所罗门兄弟', link: '/03_companies/所罗门兄弟' },
-              { text: 'Fechheimer Bros.', link: '/03_companies/Fechheimer_Bros' },
+            ]
+          },
+          {
+            text: '📁 工业与制造',
+            collapsed: true,
+            items: [
+              { text: 'BNSF铁路', link: '/03_companies/BNSF铁路' },
               { text: 'ISCAR-IMC', link: '/03_companies/ISCAR-IMC' },
               { text: 'Marmon集团', link: '/03_companies/Marmon集团' },
-              { text: 'McLanes麦克莱恩', link: '/03_companies/McLanes麦克莱恩' }
+              { text: 'Scott & Fetzer', link: '/03_companies/Scott_Fetzer' },
+              { text: 'Fechheimer Bros.', link: '/03_companies/Fechheimer_Bros' },
+              { text: 'Forest River', link: '/03_companies/Forest River' },
+              { text: 'McLanes麦克莱恩', link: '/03_companies/McLanes麦克莱恩' },
             ]
-          }
+          },
+          {
+            text: '📁 能源与金融',
+            collapsed: true,
+            items: [
+              { text: '中美能源', link: '/03_companies/中美能源' },
+              { text: '蓝筹印花', link: '/03_companies/蓝筹印花' },
+              { text: '所罗门兄弟', link: '/03_companies/所罗门兄弟' },
+              { text: '伯克希尔哈撒韦', link: '/03_companies/伯克希尔哈撒韦' },
+            ]
+          },
+          {
+            text: '📁 核心持仓',
+            collapsed: true,
+            items: [
+              { text: '苹果公司', link: '/03_companies/苹果公司' },
+              { text: '美国运通', link: '/03_companies/美国运通' },
+              { text: '可口可乐', link: '/03_companies/可口可乐' },
+              { text: '美国银行', link: '/03_companies/美国银行' },
+              { text: '雪佛龙', link: '/03_companies/雪佛龙' },
+              { text: '比亚迪', link: '/03_companies/比亚迪' },
+            ]
+          },
+          {
+            text: '📁 已清仓/历史持仓',
+            collapsed: true,
+            items: [
+              { text: '富国银行', link: '/03_companies/富国银行' },
+              { text: 'IBM', link: '/03_companies/IBM' },
+              { text: '伊利诺伊国民银行', link: '/03_companies/伊利诺伊国民银行' },
+              { text: '联合零售商店', link: '/03_companies/联合零售商店' },
+            ]
+          },
         ]
       },
       
