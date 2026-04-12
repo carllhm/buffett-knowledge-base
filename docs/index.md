@@ -17,27 +17,27 @@ hero:
 features:
   - icon: 📖
     title: 原文翻译
-    details: 70年完整翻译（1956-2025），含早期合伙企业信函
+    details: 48年完整翻译（1957-2024），含早期合伙企业信函（1956-1969）
     link: /01_letters/
   - icon: 🧠
     title: 思维导图
-    details: 70年思维导图（1956-2025全覆盖），两级折叠结构
+    details: 56年思维导图（1956-2024），两级折叠结构，覆盖主要历史阶段
     link: /01_letters/1977年/思维导图.html
   - icon: 📝
     title: 核心总结
-    details: 历年投资要点提炼，一页读懂一年精华
+    details: 70年全部完成（1956-2025），一页读懂每年投资精华
     link: /01_letters/1989年/核心总结.html
   - icon: 🧩
     title: 主题索引
-    details: 21大核心概念，从投资哲学到历史镜鉴
+    details: 14大核心概念，从护城河到复利，系统建立投资思维框架
     link: /02_concepts/
   - icon: 🏢
     title: 公司档案
-    details: 30家公司深度解读，子公司/持仓/经典收购
+    details: 35家公司深度解读，子公司/重仓持仓/经典收购案例
     link: /03_companies/
   - icon: 👤
     title: 人物传记
-    details: 30位传奇人物，巴菲特/芒格/管理层/投资大师
+    details: 77位传奇人物，巴菲特/芒格/子公司CEO/投资大师全覆盖
     link: /04_people/
   - icon: 💬
     title: 金句库
@@ -45,12 +45,16 @@ features:
     link: /05_quotes/
   - icon: 📈
     title: 数据可视化
-    details: 业绩对比/持仓变迁/浮存金趋势，Mermaid 图表
+    details: 6张图表：收益率对比/净值增长/持仓集中度/浮存金/收购里程碑/收入结构
     link: /06_visualization/
   - icon: 📚
     title: 拓展阅读
-    details: 演讲/访谈/纪录片/历史文档，延伸学习资源
+    details: 10场经典演讲/30+小时访谈/3部纪录片/合伙企业信函1957-1970，延伸学习
     link: /07_resources/
+  - icon: 🛠️
+    title: 创作工具
+    details: 选题方法/数据查询/素材渠道/文案模板，为视频号创作者赋能
+    link: /08_creative_tools/
 ---
 
 ## 关于本站
