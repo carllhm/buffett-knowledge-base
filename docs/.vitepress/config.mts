@@ -225,7 +225,7 @@ function enableWikiLinks(md: any) {
   md.renderer.rules.link_open = function(tokens: any[], idx: number, options: any, env: any, self: any) {
     const token = tokens[idx]
     const hrefIndex = token.attrIndex('href')
-    
+
     if (hrefIndex !== -1) {
       const href = token.attrs[hrefIndex][1]
       const wikiMatch = href.match(/^\[\[(.+?)\]\]$/)
@@ -233,7 +233,7 @@ function enableWikiLinks(md: any) {
         const rawContent = wikiMatch[1]
         const pipeIndex = rawContent.indexOf('|')
         const pageName = pipeIndex >= 0 ? rawContent.slice(0, pipeIndex) : rawContent
-        
+
         if (pageName.startsWith('/')) {
           token.attrs[hrefIndex][1] = pageName
         } else if (CONCEPT_MAP[pageName]) {
@@ -247,7 +247,7 @@ function enableWikiLinks(md: any) {
         }
       }
     }
-    
+
     return defaultRender(tokens, idx, options, env, self)
   }
 }
@@ -257,15 +257,15 @@ function wikiLinkRule(md: any) {
   md.inline.ruler.before('link', 'wiki_link', function(state: any, silent: boolean) {
     const start = state.pos
     if (state.src.charCodeAt(start) !== 0x5B || state.src.charCodeAt(start + 1) !== 0x5B) return false
-    
+
     const endPos = state.src.indexOf(']]', start + 2)
     if (endPos === -1) return false
-    
+
     const rawContent = state.src.slice(start + 2, endPos)
     const pipeIndex = rawContent.indexOf('|')
     const pageName = pipeIndex >= 0 ? rawContent.slice(0, pipeIndex) : rawContent
     const displayText = pipeIndex >= 0 ? rawContent.slice(pipeIndex + 1) : rawContent
-    
+
     if (!silent) {
       let href: string
       if (pageName.startsWith('/')) {
@@ -283,11 +283,11 @@ function wikiLinkRule(md: any) {
       } else {
         href = `/search?q=${encodeURIComponent(pageName)}`
       }
-      
+
       const token = state.push('link_open', 'a', 1)
       token.attrs = [['href', href]]
       token.markup = '[['
-      
+
       // 对于 [[/01_letters/1993年/核心总结]] 无 | 的情况，
       // 用路径最后一段做显示文本（如"核心总结"）
       const display = (!pageName.includes('|') && pageName.startsWith('/'))
@@ -295,10 +295,10 @@ function wikiLinkRule(md: any) {
         : displayText
       const textToken = state.push('text', '', 0)
       textToken.content = display
-      
+
       state.push('link_close', 'a', -1)
     }
-    
+
     state.pos = endPos + 2
     return true
   })
@@ -308,21 +308,21 @@ function wikiLinkRule(md: any) {
 function generateYearItems(year: string) {
   const items: any[] = []
   const yearNum = parseInt(year)
-  
+
   items.push({ text: '📄 全年股东信', link: `/01_letters/${year}年/翻译` })
-  
+
   if (year === '1961' || year === '1962') {
     items.push({ text: '📅 年中信', link: `/01_letters/${year}年/年中信` })
   }
-  
-  if (yearNum >= 1970) {
+
+  if (yearNum >= 1970 || ['1956','1957','1958','1959','1960','1961','1962','1963','1964','1965','1966','1967','1968','1969'].includes(year)) {
     items.push({ text: '📝 核心总结', link: `/01_letters/${year}年/核心总结` })
   }
-  
-  if (year !== '2009' && (yearNum <= 1959 || yearNum >= 1977)) {
+
+  if (year !== '2009' && year !== '2010') {
     items.push({ text: '🧠 思维导图', link: `/01_letters/${year}年/思维导图` })
   }
-  
+
   return items
 }
 
@@ -361,11 +361,11 @@ const ERA_SIDEBAR = ERA_CONFIGS.map(era => ({
 export default withMermaid(defineConfig({
   title: '巴菲特致股东信知识库',
   description: '中文世界最系统的巴菲特股东信知识库（1956-2025）',
-  
+
   ignoreDeadLinks: true,
-  
+
   mermaid: {},
-  
+
   markdown: {
     // ✅ 在 markdown.config 里直接调用两个 wiki-links 插件
     config: (md) => {
@@ -373,13 +373,13 @@ export default withMermaid(defineConfig({
       wikiLinkRule(md)        // 解析层：识别 [[...]] 语法
     }
   },
-  
+
   themeConfig: {
     outline: {
       level: [2, 3],
       label: '本页目录'
     },
-    
+
     nav: [
       { text: '首页', link: '/' },
       { text: '全年股东信', link: '/01_letters/' },
@@ -391,20 +391,20 @@ export default withMermaid(defineConfig({
       { text: '扩展阅读', link: '/07_resources/' },
       { text: '创作工具', link: '/08_tools/' }
     ],
-    
+
     sidebar: [
       {
         text: '🏠 首页',
         link: '/'
       },
-      
+
       {
         text: '📚 全年股东信',
         link: '/01_letters/',
         collapsed: false,
         items: ERA_SIDEBAR
       },
-      
+
       {
         text: '🎯 主题索引',
         link: '/02_concepts/',
@@ -462,7 +462,7 @@ export default withMermaid(defineConfig({
           }
         ]
       },
-      
+
       {
         text: '🏢 公司档案',
         link: '/03_companies/',
@@ -542,7 +542,7 @@ export default withMermaid(defineConfig({
           },
         ]
       },
-      
+
       {
         text: '👤 人物传记',
         link: '/04_people/',
@@ -621,7 +621,7 @@ export default withMermaid(defineConfig({
           },
         ]
       },
-      
+
       {
         text: '💬 金句库',
         link: '/05_quotes/',
@@ -632,7 +632,7 @@ export default withMermaid(defineConfig({
           { text: '🎯 按场景', link: '/05_quotes/by-scene/' }
         ]
       },
-      
+
       {
         text: '📊 数据可视化',
         link: '/06_visualization/',
@@ -664,14 +664,14 @@ export default withMermaid(defineConfig({
           }
         ]
       },
-      
+
       {
         text: '📖 扩展阅读',
         link: '/07_resources/',
         collapsed: true,
         items: []
       },
-      
+
       {
         text: '🛠️ 创作工具',
         link: '/08_tools/',
@@ -679,11 +679,11 @@ export default withMermaid(defineConfig({
         items: []
       }
     ],
-    
+
     search: {
       provider: 'local'
     },
-    
+
     footer: {
       message: '巴菲特致股东信知识库（1956-2025）- 免费分享',
       copyright: 'Copyright © 2026'
