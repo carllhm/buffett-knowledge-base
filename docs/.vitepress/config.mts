@@ -540,7 +540,32 @@ export default withMermaid(defineConfig({
         text: '📊 数据可视化',
         link: '/06_visualization/',
         collapsed: true,
-        items: []
+        items: [
+          {
+            text: '📈 业绩与估值',
+            collapsed: true,
+            items: [
+              { text: '伯克希尔 vs 标普500', link: '/06_visualization/berkshire-vs-sp500' },
+              { text: '账面价值增长', link: '/06_visualization/book-value-growth' }
+            ]
+          },
+          {
+            text: '💼 持仓与收购',
+            collapsed: true,
+            items: [
+              { text: '主要持仓变迁', link: '/06_visualization/top-holdings' },
+              { text: '重大收购时间线', link: '/06_visualization/acquisitions-timeline' },
+              { text: '保险浮存金趋势', link: '/06_visualization/insurance-float' }
+            ]
+          },
+          {
+            text: '🏭 业务版图',
+            collapsed: true,
+            items: [
+              { text: '收入结构', link: '/06_visualization/revenue-breakdown' }
+            ]
+          }
+        ]
       },
       
       {
