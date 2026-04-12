@@ -29,7 +29,7 @@ features:
     link: /01_letters/1989年/核心总结.html
   - icon: 🧩
     title: 主题索引
-    details: 14大核心概念，从护城河到复利，系统建立投资思维框架
+    details: 20大核心概念，从护城河到复利，系统建立投资思维框架
     link: /02_concepts/
   - icon: 🏢
     title: 公司档案
