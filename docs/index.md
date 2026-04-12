@@ -17,11 +17,11 @@ hero:
 features:
   - icon: 📖
     title: 原文翻译
-    details: 70年完整翻译（1956-2025），巴菲特投资思想全记录
+    details: 70年完整翻译（1956-2025），含早期合伙企业信函
     link: /01_letters/
   - icon: 🧠
     title: 思维导图
-    details: 51年思维导图（1956-1959 + 1977-2024），结构化理解巴菲特思路
+    details: 70年思维导图（1956-2025全覆盖），两级折叠结构
     link: /01_letters/1977年/思维导图.html
   - icon: 📝
     title: 核心总结
