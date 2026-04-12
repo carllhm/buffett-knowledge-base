@@ -78,6 +78,30 @@ const PEOPLE_MAP: Record<string, string> = {
   '保罗·纽曼': '保罗·纽曼',
   'Paul Newman': '保罗·纽曼',
   'John-Lo': 'John-Lo',
+  // 2026-04-12 新增人物
+  '格雷格·阿贝尔': '格雷格·阿贝尔',
+  'Greg Abel': '格雷格·阿贝尔',
+  '阿贝尔': '格雷格·阿贝尔',
+  '托德·康姆斯': '托德·康姆斯',
+  'Todd Combs': '托德·康姆斯',
+  '特德·韦斯勒': '特德·韦斯勒',
+  'Ted Weschler': '特德·韦斯勒',
+  '韦斯勒': '特德·韦斯勒',
+  '托尼·尼斯利': '托尼·尼斯利',
+  'Tony Nicely': '托尼·尼斯利',
+  '尼斯利': '托尼·尼斯利',
+  '大卫·索科尔': '大卫·索科尔',
+  'David Sokol': '大卫·索科尔',
+  '索科尔': '大卫·索科尔',
+  '沃尔特·斯科特': '沃尔特·斯科特',
+  'Walter Scott': '沃尔特·斯科特',
+  '罗恩·奥尔森': '罗恩·奥尔森',
+  'Ron Olson': '罗恩·奥尔森',
+  '洛伊默·戴维森': '洛伊默·戴维森',
+  'Lorimer Davidson': '洛伊默·戴维森',
+  '凯·格雷厄姆': '凯·格雷厄姆',
+  '罗恩·弗格森': '罗恩·弗格森',
+  'Ron Ferguson': '罗恩·弗格森',
 }
 
 // 公司名别名映射
@@ -483,45 +507,76 @@ export default withMermaid(defineConfig({
         collapsed: true,
         items: [
           {
-            text: '📁 伯克希尔核心管理层',
+            text: '👑 伯克希尔核心',
             collapsed: true,
             items: [
               { text: '沃伦·巴菲特', link: '/04_people/沃伦·巴菲特' },
               { text: '查理·芒格', link: '/04_people/查理·芒格' },
+              { text: '格雷格·阿贝尔', link: '/04_people/格雷格·阿贝尔' },
               { text: '阿吉特·贾恩', link: '/04_people/阿吉特·贾恩' },
-              { text: '格雷迪·罗西尔', link: '/04_people/格雷迪·罗西尔' }
             ]
           },
           {
-            text: '📁 子公司CEO',
+            text: '📊 投资经理',
             collapsed: true,
             items: [
-              { text: '菲尔·利切', link: '/04_people/菲尔·利切' },
-              { text: '皮特·利格尔', link: '/04_people/皮特·利格尔' },
-              { text: '凯文·克莱顿', link: '/04_people/凯文·克莱顿' },
-              { text: '雅各布·哈帕兹', link: '/04_people/雅各布·哈帕兹' },
-              { text: '埃坦·韦特海默', link: '/04_people/埃坦·韦特海默' }
+              { text: '托德·康姆斯', link: '/04_people/托德·康姆斯' },
+              { text: '特德·韦斯勒', link: '/04_people/特德·韦斯勒' },
+              { text: '卢·辛普森', link: '/04_people/卢·辛普森' },
             ]
           },
           {
-            text: '📁 投资大师',
+            text: '🏢 保险业务',
+            collapsed: true,
+            items: [
+              { text: '托尼·尼斯利', link: '/04_people/托尼·尼斯利' },
+              { text: '杰克·伯恩', link: '/04_people/杰克·伯恩' },
+              { text: '洛伊默·戴维森', link: '/04_people/洛伊默·戴维森' },
+              { text: '罗恩·弗格森', link: '/04_people/罗恩·弗格森' },
+              { text: '菲尔·利切', link: '/04_people/菲尔·利切' },
+            ]
+          },
+          {
+            text: '🏭 子公司CEO',
+            collapsed: true,
+            items: [
+              { text: 'B夫人', link: '/04_people/B夫人' },
+              { text: '凯文·克莱顿', link: '/04_people/凯文·克莱顿' },
+              { text: '格雷迪·罗西尔', link: '/04_people/格雷迪·罗西尔' },
+              { text: '皮特·利格尔', link: '/04_people/皮特·利格尔' },
+              { text: '埃坦·韦特海默', link: '/04_people/埃坦·韦特海默' },
+              { text: '雅各布·哈帕兹', link: '/04_people/雅各布·哈帕兹' },
+              { text: '弗兰克·普塔克', link: '/04_people/弗兰克·普塔克' },
+              { text: 'Chuck Huggins', link: '/04_people/Chuck_Huggins' },
+            ]
+          },
+          {
+            text: '📰 被投公司CEO',
+            collapsed: true,
+            items: [
+              { text: 'Tom Murphy', link: '/04_people/Tom_Murphy' },
+              { text: '凯·格雷厄姆', link: '/04_people/凯·格雷厄姆' },
+              { text: '本·罗斯纳', link: '/04_people/本·罗斯纳' },
+              { text: '吉恩·阿贝格', link: '/04_people/吉恩·阿贝格' },
+            ]
+          },
+          {
+            text: '🎓 投资大师',
             collapsed: true,
             items: [
               { text: '本·格雷厄姆', link: '/04_people/本·格雷厄姆' },
               { text: '斯坦·利普西', link: '/04_people/斯坦·利普西' },
-              { text: '卢·辛普森', link: '/04_people/卢·辛普森' }
             ]
           },
           {
-            text: '📁 被投公司CEO',
+            text: '🤝 董事与顾问',
             collapsed: true,
             items: [
-              { text: '杰克·伯恩', link: '/04_people/杰克·伯恩' },
-              { text: '本·罗斯纳', link: '/04_people/本·罗斯纳' },
-              { text: '吉恩·阿贝格', link: '/04_people/吉恩·阿贝格' },
-              { text: '弗兰克·普塔克', link: '/04_people/弗兰克·普塔克' }
+              { text: '沃尔特·斯科特', link: '/04_people/沃尔特·斯科特' },
+              { text: '罗恩·奥尔森', link: '/04_people/罗恩·奥尔森' },
+              { text: '大卫·索科尔', link: '/04_people/大卫·索科尔' },
             ]
-          }
+          },
         ]
       },
       
