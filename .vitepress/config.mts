@@ -14,10 +14,13 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '原文翻译', link: '/01_letters/' },
+      { text: '全年股东信', link: '/01_letters/' },
       { text: '主题索引', link: '/02_concepts/' },
-      { text: '公司库', link: '/03_companies/' },
-      { text: '人物库', link: '/04_people/' }
+      { text: '公司档案', link: '/03_companies/' },
+      { text: '人物传记', link: '/04_people/' },
+      { text: '金句库', link: '/05_quotes/' },
+      { text: '数据可视化', link: '/06_visualization/' },
+      { text: '扩展阅读', link: '/07_resources/' }
     ],
     
     sidebar: {
