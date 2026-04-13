@@ -51,10 +51,6 @@ features:
     title: 拓展阅读
     details: 10场经典演讲/30+小时访谈/3部纪录片/合伙企业信函1957-1970，延伸学习
     link: /07_resources/
-  - icon: 🛠️
-    title: 创作工具
-    details: 选题方法/数据查询/素材渠道/文案模板，为视频号创作者赋能
-    link: /08_creative_tools/
 ---
 
 ## 关于本站
