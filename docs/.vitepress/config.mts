@@ -31,6 +31,14 @@ const CONCEPT_MAP: Record<string, string> = {
   '日本五大投资': 'japan-investments',
   '日本五大综合企业': 'japan-investments',
   '承保纪律': 'underwriting-discipline',
+  // 2026-04-15 新增主题
+  '递延税复利': 'deferred-tax',
+  '透视盈利': 'look-through-earnings',
+  '所罗门危机': 'salomon-crisis',
+  '错误坦诚': 'mistakes',
+  '合伙基金方法': 'partnership-method',
+  '三大投资类别': 'partnership-method',
+  '投资方法': 'partnership-method',
 }
 
 const PEOPLE_MAP: Record<string, string> = {
@@ -387,7 +395,6 @@ export default withMermaid(defineConfig({
       { text: '金句库', link: '/05_quotes/' },
       { text: '数据可视化', link: '/06_visualization/' },
       { text: '扩展阅读', link: '/07_resources/' },
-      { text: '创作工具', link: '/08_tools/' }
     ],
 
     sidebar: [
@@ -420,42 +427,54 @@ export default withMermaid(defineConfig({
             ]
           },
           {
-            text: '⚙️ 商业逻辑（4）',
+            text: '⚙️ 商业逻辑（4+1）',
             collapsed: true,
             items: [
               { text: '保险浮存金', link: '/02_concepts/insurance-float' },
               { text: '承保纪律', link: '/02_concepts/underwriting-discipline' },
               { text: '资本配置', link: '/02_concepts/capital-allocation' },
-              { text: '股票回购', link: '/02_concepts/share-buybacks' }
+              { text: '递延税复利 🆕', link: '/02_concepts/deferred-tax' }
             ]
           },
           {
-            text: '🧠 思维方法（4）',
+            text: '🧠 投资方法论（5）',
             collapsed: true,
             items: [
               { text: '能力圈', link: '/02_concepts/circle-of-competence' },
               { text: '逆向思维', link: '/02_concepts/contrarian' },
-              { text: '多元化与集中', link: '/02_concepts/diversification' },
+              { text: '透视盈利 🆕', link: '/02_concepts/look-through-earnings' },
+              { text: '股票回购', link: '/02_concepts/share-buybacks' },
               { text: '风险', link: '/02_concepts/risk' }
             ]
           },
           {
-            text: '🏛️ 治理智慧（4）',
+            text: '🏛️ 治理智慧（4+1）',
             collapsed: true,
             items: [
               { text: '管理层选择', link: '/02_concepts/management' },
               { text: '高管薪酬', link: '/02_concepts/executive-compensation' },
               { text: '董事会与公司治理', link: '/02_concepts/corporate-governance' },
+              { text: '错误坦诚 🆕', link: '/02_concepts/mistakes' },
               { text: '声誉', link: '/02_concepts/reputation' }
             ]
           },
           {
-            text: '📜 历史镜鉴（3）',
+            text: '📜 历史镜鉴（5）',
             collapsed: true,
             items: [
               { text: '航空公司教训', link: '/02_concepts/airline-lessons' },
+              { text: '所罗门危机 🆕', link: '/02_concepts/salomon-crisis' },
               { text: '日本五大投资', link: '/02_concepts/japan-investments' },
-              { text: '长期主义', link: '/02_concepts/long-term' }
+              { text: '长期主义', link: '/02_concepts/long-term' },
+              { text: '多元化与集中', link: '/02_concepts/diversification' }
+            ]
+          },
+          {
+            text: '📦 合伙基金时期（1956-1969）',
+            collapsed: true,
+            items: [
+              { text: '三大投资类别 🆕', link: '/02_concepts/partnership-method' },
+              { text: '安全边际的原始含义', link: '/02_concepts/safety-margin' }
             ]
           }
         ]
@@ -670,12 +689,6 @@ export default withMermaid(defineConfig({
         items: []
       },
 
-      {
-        text: '🛠️ 创作工具',
-        link: '/08_tools/',
-        collapsed: true,
-        items: []
-      }
     ],
 
     search: {
