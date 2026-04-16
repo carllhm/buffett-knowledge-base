@@ -91,10 +91,10 @@ features:
 }
 /* 右上角固定二维码 */
 .qrcode-float {
-  position: absolute;
+  position: fixed;
   top: 24px;
   right: 24px;
-  z-index: 10;
+  z-index: 100;
   text-align: center;
 }
 .qrcode-box {
