@@ -21,7 +21,6 @@ hero:
 .home .hero {
   padding-top: 24px !important;
   padding-bottom: 12px !important;
-  padding-right: 200px !important; /* 给右上角二维码留出空间 */
 }
 .home .hero .name {
   font-size: 28px !important;
@@ -32,14 +31,45 @@ hero:
   font-size: 16px !important;
   margin-bottom: 16px !important;
 }
+/* 二维码区块 - 在九宫格上方居中展示 */
+.qrcode-section {
+  text-align: center;
+  margin: 16px 0 12px 0;
+}
+.qrcode-box {
+  display: inline-flex;
+  gap: 24px;
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.qrcode-item {
+  text-align: center;
+}
+.qrcode-item img {
+  width: 90px;
+  height: 90px;
+  display: block;
+  border-radius: 4px;
+}
+.qrcode-item p {
+  margin: 6px 0 0 0;
+  font-size: 13px;
+  line-height: 1.3;
+}
+.qrcode-title {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+}
 /* 自定义九宫格容器 */
 .custom-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  padding-top: 12px;
+  padding-top: 0;
   padding-bottom: 12px;
-  padding-right: 200px; /* 给右上角二维码留出空间 */
 }
 /* 自定义卡片 - 左右布局：左边图标+标题，右边描述 */
 .custom-card {
@@ -84,63 +114,24 @@ hero:
 .home-container h2 {
   display: none;
 }
-/* 容器相对定位，二维码绝对定位 */
-.home-container {
-  position: relative !important;
-}
-/* 右上角二维码：相对于内容容器，会跟着滚动走 */
-.qrcode-float {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  z-index: 100;
-  text-align: center;
-}
-.qrcode-box {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-.qrcode-item {
-  text-align: center;
-  background: var(--vp-c-bg-soft);
-  padding: 6px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-.qrcode-item img {
-  width: 60px;
-  height: 60px;
-  border-radius: 4px;
-}
-.qrcode-item p {
-  margin: 2px 0 0;
-  font-size: 10px;
-  line-height: 1.2;
-}
-.qrcode-float .qrcode-title {
-  font-size: 12px;
-  color: var(--vp-c-text-2);
-}
 /* 底部版权 */
 .copyright {
   text-align: center;
   font-size: 12px;
   color: var(--vp-c-text-3);
   margin: 8px 0 12px;
-  padding-right: 200px;
 }
 .home-container p.intro {
   margin: 8px 0 !important;
-  padding-right: 200px;
   font-size: 14px;
   text-align: left;
 }
 </style>
 
-<!-- 右上角浮动二维码 -->
-<div class="qrcode-float">
+<p class="intro"><strong>我是卡尔，「慢慢变富的卡尔」主理人。</strong>做这个知识库，倒逼自己系统化学习，也分享给同道中人，一起慢慢变富。</p>
+
+<!-- 二维码区块：九宫格卡片上方，居中展示 -->
+<div class="qrcode-section">
   <div class="qrcode-box">
     <div class="qrcode-item">
       <img src="/images/公众号二维码.jpg" alt="公众号">
@@ -220,7 +211,5 @@ hero:
     </div>
   </a>
 </div>
-
-<p class="intro"><strong>我是卡尔，「慢慢变富的卡尔」主理人。</strong>做这个知识库，倒逼自己系统化学习，也分享给同道中人，一起慢慢变富。</p>
 
 <div class="copyright">本站内容免费分享，欢迎传播</div>
