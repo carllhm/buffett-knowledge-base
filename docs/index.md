@@ -31,9 +31,9 @@ hero:
   font-size: 16px !important;
   margin-bottom: 16px !important;
 }
-/* 二维码区块 - 在九宫格上方居中展示 */
+/* 二维码区块 - 在九宫格上方，右对齐，和九宫格右边缘对齐 */
 .qrcode-section {
-  text-align: center;
+  text-align: right;
   margin: 16px 0 12px 0;
 }
 .qrcode-box {
