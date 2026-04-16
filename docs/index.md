@@ -142,31 +142,20 @@ hero:
 }
 </style>
 
-<!-- 二维码放在hero区域内部，和标题同一行区域 -->
-<script setup>
-import { onMounted } from 'vue'
-onMounted(() => {
-  const hero = document.querySelector('.VPHero .container')
-  if (hero) {
-    const qrcodeHtml = `
-      <div class="qrcode-section">
-        <div class="qrcode-box">
-          <div class="qrcode-item">
-            <img src="/images/公众号二维码.jpg" alt="公众号">
-            <p><strong>公众号</strong><br>慢慢变富的卡尔</p>
-          </div>
-          <div class="qrcode-item">
-            <img src="/images/视频号二维码.jpg" alt="视频号">
-            <p><strong>视频号</strong><br>慢慢变富的卡尔</p>
-          </div>
-        </div>
-        <div class="qrcode-title">关注我，一起学习投资大师</div>
-      </div>
-    `
-    hero.insertAdjacentHTML('beforeend', qrcodeHtml)
-  }
-})
-</script>
+<!-- 二维码区域 - 直接写在HTML中，和标题并排 -->
+<div class="qrcode-section">
+  <div class="qrcode-box">
+    <div class="qrcode-item">
+      <img src="/images/公众号二维码.jpg" alt="公众号">
+      <p><strong>公众号</strong><br>慢慢变富的卡尔</p>
+    </div>
+    <div class="qrcode-item">
+      <img src="/images/视频号二维码.jpg" alt="视频号">
+      <p><strong>视频号</strong><br>慢慢变富的卡尔</p>
+    </div>
+  </div>
+  <div class="qrcode-title">关注我，一起学习投资大师</div>
+</div>
 
 <!-- 自定义九宫格卡片 - 左右布局 -->
 <div class="custom-grid">
