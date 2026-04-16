@@ -17,7 +17,7 @@ hero:
 ---
 
 <style>
-/* 压缩首页间距，二维码顶格和标题对齐 */
+/* 压缩首页间距，实现一屏展示 */
 .home .hero {
   padding-top: 24px !important;
   padding-bottom: 12px !important;
@@ -31,53 +31,46 @@ hero:
   font-size: 16px !important;
   margin-bottom: 16px !important;
 }
-/* 容器相对定位，二维码绝对定位顶格右对齐 */
-.home-container {
-  position: relative !important;
-}
-/* 二维码：顶格和标题对齐，右边缘和九宫格对齐 */
-.qrcode-float {
-  position: absolute;
-  top: 24px; /* 和 hero padding-top 一致，顶格对齐 */
-  right: 0; /* 右对齐，和九宫格右边缘齐平 */
-  z-index: 100;
-  text-align: center;
+/* 二维码区块 - 在九宫格上方，右对齐，与九宫格右边缘对齐 */
+.qrcode-section {
+  text-align: right;
+  margin: 8px 0 12px 0;
 }
 .qrcode-box {
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
   gap: 12px;
-  margin-bottom: 6px;
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .qrcode-item {
   text-align: center;
-  background: var(--vp-c-bg-soft);
-  padding: 6px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .qrcode-item img {
   width: 70px;
   height: 70px;
+  display: block;
   border-radius: 4px;
 }
 .qrcode-item p {
-  margin: 2px 0 0;
+  margin: 4px 0 0 0;
   font-size: 11px;
   line-height: 1.2;
 }
-.qrcode-float .qrcode-title {
+.qrcode-title {
+  margin-top: 4px;
   font-size: 12px;
   color: var(--vp-c-text-2);
+  text-align: center;
 }
 /* 自定义九宫格容器 */
 .custom-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  padding-top: 12px;
+  padding-top: 0;
   padding-bottom: 12px;
-  margin-top: 0;
 }
 /* 自定义卡片 - 左右布局：左边图标+标题，右边描述 */
 .custom-card {
@@ -131,8 +124,8 @@ hero:
 }
 </style>
 
-<!-- 二维码：顶格和标题对齐，右边缘和九宫格对齐 -->
-<div class="qrcode-float">
+<!-- 二维码区块：九宫格上方，右对齐，右边缘和九宫格对齐 -->
+<div class="qrcode-section">
   <div class="qrcode-box">
     <div class="qrcode-item">
       <img src="/images/公众号二维码.jpg" alt="公众号">
