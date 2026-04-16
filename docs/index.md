@@ -14,43 +14,6 @@ hero:
       text: 🧭 阅读导航
       link: /00_index/reading-guide
 
-features:
-  - icon: 📖
-    title: 原文翻译
-    details: 70年完整翻译（1956-2025）
-    link: /01_letters/
-  - icon: 🧠
-    title: 思维导图
-    details: 70年两级折叠导图
-    link: /01_letters/1977年/思维导图.html
-  - icon: 📝
-    title: 核心总结
-    details: 70年年度精华梳理
-    link: /01_letters/1989年/核心总结.html
-  - icon: 🧩
-    title: 主题索引
-    details: 25个核心投资概念
-    link: /02_concepts/
-  - icon: 🏢
-    title: 公司档案
-    details: 35家经典投资案例
-    link: /03_companies/
-  - icon: 👤
-    title: 人物传记
-    details: 77位核心人物全收录
-    link: /04_people/
-  - icon: 💬
-    title: 金句库
-    details: 70年经典语录分类
-    link: /05_quotes/
-  - icon: 📈
-    title: 数据可视化
-    details: 6大维度图表分析
-    link: /06_visualization/
-  - icon: 📚
-    title: 拓展阅读
-    details: 演讲访谈纪录片汇总
-    link: /07_resources/
 ---
 
 <style>
@@ -69,65 +32,68 @@ features:
   font-size: 16px !important;
   margin-bottom: 16px !important;
 }
-.home .features {
-  padding-top: 12px !important;
-  padding-bottom: 12px !important;
-  padding-right: 200px !important; /* 给右上角二维码留出空间 */
+/* 自定义九宫格容器 */
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 200px; /* 给右上角二维码留出空间 */
 }
-.home .features .feature {
-  padding: 12px 16px !important;
+/* 自定义卡片 - 左右布局：左边图标+标题，右边描述 */
+.custom-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+  color: var(--vp-c-text-1);
 }
-.home .features .feature .title {
-  font-size: 15px !important;
-  margin-bottom: 4px !important;
+.custom-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
-.home .features .feature .details {
-  font-size: 13px !important;
-  line-height: 1.4 !important;
-}
-/* 九宫格卡片改为左右布局：左边图标+模块名，右边文字描述 */
-.home .features .feature {
-  display: flex !important;
-  align-items: flex-start !important;
-  text-align: left !important;
-  gap: 16px !important;
-  padding: 16px !important;
-}
-.home .features .feature .icon {
+.custom-card .icon {
   flex-shrink: 0;
-  margin: 0 !important;
-  font-size: 32px !important;
-  width: 40px !important;
-  text-align: center !important;
+  font-size: 32px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
 }
-.home .features .feature .content {
+.custom-card .content {
   flex: 1;
-  display: flex !important;
-  flex-direction: column !important;
 }
-.home .features .feature .content .title {
-  margin: 0 0 4px 0 !important;
-  font-size: 16px !important;
-  font-weight: 600 !important;
+.custom-card .content .title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: var(--vp-c-text-1);
 }
-.home .features .feature .content .details {
-  margin: 0 !important;
-  font-size: 13px !important;
-  line-height: 1.5 !important;
+.custom-card .content .details {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+  margin: 0;
 }
 /* 隐藏关于我们标题 */
 .home-container h2 {
   display: none;
 }
-/* 右上角二维码：相对于内容容器，会跟着滚动走 */
-.home {
+/* 容器相对定位，二维码绝对定位 */
+.home-container {
   position: relative !important;
 }
+/* 右上角二维码：相对于内容容器，会跟着滚动走 */
 .qrcode-float {
   position: absolute;
   top: 24px;
   right: 24px;
-  z-index: 10;
+  z-index: 100;
   text-align: center;
 }
 .qrcode-box {
@@ -186,6 +152,73 @@ features:
     </div>
   </div>
   <div class="qrcode-title">关注我，一起学习投资大师</div>
+</div>
+
+<!-- 自定义九宫格卡片 - 左右布局 -->
+<div class="custom-grid">
+  <a href="/01_letters/" class="custom-card">
+    <div class="icon">📖</div>
+    <div class="content">
+      <h3 class="title">原文翻译</h3>
+      <p class="details">70年完整翻译（1956-2025）</p>
+    </div>
+  </a>
+  <a href="/01_letters/1977年/思维导图.html" class="custom-card">
+    <div class="icon">🧠</div>
+    <div class="content">
+      <h3 class="title">思维导图</h3>
+      <p class="details">70年两级折叠导图</p>
+    </div>
+  </a>
+  <a href="/01_letters/1989年/核心总结.html" class="custom-card">
+    <div class="icon">📝</div>
+    <div class="content">
+      <h3 class="title">核心总结</h3>
+      <p class="details">70年年度精华梳理</p>
+    </div>
+  </a>
+  <a href="/02_concepts/" class="custom-card">
+    <div class="icon">🧩</div>
+    <div class="content">
+      <h3 class="title">主题索引</h3>
+      <p class="details">25个核心投资概念</p>
+    </div>
+  </a>
+  <a href="/03_companies/" class="custom-card">
+    <div class="icon">🏢</div>
+    <div class="content">
+      <h3 class="title">公司档案</h3>
+      <p class="details">35家经典投资案例</p>
+    </div>
+  </a>
+  <a href="/04_people/" class="custom-card">
+    <div class="icon">👤</div>
+    <div class="content">
+      <h3 class="title">人物传记</h3>
+      <p class="details">77位核心人物全收录</p>
+    </div>
+  </a>
+  <a href="/05_quotes/" class="custom-card">
+    <div class="icon">💬</div>
+    <div class="content">
+      <h3 class="title">金句库</h3>
+      <p class="details">70年经典语录分类</p>
+    </div>
+  </a>
+  <a href="/06_visualization/" class="custom-card">
+    <div class="icon">📈</div>
+    <div class="content">
+      <h3 class="title">数据可视化</h3>
+      <p class="details">6大维度图表分析</p>
+    </div>
+  </a>
+  <a href="/07_resources/" class="custom-card">
+    <div class="icon">📚</div>
+    <div class="content">
+      <h3 class="title">拓展阅读</h3>
+      <p class="details">演讲访谈纪录片汇总</p>
+    </div>
+  </a>
 </div>
 
 <p class="intro"><strong>我是卡尔，「慢慢变富的卡尔」主理人。</strong>做这个知识库，倒逼自己系统化学习，也分享给同道中人，一起慢慢变富。</p>
