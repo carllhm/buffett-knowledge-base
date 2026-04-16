@@ -104,3 +104,11 @@ GEICO当年报告股息收益300万美元，但巴菲特估计伯克希尔占有
 - [递延税复利 Deferred Tax Compounding](./deferred-tax.md) — 递延纳税与复利的结合
 - [内在价值 Intrinsic Value](./intrinsic-value.md) — 透视盈利是内在价值的重要驱动
 - [复利 Compounding](./compounding.md) — 时间是伟大事业的朋友
+
+## 关键原文出处
+
+以下为该主题在致股东信中的关键原文出处年份，点击即可阅读完整翻译：
+
+- [[1980年：首次提出|完整翻译|/01_letters/1980年/翻译]]
+- [[1990年：体系化|完整翻译|/01_letters/1990年/翻译]]
+- [[2004年：深化|完整翻译|/01_letters/2004年/翻译]]
