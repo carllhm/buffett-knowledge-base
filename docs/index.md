@@ -85,31 +85,49 @@ features:
   font-size: 13px !important;
   line-height: 1.4 !important;
 }
-/* 九宫格卡片改为左右布局：左边图标+标题，右边描述 */
+/* 九宫格卡片改为左右布局：左边图标+模块名，右边文字描述 */
 .home .features .feature {
   display: flex !important;
-  align-items: center !important;
+  align-items: flex-start !important;
   text-align: left !important;
-  gap: 12px !important;
+  gap: 16px !important;
+  padding: 16px !important;
 }
 .home .features .feature .icon {
   flex-shrink: 0;
   margin: 0 !important;
-  font-size: 28px !important;
+  font-size: 32px !important;
+  width: 40px !important;
+  text-align: center !important;
 }
 .home .features .feature .content {
   flex: 1;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.home .features .feature .content .title {
+  margin: 0 0 4px 0 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+.home .features .feature .content .details {
+  margin: 0 !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
 }
 /* 隐藏关于我们标题 */
 .home-container h2 {
   display: none;
 }
-/* 右上角固定二维码 */
+/* 右上角二维码：相对于内容容器，会跟着滚动走 */
+.home {
+  position: relative !important;
+}
 .qrcode-float {
-  position: fixed;
+  position: absolute;
   top: 24px;
   right: 24px;
-  z-index: 100;
+  z-index: 10;
   text-align: center;
 }
 .qrcode-box {
