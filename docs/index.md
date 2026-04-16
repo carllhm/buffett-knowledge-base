@@ -99,7 +99,7 @@ features:
 }
 .qrcode-box {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 8px;
   margin-bottom: 6px;
 }
@@ -111,13 +111,13 @@ features:
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .qrcode-item img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 4px;
 }
 .qrcode-item p {
   margin: 2px 0 0;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.2;
 }
 .qrcode-float .qrcode-title {
