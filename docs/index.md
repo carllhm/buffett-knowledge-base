@@ -73,12 +73,12 @@ hero:
   color: var(--vp-c-text-2);
   text-align: center;
 }
-/* 自定义九宫格容器 */
+/* 自定义九宫格容器 - 上方留足够空间，完全不重合 */
 .custom-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  padding-top: 12px; /* 上方留出二维码高度空间 */
+  padding-top: 130px; /* 增加到130px，完全避开二维码高度，不重合 */
   padding-bottom: 12px;
 }
 /* 自定义卡片 - 左右布局：左边图标+标题，右边描述 */
