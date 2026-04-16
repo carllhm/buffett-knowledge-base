@@ -58,6 +58,7 @@ features:
 .home .hero {
   padding-top: 24px !important;
   padding-bottom: 12px !important;
+  padding-right: 200px !important; /* 给右上角二维码留出空间 */
 }
 .home .hero .name {
   font-size: 28px !important;
@@ -71,6 +72,7 @@ features:
 .home .features {
   padding-top: 12px !important;
   padding-bottom: 12px !important;
+  padding-right: 200px !important; /* 给右上角二维码留出空间 */
 }
 .home .features .feature {
   padding: 12px 16px !important;
@@ -83,55 +85,76 @@ features:
   font-size: 13px !important;
   line-height: 1.4 !important;
 }
-/* 隐藏关于我们标题，二维码缩小 */
+/* 隐藏关于我们标题 */
 .home-container h2 {
   display: none;
 }
-.home-container p {
-  margin: 8px 0 !important;
-  font-size: 14px;
+/* 右上角固定二维码 */
+.qrcode-float {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
   text-align: center;
+}
+.qrcode-float .qrcode-title {
+  font-size: 12px;
+  color: var(--vp-c-text-2);
+  margin-bottom: 6px;
 }
 .qrcode-box {
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin: 12px 0 8px;
+  flex-direction: column;
+  gap: 8px;
 }
 .qrcode-item {
   text-align: center;
   background: var(--vp-c-bg-soft);
-  padding: 10px;
-  border-radius: 8px;
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .qrcode-item img {
-  width: 80px;
-  height: 80px;
-  border-radius: 6px;
+  width: 70px;
+  height: 70px;
+  border-radius: 4px;
 }
 .qrcode-item p {
-  margin: 4px 0 0;
-  font-size: 12px;
+  margin: 2px 0 0;
+  font-size: 11px;
+  line-height: 1.2;
 }
+/* 底部版权 */
 .copyright {
   text-align: center;
   font-size: 12px;
   color: var(--vp-c-text-3);
   margin: 8px 0 12px;
+  padding-right: 200px;
+}
+.home-container p.intro {
+  margin: 8px 0 !important;
+  padding-right: 200px;
+  font-size: 14px;
+  text-align: left;
 }
 </style>
 
-<p><strong>我是卡尔，「慢慢变富的卡尔」主理人。</strong>做这个知识库，倒逼自己系统化学习，也分享给同道中人，一起慢慢变富。</p>
-
-<div class="qrcode-box">
-  <div class="qrcode-item">
-    <img src="/images/公众号二维码.jpg" alt="公众号">
-    <p><strong>公众号</strong><br>慢慢变富的卡尔</p>
-  </div>
-  <div class="qrcode-item">
-    <img src="/images/视频号二维码.jpg" alt="视频号">
-    <p><strong>视频号</strong><br>慢慢变富的卡尔</p>
+<!-- 右上角浮动二维码 -->
+<div class="qrcode-float">
+  <div class="qrcode-title">关注我，一起学习投资大师</div>
+  <div class="qrcode-box">
+    <div class="qrcode-item">
+      <img src="/images/公众号二维码.jpg" alt="公众号">
+      <p><strong>公众号</strong><br>慢慢变富的卡尔</p>
+    </div>
+    <div class="qrcode-item">
+      <img src="/images/视频号二维码.jpg" alt="视频号">
+      <p><strong>视频号</strong><br>慢慢变富的卡尔</p>
+    </div>
   </div>
 </div>
+
+<p class="intro"><strong>我是卡尔，「慢慢变富的卡尔」主理人。</strong>做这个知识库，倒逼自己系统化学习，也分享给同道中人，一起慢慢变富。</p>
 
 <div class="copyright">本站内容免费分享，欢迎传播</div>
