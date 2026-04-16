@@ -1,96 +1,30 @@
----
-layout: home
-aside: false
-
-hero:
-  name: "巴菲特致股东信知识库"
-  text: ""
-  tagline: "70年投资智慧 · 系统学习巴菲特"
-  actions:
-    - theme: brand
-      text: 📖 70年导读
-      link: /00_index/巴菲特致股东信70年导读
-    - theme: alt
-      text: 🧭 阅读导航
-      link: /00_index/reading-guide
-
----
+<script setup>
+import HeroQrcode from '.vitepress/components/HeroQrcode.vue'
+</script>
 
 <style>
-/* hero区域 - Flex布局让标题和二维码并排 */
-.VPHero {
-  padding-top: 24px !important;
-  padding-bottom: 12px !important;
-}
+/* 二维码放在 hero 主区域右侧，和标题对齐 */
 .VPHero .container {
   display: flex !important;
   flex-direction: row !important;
   justify-content: space-between !important;
   align-items: flex-start !important;
-  gap: 24px !important;
-  max-width: 1152px !important;
-  margin: 0 auto !important;
-  padding: 0 24px !important;
+  gap: 0 !important;
 }
 .VPHero .main {
   flex: 1 1 auto !important;
   min-width: 0 !important;
 }
-.VPHero .name {
-  font-size: 28px !important;
-  line-height: 1.2 !important;
-  margin-bottom: 4px !important;
-}
-.VPHero .tagline {
-  font-size: 16px !important;
-  margin-bottom: 16px !important;
-}
-/* 二维码区块 - Flex item，和标题并排 */
-.qrcode-section {
-  flex: 0 0 auto !important;
-  text-align: center !important;
-  margin-top: 0 !important;
-}
-.qrcode-box {
-  display: flex;
-  gap: 12px;
-  background: var(--vp-c-bg-soft);
-  border-radius: 8px;
-  padding: 8px 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  margin-bottom: 4px;
-}
-.qrcode-item {
-  text-align: center;
-}
-.qrcode-item img {
-  width: 70px;
-  height: 70px;
-  display: block;
-  border-radius: 4px;
-}
-.qrcode-item p {
-  margin: 4px 0 0 0;
-  font-size: 11px;
-  line-height: 1.2;
-}
-.qrcode-title {
-  font-size: 12px;
-  color: var(--vp-c-text-2);
-  text-align: center;
-}
-/* 自定义九宫格容器 - 正常位置，不需要额外padding */
+/* 自定义九宫格容器 */
 .custom-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  padding-top: 24px;
-  padding-bottom: 12px;
+  padding: 24px 24px 12px;
   max-width: 1152px;
   margin: 0 auto;
-  padding: 0 24px;
 }
-/* 自定义卡片 - 左右布局：左边图标+标题，右边描述 */
+/* 自定义卡片 - 左右布局 */
 .custom-card {
   display: flex;
   align-items: flex-start;
@@ -129,10 +63,6 @@ hero:
   color: var(--vp-c-text-2);
   margin: 0;
 }
-/* 隐藏关于我们标题 */
-.home-container h2 {
-  display: none;
-}
 /* 底部版权 */
 .copyright {
   text-align: center;
@@ -142,22 +72,9 @@ hero:
 }
 </style>
 
-<!-- 二维码区域 - 直接写在HTML中，和标题并排 -->
-<div class="qrcode-section">
-  <div class="qrcode-box">
-    <div class="qrcode-item">
-      <img src="/images/公众号二维码.jpg" alt="公众号">
-      <p><strong>公众号</strong><br>慢慢变富的卡尔</p>
-    </div>
-    <div class="qrcode-item">
-      <img src="/images/视频号二维码.jpg" alt="视频号">
-      <p><strong>视频号</strong><br>慢慢变富的卡尔</p>
-    </div>
-  </div>
-  <div class="qrcode-title">关注我，一起学习投资大师</div>
-</div>
+<HeroQrcode />
 
-<!-- 自定义九宫格卡片 - 左右布局 -->
+<!-- 自定义九宫格卡片 -->
 <div class="custom-grid">
   <a href="/01_letters/" class="custom-card">
     <div class="icon">📖</div>
