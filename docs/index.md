@@ -1,20 +1,22 @@
-<script setup>
-import HeroQrcode from '.vitepress/components/HeroQrcode.vue'
-</script>
+---
+layout: home
+aside: false
+
+hero:
+  name: "巴菲特致股东信知识库"
+  text: ""
+  tagline: "70年投资智慧 · 系统学习巴菲特"
+  actions:
+    - theme: brand
+      text: 📖 70年导读
+      link: /00_index/巴菲特致股东信70年导读
+    - theme: alt
+      text: 🧭 阅读导航
+      link: /00_index/reading-guide
+
+---
 
 <style>
-/* 二维码放在 hero 主区域右侧，和标题对齐 */
-.VPHero .container {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: space-between !important;
-  align-items: flex-start !important;
-  gap: 0 !important;
-}
-.VPHero .main {
-  flex: 1 1 auto !important;
-  min-width: 0 !important;
-}
 /* 自定义九宫格容器 */
 .custom-grid {
   display: grid;
@@ -63,16 +65,51 @@ import HeroQrcode from '.vitepress/components/HeroQrcode.vue'
   color: var(--vp-c-text-2);
   margin: 0;
 }
+/* 二维码区块 - 放在九宫格下方 */
+.qrcode-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 24px 24px;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.qrcode-box {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+  padding: 12px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.qrcode-item {
+  text-align: center;
+}
+.qrcode-item img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  border-radius: 4px;
+}
+.qrcode-item p {
+  margin: 6px 0 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.qrcode-title {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+}
 /* 底部版权 */
 .copyright {
   text-align: center;
   font-size: 12px;
   color: var(--vp-c-text-3);
-  margin: 8px 0 12px;
+  margin: 0 0 16px;
 }
 </style>
-
-<HeroQrcode />
 
 <!-- 自定义九宫格卡片 -->
 <div class="custom-grid">
@@ -139,6 +176,21 @@ import HeroQrcode from '.vitepress/components/HeroQrcode.vue'
       <p class="details">演讲访谈纪录片汇总</p>
     </div>
   </a>
+</div>
+
+<!-- 二维码区块 - 放在九宫格下方 -->
+<div class="qrcode-section">
+  <div class="qrcode-box">
+    <div class="qrcode-item">
+      <img src="/images/公众号二维码.jpg" alt="公众号">
+      <p><strong>公众号</strong><br>慢慢变富的卡尔</p>
+    </div>
+    <div class="qrcode-item">
+      <img src="/images/视频号二维码.jpg" alt="视频号">
+      <p><strong>视频号</strong><br>慢慢变富的卡尔</p>
+    </div>
+  </div>
+  <div class="qrcode-title">关注我，一起学习投资大师</div>
 </div>
 
 <div class="copyright">本站内容免费分享，欢迎传播</div>
