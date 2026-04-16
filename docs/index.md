@@ -17,7 +17,7 @@ hero:
 ---
 
 <style>
-/* 压缩首页间距，实现一屏展示 */
+/* 压缩首页间距，二维码顶格和标题对齐 */
 .home .hero {
   padding-top: 24px !important;
   padding-bottom: 12px !important;
@@ -31,36 +31,43 @@ hero:
   font-size: 16px !important;
   margin-bottom: 16px !important;
 }
-/* 二维码区块 - 在九宫格上方，右对齐，和九宫格右边缘对齐 */
-.qrcode-section {
-  text-align: right;
-  margin: 16px 0 12px 0;
+/* 容器相对定位，二维码绝对定位顶格右对齐 */
+.home-container {
+  position: relative !important;
+}
+/* 二维码：顶格和标题对齐，右边缘和九宫格对齐 */
+.qrcode-float {
+  position: absolute;
+  top: 24px; /* 和 hero padding-top 一致，顶格对齐 */
+  right: 0; /* 右对齐，和九宫格右边缘齐平 */
+  z-index: 100;
+  text-align: center;
 }
 .qrcode-box {
-  display: inline-flex;
-  gap: 24px;
-  background: var(--vp-c-bg-soft);
-  border-radius: 8px;
-  padding: 12px 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 6px;
 }
 .qrcode-item {
   text-align: center;
+  background: var(--vp-c-bg-soft);
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .qrcode-item img {
-  width: 90px;
-  height: 90px;
-  display: block;
+  width: 70px;
+  height: 70px;
   border-radius: 4px;
 }
 .qrcode-item p {
-  margin: 6px 0 0 0;
-  font-size: 13px;
-  line-height: 1.3;
+  margin: 2px 0 0;
+  font-size: 11px;
+  line-height: 1.2;
 }
-.qrcode-title {
-  margin-top: 8px;
-  font-size: 13px;
+.qrcode-float .qrcode-title {
+  font-size: 12px;
   color: var(--vp-c-text-2);
 }
 /* 自定义九宫格容器 */
@@ -68,8 +75,9 @@ hero:
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  padding-top: 0;
+  padding-top: 12px;
   padding-bottom: 12px;
+  margin-top: 0;
 }
 /* 自定义卡片 - 左右布局：左边图标+标题，右边描述 */
 .custom-card {
@@ -121,17 +129,10 @@ hero:
   color: var(--vp-c-text-3);
   margin: 8px 0 12px;
 }
-.home-container p.intro {
-  margin: 8px 0 !important;
-  font-size: 14px;
-  text-align: left;
-}
 </style>
 
-<p class="intro"><strong>我是卡尔，「慢慢变富的卡尔」主理人。</strong>做这个知识库，倒逼自己系统化学习，也分享给同道中人，一起慢慢变富。</p>
-
-<!-- 二维码区块：九宫格卡片上方，居中展示 -->
-<div class="qrcode-section">
+<!-- 二维码：顶格和标题对齐，右边缘和九宫格对齐 -->
+<div class="qrcode-float">
   <div class="qrcode-box">
     <div class="qrcode-item">
       <img src="/images/公众号二维码.jpg" alt="公众号">
