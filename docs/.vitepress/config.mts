@@ -486,28 +486,28 @@ export default withMermaid(defineConfig({
             ]
           },
           {
-            text: '⚙️ 商业逻辑（4+1）',
+            text: '⚙️ 商业逻辑（5）',
             collapsed: true,
             items: [
               { text: '保险浮存金', link: '/02_concepts/insurance-float' },
               { text: '承保纪律', link: '/02_concepts/underwriting-discipline' },
               { text: '资本配置', link: '/02_concepts/capital-allocation' },
-              { text: '递延税复利 🆕', link: '/02_concepts/deferred-tax' }
+              { text: '递延税复利 🆕', link: '/02_concepts/deferred-tax' },
+              { text: '回购纪律', link: '/02_concepts/share-buybacks' }
             ]
           },
           {
-            text: '🧠 投资方法论（5）',
+            text: '🧠 投资方法论（4）',
             collapsed: true,
             items: [
               { text: '能力圈', link: '/02_concepts/circle-of-competence' },
               { text: '逆向思维', link: '/02_concepts/contrarian' },
               { text: '透视盈利 🆕', link: '/02_concepts/look-through-earnings' },
-              { text: '股票回购', link: '/02_concepts/share-buybacks' },
               { text: '风险', link: '/02_concepts/risk' }
             ]
           },
           {
-            text: '🏛️ 治理智慧（4+1）',
+            text: '🏛️ 治理智慧（5）',
             collapsed: true,
             items: [
               { text: '管理层选择', link: '/02_concepts/management' },
@@ -560,6 +560,9 @@ export default withMermaid(defineConfig({
               { text: '喜诗糖果', link: '/03_companies/喜诗糖果' },
               { text: '内布拉斯加家具城', link: '/03_companies/内布拉斯加家具城' },
               { text: '克莱顿家园', link: '/03_companies/克莱顿家园' },
+              { text: 'Forest River', link: '/03_companies/Forest River' },
+              { text: 'McLanes麦克莱恩', link: '/03_companies/McLanes麦克莱恩' },
+              { text: '麦当劳', link: '/03_companies/麦当劳' },
             ]
           },
           {
@@ -580,8 +583,7 @@ export default withMermaid(defineConfig({
               { text: 'Marmon集团', link: '/03_companies/Marmon集团' },
               { text: 'Scott & Fetzer', link: '/03_companies/Scott_Fetzer' },
               { text: 'Fechheimer Bros.', link: '/03_companies/Fechheimer_Bros' },
-              { text: 'Forest River', link: '/03_companies/Forest River' },
-              { text: 'McLanes麦克莱恩', link: '/03_companies/McLanes麦克莱恩' },
+              { text: '冠军国际纸业', link: '/03_companies/冠军国际纸业' },
             ]
           },
           {
@@ -592,6 +594,7 @@ export default withMermaid(defineConfig({
               { text: '蓝筹印花', link: '/03_companies/蓝筹印花' },
               { text: '所罗门兄弟', link: '/03_companies/所罗门兄弟' },
               { text: '伯克希尔哈撒韦', link: '/03_companies/伯克希尔哈撒韦' },
+              { text: '健力士', link: '/03_companies/健力士' },
             ]
           },
           {
@@ -604,6 +607,7 @@ export default withMermaid(defineConfig({
               { text: '美国银行', link: '/03_companies/美国银行' },
               { text: '雪佛龙', link: '/03_companies/雪佛龙' },
               { text: '比亚迪', link: '/03_companies/比亚迪' },
+              { text: '迪士尼', link: '/03_companies/迪士尼' },
             ]
           },
           {
@@ -625,7 +629,7 @@ export default withMermaid(defineConfig({
         collapsed: true,
         items: [
           {
-            text: '👑 伯克希尔核心',
+            text: '👑 伯克希尔核心（4）',
             collapsed: true,
             items: [
               { text: '沃伦·巴菲特', link: '/04_people/沃伦·巴菲特' },
@@ -635,7 +639,7 @@ export default withMermaid(defineConfig({
             ]
           },
           {
-            text: '📊 投资经理',
+            text: '📊 投资经理（3）',
             collapsed: true,
             items: [
               { text: '托德·康姆斯', link: '/04_people/托德·康姆斯' },
@@ -644,55 +648,102 @@ export default withMermaid(defineConfig({
             ]
           },
           {
-            text: '🏢 保险业务',
+            text: '🏢 保险业务（10）',
             collapsed: true,
             items: [
               { text: '托尼·尼斯利', link: '/04_people/托尼·尼斯利' },
               { text: '杰克·伯恩', link: '/04_people/杰克·伯恩' },
               { text: '洛伊默·戴维森', link: '/04_people/洛伊默·戴维森' },
+              { text: '比尔·斯奈德', link: '/04_people/比尔·斯奈德' },
               { text: '罗恩·弗格森', link: '/04_people/罗恩·弗格森' },
               { text: '菲尔·利切', link: '/04_people/菲尔·利切' },
+              { text: '杰克·林格沃尔特', link: '/04_people/杰克·林格沃尔特' },
+              { text: '比尔·凯泽', link: '/04_people/比尔·凯泽' },
+              { text: '迈克·戈德堡', link: '/04_people/迈克·戈德堡' },
+              { text: '迪诺斯·约达努', link: '/04_people/迪诺斯·约达努' },
             ]
           },
           {
-            text: '🏭 子公司CEO',
+            text: '🏭 子公司CEO与管理层（36）',
             collapsed: true,
             items: [
               { text: 'B夫人', link: '/04_people/B夫人' },
+              { text: '路易·布鲁姆金', link: '/04_people/路易·布鲁姆金' },
+              { text: '罗恩·欧文', link: '/04_people/罗恩·欧文' },
               { text: '凯文·克莱顿', link: '/04_people/凯文·克莱顿' },
               { text: '格雷迪·罗西尔', link: '/04_people/格雷迪·罗西尔' },
               { text: '皮特·利格尔', link: '/04_people/皮特·利格尔' },
               { text: '埃坦·韦特海默', link: '/04_people/埃坦·韦特海默' },
               { text: '雅各布·哈帕兹', link: '/04_people/雅各布·哈帕兹' },
               { text: '弗兰克·普塔克', link: '/04_people/弗兰克·普塔克' },
+              { text: '里奇·桑图利', link: '/04_people/里奇·桑图利' },
               { text: 'Chuck Huggins', link: '/04_people/Chuck_Huggins' },
+              { text: '斯坦·利普西', link: '/04_people/斯坦·利普西' },
+              { text: '默里·莱特', link: '/04_people/默里·莱特' },
+              { text: '迪克·西蒙斯', link: '/04_people/迪克·西蒙斯' },
+              { text: '本·罗斯纳', link: '/04_people/本·罗斯纳' },
+              { text: '吉恩·阿贝格', link: '/04_people/吉恩·阿贝格' },
+              { text: '弗兰克·鲁尼', link: '/04_people/弗兰克·鲁尼' },
+              { text: '吉姆·伊斯勒', link: '/04_people/吉姆·伊斯勒' },
+              { text: '比尔·蔡尔德', link: '/04_people/比尔·蔡尔德' },
+              { text: '谢尔顿·蔡尔德', link: '/04_people/谢尔顿·蔡尔德' },
+              { text: '哈罗德·阿尔方德', link: '/04_people/哈罗德·阿尔方德' },
+              { text: '彼得·伦德', link: '/04_people/彼得·伦德' },
+              { text: '梅尔文·沃尔夫', link: '/04_people/梅尔文·沃尔夫' },
+              { text: '雪莉·图米姆', link: '/04_people/雪莉·图米姆' },
+              { text: '赫尔德曼家族', link: '/04_people/赫尔德曼家族' },
+              { text: '巴里·塔特尔曼', link: '/04_people/巴里·塔特尔曼' },
+              { text: '艾略特·塔特尔曼', link: '/04_people/艾略特·塔特尔曼' },
+              { text: '小巴内特·赫尔兹伯格', link: '/04_people/小巴内特·赫尔兹伯格' },
+              { text: '杰夫·科门特', link: '/04_people/杰夫·科门特' },
+              { text: '苏珊·雅克', link: '/04_people/苏珊·雅克' },
+              { text: '艾克·弗里德曼', link: '/04_people/艾克·弗里德曼' },
+              { text: '艾伦·弗里德曼', link: '/04_people/艾伦·弗里德曼' },
+              { text: '约翰·穆蒂', link: '/04_people/约翰·穆蒂' },
+              { text: '迈克·沙利文', link: '/04_people/迈克·沙利文' },
+              { text: '阿尔·乌尔奇', link: '/04_people/阿尔·乌尔奇' },
+              { text: '拉尔夫·谢伊', link: '/04_people/拉尔夫·谢伊' },
             ]
           },
           {
-            text: '📰 被投公司CEO',
+            text: '📰 被投公司CEO（17）',
             collapsed: true,
             items: [
               { text: 'Tom Murphy', link: '/04_people/Tom_Murphy' },
+              { text: '丹·伯克', link: '/04_people/丹·伯克' },
               { text: '凯·格雷厄姆', link: '/04_people/凯·格雷厄姆' },
-              { text: '本·罗斯纳', link: '/04_people/本·罗斯纳' },
-              { text: '吉恩·阿贝格', link: '/04_people/吉恩·阿贝格' },
+              { text: '罗伯托·戈伊苏埃塔', link: '/04_people/罗伯托·戈伊苏埃塔' },
+              { text: '唐·库赫', link: '/04_people/唐·库赫' },
+              { text: '保罗·黑曾', link: '/04_people/保罗·黑曾' },
+              { text: '卡尔·赖查特', link: '/04_people/卡尔·赖查特' },
+              { text: '大卫·马克斯韦尔', link: '/04_people/大卫·马克斯韦尔' },
+              { text: '比尔·安德斯', link: '/04_people/比尔·安德斯' },
+              { text: '科尔曼·莫格勒', link: '/04_people/科尔曼·莫格勒' },
+              { text: '弗兰克·奥尔森', link: '/04_people/弗兰克·奥尔森' },
+              { text: '塞思·斯科菲尔德', link: '/04_people/塞思·斯科菲尔德' },
+              { text: '约翰·古尔特弗里德', link: '/04_people/约翰·古尔特弗里德' },
+              { text: '约翰·麦克法兰', link: '/04_people/约翰·麦克法兰' },
+              { text: '德里克·莫恩', link: '/04_people/德里克·莫恩' },
+              { text: '唐·霍华德', link: '/04_people/唐·霍华德' },
+              { text: '鲍勃·德纳姆', link: '/04_people/鲍勃·德纳姆' },
             ]
           },
           {
-            text: '🎓 投资大师',
+            text: '🎓 投资大师（1）',
             collapsed: true,
             items: [
               { text: '本·格雷厄姆', link: '/04_people/本·格雷厄姆' },
-              { text: '斯坦·利普西', link: '/04_people/斯坦·利普西' },
             ]
           },
           {
-            text: '🤝 董事与顾问',
+            text: '🤝 董事与顾问（5）',
             collapsed: true,
             items: [
               { text: '沃尔特·斯科特', link: '/04_people/沃尔特·斯科特' },
               { text: '罗恩·奥尔森', link: '/04_people/罗恩·奥尔森' },
               { text: '大卫·索科尔', link: '/04_people/大卫·索科尔' },
+              { text: '理查德·瑟斯', link: '/04_people/理查德·瑟斯' },
+              { text: '罗伊·丁斯代尔', link: '/04_people/罗伊·丁斯代尔' },
             ]
           },
         ]
