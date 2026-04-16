@@ -85,6 +85,21 @@ features:
   font-size: 13px !important;
   line-height: 1.4 !important;
 }
+/* 九宫格卡片改为左右布局：左边图标+标题，右边描述 */
+.home .features .feature {
+  display: flex !important;
+  align-items: center !important;
+  text-align: left !important;
+  gap: 12px !important;
+}
+.home .features .feature .icon {
+  flex-shrink: 0;
+  margin: 0 !important;
+  font-size: 28px !important;
+}
+.home .features .feature .content {
+  flex: 1;
+}
 /* 隐藏关于我们标题 */
 .home-container h2 {
   display: none;
