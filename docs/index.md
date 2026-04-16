@@ -17,11 +17,24 @@ hero:
 ---
 
 <style>
-/* hero区域设置相对定位，二维码放在hero内部右上角 */
+/* hero区域 - Flex布局让标题和二维码并排 */
 .VPHero {
-  position: relative;
   padding-top: 24px !important;
   padding-bottom: 12px !important;
+}
+.VPHero .container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 24px !important;
+  max-width: 1152px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+.VPHero .main {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
 }
 .VPHero .name {
   font-size: 28px !important;
@@ -32,12 +45,11 @@ hero:
   font-size: 16px !important;
   margin-bottom: 16px !important;
 }
-/* 二维码区块 - 放在hero内部的右上角，和标题同一行区域 */
+/* 二维码区块 - Flex item，和标题并排 */
 .qrcode-section {
-  position: absolute;
-  top: 24px; /* 和hero的padding-top一致，和标题上沿对齐 */
-  right: 0; /* 和hero右边、九宫格右边对齐 */
-  text-align: center;
+  flex: 0 0 auto !important;
+  text-align: center !important;
+  margin-top: 0 !important;
 }
 .qrcode-box {
   display: flex;
