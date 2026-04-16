@@ -1,6 +1,6 @@
 ---
 layout: home
-aside: true
+aside: false
 
 hero:
   name: "巴菲特致股东信知识库"
@@ -17,68 +17,121 @@ hero:
 features:
   - icon: 📖
     title: 原文翻译
-    details: 70年完整翻译（1956-2025），含早期合伙企业信函原文
+    details: 70年完整翻译（1956-2025）
     link: /01_letters/
   - icon: 🧠
     title: 思维导图
-    details: 70年思维导图（1956-2025），两级折叠结构，梳理年度投资脉络
+    details: 70年两级折叠导图
     link: /01_letters/1977年/思维导图.html
   - icon: 📝
     title: 核心总结
-    details: 70年核心总结（1956-2025），一页读懂每年投资精华
+    details: 70年年度精华梳理
     link: /01_letters/1989年/核心总结.html
   - icon: 🧩
     title: 主题索引
-    details: 25个核心概念，从护城河到复利，系统建立投资思维框架
+    details: 25个核心投资概念
     link: /02_concepts/
   - icon: 🏢
     title: 公司档案
-    details: 35家公司深度解读，子公司/重仓持仓/经典收购案例
+    details: 35家经典投资案例
     link: /03_companies/
   - icon: 👤
     title: 人物传记
-    details: 77位传奇人物，巴菲特/芒格/子公司CEO/投资大师全覆盖
+    details: 77位核心人物全收录
     link: /04_people/
   - icon: 💬
     title: 金句库
-    details: 70年经典语录，按主题/年份/场景分类
+    details: 70年经典语录分类
     link: /05_quotes/
   - icon: 📈
     title: 数据可视化
-    details: 6张图表：收益率对比/净值增长/持仓集中度/浮存金/收购里程碑/收入结构
+    details: 6大维度图表分析
     link: /06_visualization/
   - icon: 📚
     title: 拓展阅读
-    details: 10场经典演讲/30+小时访谈/3部纪录片/合伙企业信函1957-1970，延伸学习
+    details: 演讲访谈纪录片汇总
     link: /07_resources/
 ---
 
-## 关于本站
+<style>
+/* 压缩首页间距，实现一屏展示 */
+.home .hero {
+  padding-top: 24px !important;
+  padding-bottom: 12px !important;
+}
+.home .hero .name {
+  font-size: 28px !important;
+  line-height: 1.2 !important;
+  margin-bottom: 4px !important;
+}
+.home .hero .tagline {
+  font-size: 16px !important;
+  margin-bottom: 16px !important;
+}
+.home .features {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+.home .features .feature {
+  padding: 12px 16px !important;
+}
+.home .features .feature .title {
+  font-size: 15px !important;
+  margin-bottom: 4px !important;
+}
+.home .features .feature .details {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+/* 隐藏关于我们标题，二维码缩小 */
+.home-container h2 {
+  display: none;
+}
+.home-container p {
+  margin: 8px 0 !important;
+  font-size: 14px;
+  text-align: center;
+}
+.qrcode-box {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 12px 0 8px;
+}
+.qrcode-item {
+  text-align: center;
+  background: var(--vp-c-bg-soft);
+  padding: 10px;
+  border-radius: 8px;
+}
+.qrcode-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+}
+.qrcode-item p {
+  margin: 4px 0 0;
+  font-size: 12px;
+}
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+  margin: 8px 0 12px;
+}
+</style>
 
-我是卡尔，「慢慢变富的卡尔」主理人。
+<p><strong>我是卡尔，「慢慢变富的卡尔」主理人。</strong>做这个知识库，倒逼自己系统化学习，也分享给同道中人，一起慢慢变富。</p>
 
-做这个知识库，一方面是倒逼自己系统化学习投资大师的投资理念，另一方面也希望能分享给更多同道中人，一起学习大师的投资智慧。
-
-欢迎关注公众号和视频号「慢慢变富的卡尔」，我们一起慢慢变富。
-
-### 关注我们
-
-<div style="display: flex; justify-content: center; gap: 40px; margin: 30px 0;">
-
-<div style="text-align: center; background: #f8f9fa; padding: 20px; border-radius: 12px;">
-<img src="/images/公众号二维码.jpg" alt="公众号：慢慢变富的卡尔" style="width: 120px; height: 120px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-<p style="margin-top: 10px; font-weight: 600; color: #333;">公众号</p>
-<p style="margin: 5px 0 0; color: #666; font-size: 14px;">慢慢变富的卡尔</p>
+<div class="qrcode-box">
+  <div class="qrcode-item">
+    <img src="/images/公众号二维码.jpg" alt="公众号">
+    <p><strong>公众号</strong><br>慢慢变富的卡尔</p>
+  </div>
+  <div class="qrcode-item">
+    <img src="/images/视频号二维码.jpg" alt="视频号">
+    <p><strong>视频号</strong><br>慢慢变富的卡尔</p>
+  </div>
 </div>
 
-<div style="text-align: center; background: #f8f9fa; padding: 20px; border-radius: 12px;">
-<img src="/images/视频号二维码.jpg" alt="视频号" style="width: 120px; height: 120px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-<p style="margin-top: 10px; font-weight: 600; color: #333;">视频号</p>
-<p style="margin: 5px 0 0; color: #666; font-size: 14px;">慢慢变富的卡尔</p>
-</div>
-
-</div>
-
----
-
-*本站内容免费分享，欢迎传播*
+<div class="copyright">本站内容免费分享，欢迎传播</div>
