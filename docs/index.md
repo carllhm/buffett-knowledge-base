@@ -1,5 +1,6 @@
 ---
 layout: home
+aside: true
 
 hero:
   name: "巴菲特致股东信知识库"
