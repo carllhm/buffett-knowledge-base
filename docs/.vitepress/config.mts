@@ -448,6 +448,7 @@ export default withMermaid(defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '全年股东信', link: '/01_letters/' },
+      { text: '70年导读', link: '/00_index/巴菲特致股东信70年导读' },
       { text: '主题索引', link: '/02_concepts/' },
       { text: '公司档案', link: '/03_companies/' },
       { text: '人物传记', link: '/04_people/' },

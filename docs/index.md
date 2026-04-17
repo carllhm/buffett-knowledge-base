@@ -156,7 +156,6 @@ aside: true
   <p class="tagline">70年投资智慧 · 系统学习巴菲特</p>
   <div class="hero-actions">
     <a href="/00_index/巴菲特致股东信70年导读" class="brand">📖 70年导读</a>
-    <a href="/00_index/reading-guide" class="alt">🧭 阅读导航</a>
   </div>
 </div>
 
