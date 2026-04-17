@@ -1,22 +1,61 @@
 ---
-layout: home
 aside: true
-
-hero:
-  name: "巴菲特致股东信知识库"
-  text: ""
-  tagline: "70年投资智慧 · 系统学习巴菲特"
-  actions:
-    - theme: brand
-      text: 📖 70年导读
-      link: /00_index/巴菲特致股东信70年导读
-    - theme: alt
-      text: 🧭 阅读导航
-      link: /00_index/reading-guide
-
 ---
 
 <style>
+/* Hero区域样式 */
+.hero-section {
+  text-align: center;
+  padding: 48px 24px 32px;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.hero-section h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  background: linear-gradient(135deg, var(--vp-c-brand-1) 0%, var(--vp-c-brand-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-section .tagline {
+  font-size: 20px;
+  color: var(--vp-c-text-2);
+  margin: 0 0 32px;
+}
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero-actions a {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.hero-actions .brand {
+  background: var(--vp-c-brand-1);
+  color: white;
+}
+.hero-actions .brand:hover {
+  background: var(--vp-c-brand-dark);
+}
+.hero-actions .alt {
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  border: 1px solid var(--vp-c-divider);
+}
+.hero-actions .alt:hover {
+  border-color: var(--vp-c-brand-1);
+}
+
 /* 自定义九宫格容器 */
 .custom-grid {
   display: grid;
@@ -110,6 +149,16 @@ hero:
   margin: 0 0 16px;
 }
 </style>
+
+<!-- Hero区域 -->
+<div class="hero-section">
+  <h1>巴菲特致股东信知识库</h1>
+  <p class="tagline">70年投资智慧 · 系统学习巴菲特</p>
+  <div class="hero-actions">
+    <a href="/00_index/巴菲特致股东信70年导读" class="brand">📖 70年导读</a>
+    <a href="/00_index/reading-guide" class="alt">🧭 阅读导航</a>
+  </div>
+</div>
 
 <!-- 自定义九宫格卡片 -->
 <div class="custom-grid">

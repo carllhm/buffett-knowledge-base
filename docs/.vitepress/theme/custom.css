@@ -173,7 +173,31 @@
   border-radius: 8px;
 }
 
-/* 内容区域最大宽度限制，更适合阅读 */
+/* 首页强制显示侧边栏 */
+.home .VPSidebar {
+  display: block !important;
+}
+
+.home .VPContent {
+  display: flex;
+}
+
+.home .VPDoc {
+  flex: 1;
+  padding-left: 0;
+}
+
+@media (min-width: 960px) {
+  .home .VPDoc {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home .VPDoc {
+    padding-left: 0;
+  }
+}
 .VPDoc .content-container {
   max-width: 860px;
   margin: 0 auto;
