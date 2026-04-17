@@ -6,7 +6,7 @@ aside: true
 /* Hero区域样式 */
 .hero-section {
   text-align: center;
-  padding: 48px 24px 32px;
+  padding: 16px 24px 12px;
   max-width: 1152px;
   margin: 0 auto;
 }
@@ -23,7 +23,7 @@ aside: true
 .hero-section .tagline {
   font-size: 20px;
   color: var(--vp-c-text-2);
-  margin: 0 0 32px;
+  margin: 0 0 12px;
 }
 .hero-actions {
   display: flex;
@@ -61,7 +61,7 @@ aside: true
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  padding: 24px 24px 12px;
+  padding: 0 24px 12px;
   max-width: 1152px;
   margin: 0 auto;
 }
