@@ -154,9 +154,7 @@ aside: true
 <div class="hero-section">
   <h1>巴菲特致股东信知识库</h1>
   <p class="tagline">70年投资智慧 · 系统学习巴菲特</p>
-  <div class="hero-actions">
-    <a href="/00_index/巴菲特致股东信70年导读" class="brand">📖 70年导读</a>
-  </div>
+  <div class="hero-actions"></div>
 </div>
 
 <!-- 自定义九宫格卡片 -->
