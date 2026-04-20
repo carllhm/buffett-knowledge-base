@@ -806,7 +806,8 @@ export default withMermaid(defineConfig({
         items: [
           { text: '📊 概念关系图', link: '/08_knowledge-graph/concept-relations' },
           { text: '👥 人物关系网络', link: '/08_knowledge-graph/person-network' },
-          { text: '📅 投资时间线', link: '/08_knowledge-graph/investment-timeline' }
+          { text: '📅 投资时间线', link: '/08_knowledge-graph/investment-timeline' },
+          { text: '🌐 全景图谱', link: '/08_knowledge-graph/full-graph' },
         ]
       },
 
