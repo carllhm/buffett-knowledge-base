@@ -1,11 +1,6 @@
 # 巴菲特之道
 
-<p align="center">
-<img src="https://img.shields.io/badge/作者-Robert%20G.%20Hagstrom-blue" alt="作者">
-<img src="badge/翻译-杨天南-green" alt="翻译">
-<img src="badge/版本-第3版-orange" alt="版本">
-<img src="badge/出版-2015-red" alt="出版">
-</p>
+> **作者：** Robert G. Hagstrom | **翻译：** 杨天南 | **版本：** 第3版 | **出版：** 2015
 
 ## 书籍简介
 
