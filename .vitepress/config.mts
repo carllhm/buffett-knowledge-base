@@ -20,7 +20,8 @@ export default defineConfig({
       { text: '人物传记', link: '/04_people/' },
       { text: '金句库', link: '/05_quotes/' },
       { text: '数据可视化', link: '/06_visualization/' },
-      { text: '扩展阅读', link: '/07_resources/' }
+      { text: '扩展阅读', link: '/07_resources/' },
+      { text: '巴菲特之道', link: '/09_books/巴菲特之道/' }
     ],
     
     sidebar: {
@@ -287,6 +288,23 @@ export default defineConfig({
             { text: '雪莉·图米姆', link: '/04_people/雪莉·图米姆' },
             { text: '鲍勃·德纳姆', link: '/04_people/鲍勃·德纳姆' },
             { text: '默里·莱特', link: '/04_people/默里·莱特' }
+          ]
+        }
+      ],
+
+      '/09_books/巴菲特之道/': [
+        {
+          text: '巴菲特之道',
+          collapsed: false,
+          items: [
+            { text: '书籍简介', link: '/09_books/巴菲特之道/' },
+            { text: '12条投资准则', link: '/09_books/巴菲特之道/准则/' },
+            { text: '企业准则', link: '/09_books/巴菲特之道/准则/01_企业准则' },
+            { text: '管理准则', link: '/09_books/巴菲特之道/准则/02_管理准则' },
+            { text: '财务准则', link: '/09_books/巴菲特之道/准则/03_财务准则' },
+            { text: '市场准则', link: '/09_books/巴菲特之道/准则/04_市场准则' },
+            { text: '安全边际', link: '/09_books/巴菲特之道/准则/10_安全边际' },
+            { text: '股票市值', link: '/09_books/巴菲特之道/准则/11_股票市值' }
           ]
         }
       ]
