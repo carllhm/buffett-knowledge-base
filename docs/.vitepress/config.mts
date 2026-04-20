@@ -427,7 +427,7 @@ export default withMermaid(defineConfig({
   title: '巴菲特致股东信知识库',
   description: '中文世界最系统的巴菲特股东信知识库（1956-2025）',
 
-  cleanUrls: true,
+  cleanUrls: false,
 
   ignoreDeadLinks: true,
 
@@ -449,14 +449,14 @@ export default withMermaid(defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: '全年股东信', link: '/01_letters/' },
-      { text: '70年导读', link: '/00_index/巴菲特致股东信70年导读' },
-      { text: '主题索引', link: '/02_concepts/' },
-      { text: '公司档案', link: '/03_companies/' },
-      { text: '人物传记', link: '/04_people/' },
-      { text: '金句库', link: '/05_quotes/' },
-      { text: '知识图谱', link: '/08_knowledge-graph/' },
-      { text: '📖 经典著作', link: '/09_books/' },
+      { text: '全年股东信', link: '/01_letters.html' },
+      { text: '70年导读', link: '/00_index/巴菲特致股东信70年导读.html' },
+      { text: '主题索引', link: '/02_concepts.html' },
+      { text: '公司档案', link: '/03_companies.html' },
+      { text: '人物传记', link: '/04_people.html' },
+      { text: '金句库', link: '/05_quotes.html' },
+      { text: '知识图谱', link: '/08_knowledge-graph.html' },
+      { text: '📖 经典著作', link: '/09_books.html' },
     ],
 
     sidebar: [
@@ -467,76 +467,76 @@ export default withMermaid(defineConfig({
 
       {
         text: '📚 全年股东信',
-        link: '/01_letters/',
+        link: '/01_letters.html',
         collapsed: false,
         items: ERA_SIDEBAR
       },
 
       {
         text: '🎯 主题索引',
-        link: '/02_concepts/',
+        link: '/02_concepts.html',
         collapsed: true,
         items: [
           {
             text: '💡 投资哲学（5）',
             collapsed: true,
             items: [
-              { text: '内在价值', link: '/02_concepts/intrinsic-value' },
-              { text: '护城河', link: '/02_concepts/moat' },
-              { text: '安全边际', link: '/02_concepts/safety-margin' },
-              { text: '复利', link: '/02_concepts/compounding' },
-              { text: 'GAAP vs 真实盈利', link: '/02_concepts/accounting-earnings' }
+              { text: '内在价值', link: '/02_concepts/intrinsic-value.html' },
+              { text: '护城河', link: '/02_concepts/moat.html' },
+              { text: '安全边际', link: '/02_concepts/safety-margin.html' },
+              { text: '复利', link: '/02_concepts/compounding.html' },
+              { text: 'GAAP vs 真实盈利', link: '/02_concepts/accounting-earnings.html' }
             ]
           },
           {
             text: '⚙️ 商业逻辑（5）',
             collapsed: true,
             items: [
-              { text: '保险浮存金', link: '/02_concepts/insurance-float' },
-              { text: '承保纪律', link: '/02_concepts/underwriting-discipline' },
-              { text: '资本配置', link: '/02_concepts/capital-allocation' },
-              { text: '递延税复利 🆕', link: '/02_concepts/deferred-tax' },
-              { text: '回购纪律', link: '/02_concepts/share-buybacks' }
+              { text: '保险浮存金', link: '/02_concepts/insurance-float.html' },
+              { text: '承保纪律', link: '/02_concepts/underwriting-discipline.html' },
+              { text: '资本配置', link: '/02_concepts/capital-allocation.html' },
+              { text: '递延税复利 🆕', link: '/02_concepts/deferred-tax.html' },
+              { text: '回购纪律', link: '/02_concepts/share-buybacks.html' }
             ]
           },
           {
             text: '🧠 投资方法论（4）',
             collapsed: true,
             items: [
-              { text: '能力圈', link: '/02_concepts/circle-of-competence' },
-              { text: '逆向思维', link: '/02_concepts/contrarian' },
-              { text: '透视盈利 🆕', link: '/02_concepts/look-through-earnings' },
-              { text: '风险', link: '/02_concepts/risk' }
+              { text: '能力圈', link: '/02_concepts/circle-of-competence.html' },
+              { text: '逆向思维', link: '/02_concepts/contrarian.html' },
+              { text: '透视盈利 🆕', link: '/02_concepts/look-through-earnings.html' },
+              { text: '风险', link: '/02_concepts/risk.html' }
             ]
           },
           {
             text: '🏛️ 治理智慧（5）',
             collapsed: true,
             items: [
-              { text: '管理层选择', link: '/02_concepts/management' },
-              { text: '高管薪酬', link: '/02_concepts/executive-compensation' },
-              { text: '董事会与公司治理', link: '/02_concepts/corporate-governance' },
-              { text: '错误坦诚 🆕', link: '/02_concepts/mistakes' },
-              { text: '声誉', link: '/02_concepts/reputation' }
+              { text: '管理层选择', link: '/02_concepts/management.html' },
+              { text: '高管薪酬', link: '/02_concepts/executive-compensation.html' },
+              { text: '董事会与公司治理', link: '/02_concepts/corporate-governance.html' },
+              { text: '错误坦诚 🆕', link: '/02_concepts/mistakes.html' },
+              { text: '声誉', link: '/02_concepts/reputation.html' }
             ]
           },
           {
             text: '📜 历史镜鉴（5）',
             collapsed: true,
             items: [
-              { text: '航空公司教训', link: '/02_concepts/airline-lessons' },
-              { text: '所罗门危机 🆕', link: '/02_concepts/salomon-crisis' },
-              { text: '日本五大投资', link: '/02_concepts/japan-investments' },
-              { text: '长期主义', link: '/02_concepts/long-term' },
-              { text: '多元化与集中', link: '/02_concepts/diversification' }
+              { text: '航空公司教训', link: '/02_concepts/airline-lessons.html' },
+              { text: '所罗门危机 🆕', link: '/02_concepts/salomon-crisis.html' },
+              { text: '日本五大投资', link: '/02_concepts/japan-investments.html' },
+              { text: '长期主义', link: '/02_concepts/long-term.html' },
+              { text: '多元化与集中', link: '/02_concepts/diversification.html' }
             ]
           },
           {
             text: '📦 合伙基金时期（1956-1969）',
             collapsed: true,
             items: [
-              { text: '三大投资类别 🆕', link: '/02_concepts/partnership-method' },
-              { text: '安全边际的原始含义', link: '/02_concepts/safety-margin' }
+              { text: '三大投资类别 🆕', link: '/02_concepts/partnership-method.html' },
+              { text: '安全边际的原始含义', link: '/02_concepts/safety-margin.html' }
             ]
           }
         ]
@@ -544,83 +544,83 @@ export default withMermaid(defineConfig({
 
       {
         text: '🏢 公司档案',
-        link: '/03_companies/',
+        link: '/03_companies.html',
         collapsed: true,
         items: [
           {
             text: '📁 保险业务',
             collapsed: true,
             items: [
-              { text: 'GEICO', link: '/03_companies/GEICO' },
-              { text: '国家赔偿公司', link: '/03_companies/国家赔偿公司' },
-              { text: '通用再保险', link: '/03_companies/通用再保险' },
+              { text: 'GEICO', link: '/03_companies/GEICO.html' },
+              { text: '国家赔偿公司', link: '/03_companies/国家赔偿公司.html' },
+              { text: '通用再保险', link: '/03_companies/通用再保险.html' },
             ]
           },
           {
             text: '📁 消费与零售',
             collapsed: true,
             items: [
-              { text: '喜诗糖果', link: '/03_companies/喜诗糖果' },
-              { text: '内布拉斯加家具城', link: '/03_companies/内布拉斯加家具城' },
-              { text: '克莱顿家园', link: '/03_companies/克莱顿家园' },
-              { text: 'Forest River', link: '/03_companies/Forest River' },
-              { text: 'McLanes麦克莱恩', link: '/03_companies/McLanes麦克莱恩' },
-              { text: '麦当劳', link: '/03_companies/麦当劳' },
+              { text: '喜诗糖果', link: '/03_companies/喜诗糖果.html' },
+              { text: '内布拉斯加家具城', link: '/03_companies/内布拉斯加家具城.html' },
+              { text: '克莱顿家园', link: '/03_companies/克莱顿家园.html' },
+              { text: 'Forest River', link: '/03_companies/Forest River.html' },
+              { text: 'McLanes麦克莱恩', link: '/03_companies/McLanes麦克莱恩.html' },
+              { text: '麦当劳', link: '/03_companies/麦当劳.html' },
             ]
           },
           {
             text: '📁 媒体与出版',
             collapsed: true,
             items: [
-              { text: '华盛顿邮报', link: '/03_companies/华盛顿邮报' },
-              { text: '首都城市ABC', link: '/03_companies/首都城市ABC' },
-              { text: '水牛城新闻', link: '/03_companies/水牛城新闻' },
+              { text: '华盛顿邮报', link: '/03_companies/华盛顿邮报.html' },
+              { text: '首都城市ABC', link: '/03_companies/首都城市ABC.html' },
+              { text: '水牛城新闻', link: '/03_companies/水牛城新闻.html' },
             ]
           },
           {
             text: '📁 工业与制造',
             collapsed: true,
             items: [
-              { text: 'BNSF铁路', link: '/03_companies/BNSF铁路' },
-              { text: 'ISCAR-IMC', link: '/03_companies/ISCAR-IMC' },
-              { text: 'Marmon集团', link: '/03_companies/Marmon集团' },
-              { text: 'Scott & Fetzer', link: '/03_companies/Scott_Fetzer' },
-              { text: 'Fechheimer Bros.', link: '/03_companies/Fechheimer_Bros' },
-              { text: '冠军国际纸业', link: '/03_companies/冠军国际纸业' },
+              { text: 'BNSF铁路', link: '/03_companies/BNSF铁路.html' },
+              { text: 'ISCAR-IMC', link: '/03_companies/ISCAR-IMC.html' },
+              { text: 'Marmon集团', link: '/03_companies/Marmon集团.html' },
+              { text: 'Scott & Fetzer', link: '/03_companies/Scott_Fetzer.html' },
+              { text: 'Fechheimer Bros.', link: '/03_companies/Fechheimer_Bros.html' },
+              { text: '冠军国际纸业', link: '/03_companies/冠军国际纸业.html' },
             ]
           },
           {
             text: '📁 能源与金融',
             collapsed: true,
             items: [
-              { text: '中美能源', link: '/03_companies/中美能源' },
-              { text: '蓝筹印花', link: '/03_companies/蓝筹印花' },
-              { text: '所罗门兄弟', link: '/03_companies/所罗门兄弟' },
-              { text: '伯克希尔哈撒韦', link: '/03_companies/伯克希尔哈撒韦' },
-              { text: '健力士', link: '/03_companies/健力士' },
+              { text: '中美能源', link: '/03_companies/中美能源.html' },
+              { text: '蓝筹印花', link: '/03_companies/蓝筹印花.html' },
+              { text: '所罗门兄弟', link: '/03_companies/所罗门兄弟.html' },
+              { text: '伯克希尔哈撒韦', link: '/03_companies/伯克希尔哈撒韦.html' },
+              { text: '健力士', link: '/03_companies/健力士.html' },
             ]
           },
           {
             text: '📁 核心持仓',
             collapsed: true,
             items: [
-              { text: '苹果公司', link: '/03_companies/苹果公司' },
-              { text: '美国运通', link: '/03_companies/美国运通' },
-              { text: '可口可乐', link: '/03_companies/可口可乐' },
-              { text: '美国银行', link: '/03_companies/美国银行' },
-              { text: '雪佛龙', link: '/03_companies/雪佛龙' },
-              { text: '比亚迪', link: '/03_companies/比亚迪' },
-              { text: '迪士尼', link: '/03_companies/迪士尼' },
+              { text: '苹果公司', link: '/03_companies/苹果公司.html' },
+              { text: '美国运通', link: '/03_companies/美国运通.html' },
+              { text: '可口可乐', link: '/03_companies/可口可乐.html' },
+              { text: '美国银行', link: '/03_companies/美国银行.html' },
+              { text: '雪佛龙', link: '/03_companies/雪佛龙.html' },
+              { text: '比亚迪', link: '/03_companies/比亚迪.html' },
+              { text: '迪士尼', link: '/03_companies/迪士尼.html' },
             ]
           },
           {
             text: '📁 已清仓/历史持仓',
             collapsed: true,
             items: [
-              { text: '富国银行', link: '/03_companies/富国银行' },
-              { text: 'IBM', link: '/03_companies/IBM' },
-              { text: '伊利诺伊国民银行', link: '/03_companies/伊利诺伊国民银行' },
-              { text: '联合零售商店', link: '/03_companies/联合零售商店' },
+              { text: '富国银行', link: '/03_companies/富国银行.html' },
+              { text: 'IBM', link: '/03_companies/IBM.html' },
+              { text: '伊利诺伊国民银行', link: '/03_companies/伊利诺伊国民银行.html' },
+              { text: '联合零售商店', link: '/03_companies/联合零售商店.html' },
             ]
           },
         ]
@@ -628,125 +628,125 @@ export default withMermaid(defineConfig({
 
       {
         text: '👤 人物传记',
-        link: '/04_people/',
+        link: '/04_people.html',
         collapsed: true,
         items: [
           {
             text: '👑 伯克希尔核心（4）',
             collapsed: true,
             items: [
-              { text: '沃伦·巴菲特', link: '/04_people/沃伦·巴菲特' },
-              { text: '查理·芒格', link: '/04_people/查理·芒格' },
-              { text: '格雷格·阿贝尔', link: '/04_people/格雷格·阿贝尔' },
-              { text: '阿吉特·贾恩', link: '/04_people/阿吉特·贾恩' },
+              { text: '沃伦·巴菲特', link: '/04_people/沃伦·巴菲特.html' },
+              { text: '查理·芒格', link: '/04_people/查理·芒格.html' },
+              { text: '格雷格·阿贝尔', link: '/04_people/格雷格·阿贝尔.html' },
+              { text: '阿吉特·贾恩', link: '/04_people/阿吉特·贾恩.html' },
             ]
           },
           {
             text: '📊 投资经理（3）',
             collapsed: true,
             items: [
-              { text: '托德·康姆斯', link: '/04_people/托德·康姆斯' },
-              { text: '特德·韦斯勒', link: '/04_people/特德·韦斯勒' },
-              { text: '卢·辛普森', link: '/04_people/卢·辛普森' },
+              { text: '托德·康姆斯', link: '/04_people/托德·康姆斯.html' },
+              { text: '特德·韦斯勒', link: '/04_people/特德·韦斯勒.html' },
+              { text: '卢·辛普森', link: '/04_people/卢·辛普森.html' },
             ]
           },
           {
             text: '🏢 保险业务（10）',
             collapsed: true,
             items: [
-              { text: '托尼·尼斯利', link: '/04_people/托尼·尼斯利' },
-              { text: '杰克·伯恩', link: '/04_people/杰克·伯恩' },
-              { text: '洛伊默·戴维森', link: '/04_people/洛伊默·戴维森' },
-              { text: '比尔·斯奈德', link: '/04_people/比尔·斯奈德' },
-              { text: '罗恩·弗格森', link: '/04_people/罗恩·弗格森' },
-              { text: '菲尔·利切', link: '/04_people/菲尔·利切' },
-              { text: '杰克·林格沃尔特', link: '/04_people/杰克·林格沃尔特' },
-              { text: '比尔·凯泽', link: '/04_people/比尔·凯泽' },
-              { text: '迈克·戈德堡', link: '/04_people/迈克·戈德堡' },
-              { text: '迪诺斯·约达努', link: '/04_people/迪诺斯·约达努' },
+              { text: '托尼·尼斯利', link: '/04_people/托尼·尼斯利.html' },
+              { text: '杰克·伯恩', link: '/04_people/杰克·伯恩.html' },
+              { text: '洛伊默·戴维森', link: '/04_people/洛伊默·戴维森.html' },
+              { text: '比尔·斯奈德', link: '/04_people/比尔·斯奈德.html' },
+              { text: '罗恩·弗格森', link: '/04_people/罗恩·弗格森.html' },
+              { text: '菲尔·利切', link: '/04_people/菲尔·利切.html' },
+              { text: '杰克·林格沃尔特', link: '/04_people/杰克·林格沃尔特.html' },
+              { text: '比尔·凯泽', link: '/04_people/比尔·凯泽.html' },
+              { text: '迈克·戈德堡', link: '/04_people/迈克·戈德堡.html' },
+              { text: '迪诺斯·约达努', link: '/04_people/迪诺斯·约达努.html' },
             ]
           },
           {
             text: '🏭 子公司CEO与管理层（36）',
             collapsed: true,
             items: [
-              { text: 'B夫人', link: '/04_people/B夫人' },
-              { text: '路易·布鲁姆金', link: '/04_people/路易·布鲁姆金' },
-              { text: '罗恩·欧文', link: '/04_people/罗恩·欧文' },
-              { text: '凯文·克莱顿', link: '/04_people/凯文·克莱顿' },
-              { text: '格雷迪·罗西尔', link: '/04_people/格雷迪·罗西尔' },
-              { text: '皮特·利格尔', link: '/04_people/皮特·利格尔' },
-              { text: '埃坦·韦特海默', link: '/04_people/埃坦·韦特海默' },
-              { text: '雅各布·哈帕兹', link: '/04_people/雅各布·哈帕兹' },
-              { text: '弗兰克·普塔克', link: '/04_people/弗兰克·普塔克' },
-              { text: '里奇·桑图利', link: '/04_people/里奇·桑图利' },
-              { text: 'Chuck Huggins', link: '/04_people/Chuck_Huggins' },
-              { text: '斯坦·利普西', link: '/04_people/斯坦·利普西' },
-              { text: '默里·莱特', link: '/04_people/默里·莱特' },
-              { text: '迪克·西蒙斯', link: '/04_people/迪克·西蒙斯' },
-              { text: '本·罗斯纳', link: '/04_people/本·罗斯纳' },
-              { text: '吉恩·阿贝格', link: '/04_people/吉恩·阿贝格' },
-              { text: '弗兰克·鲁尼', link: '/04_people/弗兰克·鲁尼' },
-              { text: '吉姆·伊斯勒', link: '/04_people/吉姆·伊斯勒' },
-              { text: '比尔·蔡尔德', link: '/04_people/比尔·蔡尔德' },
-              { text: '谢尔顿·蔡尔德', link: '/04_people/谢尔顿·蔡尔德' },
-              { text: '哈罗德·阿尔方德', link: '/04_people/哈罗德·阿尔方德' },
-              { text: '彼得·伦德', link: '/04_people/彼得·伦德' },
-              { text: '梅尔文·沃尔夫', link: '/04_people/梅尔文·沃尔夫' },
-              { text: '雪莉·图米姆', link: '/04_people/雪莉·图米姆' },
-              { text: '赫尔德曼家族', link: '/04_people/赫尔德曼家族' },
-              { text: '巴里·塔特尔曼', link: '/04_people/巴里·塔特尔曼' },
-              { text: '艾略特·塔特尔曼', link: '/04_people/艾略特·塔特尔曼' },
-              { text: '小巴内特·赫尔兹伯格', link: '/04_people/小巴内特·赫尔兹伯格' },
-              { text: '杰夫·科门特', link: '/04_people/杰夫·科门特' },
-              { text: '苏珊·雅克', link: '/04_people/苏珊·雅克' },
-              { text: '艾克·弗里德曼', link: '/04_people/艾克·弗里德曼' },
-              { text: '艾伦·弗里德曼', link: '/04_people/艾伦·弗里德曼' },
-              { text: '约翰·穆蒂', link: '/04_people/约翰·穆蒂' },
-              { text: '迈克·沙利文', link: '/04_people/迈克·沙利文' },
-              { text: '阿尔·乌尔奇', link: '/04_people/阿尔·乌尔奇' },
-              { text: '拉尔夫·谢伊', link: '/04_people/拉尔夫·谢伊' },
+              { text: 'B夫人', link: '/04_people/B夫人.html' },
+              { text: '路易·布鲁姆金', link: '/04_people/路易·布鲁姆金.html' },
+              { text: '罗恩·欧文', link: '/04_people/罗恩·欧文.html' },
+              { text: '凯文·克莱顿', link: '/04_people/凯文·克莱顿.html' },
+              { text: '格雷迪·罗西尔', link: '/04_people/格雷迪·罗西尔.html' },
+              { text: '皮特·利格尔', link: '/04_people/皮特·利格尔.html' },
+              { text: '埃坦·韦特海默', link: '/04_people/埃坦·韦特海默.html' },
+              { text: '雅各布·哈帕兹', link: '/04_people/雅各布·哈帕兹.html' },
+              { text: '弗兰克·普塔克', link: '/04_people/弗兰克·普塔克.html' },
+              { text: '里奇·桑图利', link: '/04_people/里奇·桑图利.html' },
+              { text: 'Chuck Huggins', link: '/04_people/Chuck_Huggins.html' },
+              { text: '斯坦·利普西', link: '/04_people/斯坦·利普西.html' },
+              { text: '默里·莱特', link: '/04_people/默里·莱特.html' },
+              { text: '迪克·西蒙斯', link: '/04_people/迪克·西蒙斯.html' },
+              { text: '本·罗斯纳', link: '/04_people/本·罗斯纳.html' },
+              { text: '吉恩·阿贝格', link: '/04_people/吉恩·阿贝格.html' },
+              { text: '弗兰克·鲁尼', link: '/04_people/弗兰克·鲁尼.html' },
+              { text: '吉姆·伊斯勒', link: '/04_people/吉姆·伊斯勒.html' },
+              { text: '比尔·蔡尔德', link: '/04_people/比尔·蔡尔德.html' },
+              { text: '谢尔顿·蔡尔德', link: '/04_people/谢尔顿·蔡尔德.html' },
+              { text: '哈罗德·阿尔方德', link: '/04_people/哈罗德·阿尔方德.html' },
+              { text: '彼得·伦德', link: '/04_people/彼得·伦德.html' },
+              { text: '梅尔文·沃尔夫', link: '/04_people/梅尔文·沃尔夫.html' },
+              { text: '雪莉·图米姆', link: '/04_people/雪莉·图米姆.html' },
+              { text: '赫尔德曼家族', link: '/04_people/赫尔德曼家族.html' },
+              { text: '巴里·塔特尔曼', link: '/04_people/巴里·塔特尔曼.html' },
+              { text: '艾略特·塔特尔曼', link: '/04_people/艾略特·塔特尔曼.html' },
+              { text: '小巴内特·赫尔兹伯格', link: '/04_people/小巴内特·赫尔兹伯格.html' },
+              { text: '杰夫·科门特', link: '/04_people/杰夫·科门特.html' },
+              { text: '苏珊·雅克', link: '/04_people/苏珊·雅克.html' },
+              { text: '艾克·弗里德曼', link: '/04_people/艾克·弗里德曼.html' },
+              { text: '艾伦·弗里德曼', link: '/04_people/艾伦·弗里德曼.html' },
+              { text: '约翰·穆蒂', link: '/04_people/约翰·穆蒂.html' },
+              { text: '迈克·沙利文', link: '/04_people/迈克·沙利文.html' },
+              { text: '阿尔·乌尔奇', link: '/04_people/阿尔·乌尔奇.html' },
+              { text: '拉尔夫·谢伊', link: '/04_people/拉尔夫·谢伊.html' },
             ]
           },
           {
             text: '📰 被投公司CEO（17）',
             collapsed: true,
             items: [
-              { text: 'Tom Murphy', link: '/04_people/Tom_Murphy' },
-              { text: '丹·伯克', link: '/04_people/丹·伯克' },
-              { text: '凯·格雷厄姆', link: '/04_people/凯·格雷厄姆' },
-              { text: '罗伯托·戈伊苏埃塔', link: '/04_people/罗伯托·戈伊苏埃塔' },
-              { text: '唐·库赫', link: '/04_people/唐·库赫' },
-              { text: '保罗·黑曾', link: '/04_people/保罗·黑曾' },
-              { text: '卡尔·赖查特', link: '/04_people/卡尔·赖查特' },
-              { text: '大卫·马克斯韦尔', link: '/04_people/大卫·马克斯韦尔' },
-              { text: '比尔·安德斯', link: '/04_people/比尔·安德斯' },
-              { text: '科尔曼·莫格勒', link: '/04_people/科尔曼·莫格勒' },
-              { text: '弗兰克·奥尔森', link: '/04_people/弗兰克·奥尔森' },
-              { text: '塞思·斯科菲尔德', link: '/04_people/塞思·斯科菲尔德' },
-              { text: '约翰·古尔特弗里德', link: '/04_people/约翰·古尔特弗里德' },
-              { text: '约翰·麦克法兰', link: '/04_people/约翰·麦克法兰' },
-              { text: '德里克·莫恩', link: '/04_people/德里克·莫恩' },
-              { text: '唐·霍华德', link: '/04_people/唐·霍华德' },
-              { text: '鲍勃·德纳姆', link: '/04_people/鲍勃·德纳姆' },
+              { text: 'Tom Murphy', link: '/04_people/Tom_Murphy.html' },
+              { text: '丹·伯克', link: '/04_people/丹·伯克.html' },
+              { text: '凯·格雷厄姆', link: '/04_people/凯·格雷厄姆.html' },
+              { text: '罗伯托·戈伊苏埃塔', link: '/04_people/罗伯托·戈伊苏埃塔.html' },
+              { text: '唐·库赫', link: '/04_people/唐·库赫.html' },
+              { text: '保罗·黑曾', link: '/04_people/保罗·黑曾.html' },
+              { text: '卡尔·赖查特', link: '/04_people/卡尔·赖查特.html' },
+              { text: '大卫·马克斯韦尔', link: '/04_people/大卫·马克斯韦尔.html' },
+              { text: '比尔·安德斯', link: '/04_people/比尔·安德斯.html' },
+              { text: '科尔曼·莫格勒', link: '/04_people/科尔曼·莫格勒.html' },
+              { text: '弗兰克·奥尔森', link: '/04_people/弗兰克·奥尔森.html' },
+              { text: '塞思·斯科菲尔德', link: '/04_people/塞思·斯科菲尔德.html' },
+              { text: '约翰·古尔特弗里德', link: '/04_people/约翰·古尔特弗里德.html' },
+              { text: '约翰·麦克法兰', link: '/04_people/约翰·麦克法兰.html' },
+              { text: '德里克·莫恩', link: '/04_people/德里克·莫恩.html' },
+              { text: '唐·霍华德', link: '/04_people/唐·霍华德.html' },
+              { text: '鲍勃·德纳姆', link: '/04_people/鲍勃·德纳姆.html' },
             ]
           },
           {
             text: '🎓 投资大师（1）',
             collapsed: true,
             items: [
-              { text: '本·格雷厄姆', link: '/04_people/本·格雷厄姆' },
+              { text: '本·格雷厄姆', link: '/04_people/本·格雷厄姆.html' },
             ]
           },
           {
             text: '🤝 董事与顾问（5）',
             collapsed: true,
             items: [
-              { text: '沃尔特·斯科特', link: '/04_people/沃尔特·斯科特' },
-              { text: '罗恩·奥尔森', link: '/04_people/罗恩·奥尔森' },
-              { text: '大卫·索科尔', link: '/04_people/大卫·索科尔' },
-              { text: '理查德·瑟斯', link: '/04_people/理查德·瑟斯' },
-              { text: '罗伊·丁斯代尔', link: '/04_people/罗伊·丁斯代尔' },
+              { text: '沃尔特·斯科特', link: '/04_people/沃尔特·斯科特.html' },
+              { text: '罗恩·奥尔森', link: '/04_people/罗恩·奥尔森.html' },
+              { text: '大卫·索科尔', link: '/04_people/大卫·索科尔.html' },
+              { text: '理查德·瑟斯', link: '/04_people/理查德·瑟斯.html' },
+              { text: '罗伊·丁斯代尔', link: '/04_people/罗伊·丁斯代尔.html' },
             ]
           },
         ]
@@ -754,42 +754,42 @@ export default withMermaid(defineConfig({
 
       {
         text: '💬 金句库',
-        link: '/05_quotes/',
+        link: '/05_quotes.html',
         collapsed: false,
         items: [
-          { text: '📚 按主题', link: '/05_quotes/by-theme/' },
-          { text: '📅 按年份', link: '/05_quotes/by-year/' },
-          { text: '🎯 按场景', link: '/05_quotes/by-scene/' }
+          { text: '📚 按主题', link: '/05_quotes/by-theme.html' },
+          { text: '📅 按年份', link: '/05_quotes/by-year.html' },
+          { text: '🎯 按场景', link: '/05_quotes/by-scene.html' }
         ]
       },
 
       {
         text: '📊 数据可视化',
-        link: '/06_visualization/',
+        link: '/06_visualization.html',
         collapsed: true,
         items: [
           {
             text: '📈 业绩与估值',
             collapsed: true,
             items: [
-              { text: '伯克希尔 vs 标普500', link: '/06_visualization/berkshire-vs-sp500' },
-              { text: '账面价值增长', link: '/06_visualization/book-value-growth' }
+              { text: '伯克希尔 vs 标普500', link: '/06_visualization/berkshire-vs-sp500.html' },
+              { text: '账面价值增长', link: '/06_visualization/book-value-growth.html' }
             ]
           },
           {
             text: '💼 持仓与收购',
             collapsed: true,
             items: [
-              { text: '主要持仓变迁', link: '/06_visualization/top-holdings' },
-              { text: '重大收购时间线', link: '/06_visualization/acquisitions-timeline' },
-              { text: '保险浮存金趋势', link: '/06_visualization/insurance-float' }
+              { text: '主要持仓变迁', link: '/06_visualization/top-holdings.html' },
+              { text: '重大收购时间线', link: '/06_visualization/acquisitions-timeline.html' },
+              { text: '保险浮存金趋势', link: '/06_visualization/insurance-float.html' }
             ]
           },
           {
             text: '🏭 业务版图',
             collapsed: true,
             items: [
-              { text: '收入结构', link: '/06_visualization/revenue-breakdown' }
+              { text: '收入结构', link: '/06_visualization/revenue-breakdown.html' }
             ]
           }
         ]
@@ -797,32 +797,32 @@ export default withMermaid(defineConfig({
 
       {
         text: '📖 扩展阅读',
-        link: '/07_resources/',
+        link: '/07_resources.html',
         collapsed: true,
         items: []
       },
 
       {
         text: '📖 经典著作',
-        link: '/09_books/',
+        link: '/09_books.html',
         collapsed: false,
         items: [
-          { text: '📖 巴菲特之道', link: '/09_books/巴菲特之道/' },
-          { text: '🏢 企业准则', link: '/09_books/巴菲特之道/准则/01_企业准则' },
-          { text: '👔 管理准则', link: '/09_books/巴菲特之道/准则/02_管理准则' },
-          { text: '💰 财务准则', link: '/09_books/巴菲特之道/准则/03_财务准则' },
-          { text: '📈 市场准则', link: '/09_books/巴菲特之道/准则/04_市场准则' },
+          { text: '📖 巴菲特之道', link: '/09_books/巴菲特之道.html' },
+          { text: '🏢 企业准则', link: '/09_books/巴菲特之道/准则/01_企业准则.html' },
+          { text: '👔 管理准则', link: '/09_books/巴菲特之道/准则/02_管理准则.html' },
+          { text: '💰 财务准则', link: '/09_books/巴菲特之道/准则/03_财务准则.html' },
+          { text: '📈 市场准则', link: '/09_books/巴菲特之道/准则/04_市场准则.html' },
         ]
       },
       {
         text: '🔗 知识图谱',
-        link: '/08_knowledge-graph/',
+        link: '/08_knowledge-graph.html',
         collapsed: true,
         items: [
-          { text: '📊 概念关系图', link: '/08_knowledge-graph/concept-relations' },
-          { text: '👥 人物关系网络', link: '/08_knowledge-graph/person-network' },
-          { text: '📅 投资时间线', link: '/08_knowledge-graph/investment-timeline' },
-          { text: '🌐 全景图谱', link: '/08_knowledge-graph/full-graph' },
+          { text: '📊 概念关系图', link: '/08_knowledge-graph/concept-relations.html' },
+          { text: '👥 人物关系网络', link: '/08_knowledge-graph/person-network.html' },
+          { text: '📅 投资时间线', link: '/08_knowledge-graph/investment-timeline.html' },
+          { text: '🌐 全景图谱', link: '/08_knowledge-graph/full-graph.html' },
         ]
       },
 
