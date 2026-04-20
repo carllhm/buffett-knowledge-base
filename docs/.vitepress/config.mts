@@ -427,6 +427,8 @@ export default withMermaid(defineConfig({
   title: '巴菲特致股东信知识库',
   description: '中文世界最系统的巴菲特股东信知识库（1956-2025）',
 
+  cleanUrls: true,
+
   ignoreDeadLinks: true,
 
   mermaid: {},
@@ -454,6 +456,7 @@ export default withMermaid(defineConfig({
       { text: '人物传记', link: '/04_people/' },
       { text: '金句库', link: '/05_quotes/' },
       { text: '知识图谱', link: '/08_knowledge-graph/' },
+      { text: '📖 经典著作', link: '/09_books/' },
     ],
 
     sidebar: [
@@ -799,6 +802,18 @@ export default withMermaid(defineConfig({
         items: []
       },
 
+      {
+        text: '📖 经典著作',
+        link: '/09_books/',
+        collapsed: false,
+        items: [
+          { text: '📖 巴菲特之道', link: '/09_books/巴菲特之道/' },
+          { text: '🏢 企业准则', link: '/09_books/巴菲特之道/准则/01_企业准则' },
+          { text: '👔 管理准则', link: '/09_books/巴菲特之道/准则/02_管理准则' },
+          { text: '💰 财务准则', link: '/09_books/巴菲特之道/准则/03_财务准则' },
+          { text: '📈 市场准则', link: '/09_books/巴菲特之道/准则/04_市场准则' },
+        ]
+      },
       {
         text: '🔗 知识图谱',
         link: '/08_knowledge-graph/',
