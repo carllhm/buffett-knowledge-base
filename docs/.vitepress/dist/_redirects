@@ -1,0 +1,4 @@
+# VitePress Clean URLs fallback for Cloudflare Pages
+# Only redirect requests for directories (ending in /) to index.html
+# Do NOT redirect static assets (they have extensions)
+/* /index.html 200
