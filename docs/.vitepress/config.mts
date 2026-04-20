@@ -453,8 +453,7 @@ export default withMermaid(defineConfig({
       { text: '公司档案', link: '/03_companies/' },
       { text: '人物传记', link: '/04_people/' },
       { text: '金句库', link: '/05_quotes/' },
-      { text: '数据可视化', link: '/06_visualization/' },
-      { text: '扩展阅读', link: '/07_resources/' },
+      { text: '知识图谱', link: '/08_knowledge-graph/' },
     ],
 
     sidebar: [
@@ -798,6 +797,17 @@ export default withMermaid(defineConfig({
         link: '/07_resources/',
         collapsed: true,
         items: []
+      },
+
+      {
+        text: '🔗 知识图谱',
+        link: '/08_knowledge-graph/',
+        collapsed: true,
+        items: [
+          { text: '📊 概念关系图', link: '/08_knowledge-graph/concept-relations' },
+          { text: '👥 人物关系网络', link: '/08_knowledge-graph/person-network' },
+          { text: '📅 投资时间线', link: '/08_knowledge-graph/investment-timeline' }
+        ]
       },
 
     ],
