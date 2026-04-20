@@ -7,7 +7,7 @@ description: 巴菲特知识库完整知识图谱——概念、人物、公司�
 
 > 本图谱整合了巴菲特知识库的所有核心内容：25个投资概念、18位关键人物、18家重要公司、22个历史年份，以及5大主题分类。通过可视化方式展现它们之间的关联关系。
 
-<FullKnowledgeGraph />
+<ClientOnly><FullKnowledgeGraph /></ClientOnly>
 
 ---
 

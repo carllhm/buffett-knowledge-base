@@ -7,7 +7,7 @@ description: 巴菲特投资思想核心概念的动态交互式关系图谱
 
 ## 动态知识图谱
 
-<KnowledgeGraph />
+<ClientOnly><KnowledgeGraph /></ClientOnly>
 
 > 💡 **使用说明**
 > - **拖拽节点**：按住节点可自由拖动位置
